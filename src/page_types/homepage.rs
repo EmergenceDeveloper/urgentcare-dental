@@ -62,7 +62,7 @@ fn css(site: &mut Site<UCDPages>) {
                 height: min-content;
                 place-content: center flex-start;
                 align-items: center;
-                padding: 0 12px;
+                /*padding: 0 12px;*/
                 height: auto;
                 text-decoration: none;
                 align-self: center;
@@ -73,7 +73,6 @@ fn css(site: &mut Site<UCDPages>) {
                 padding: 14px 32px;
                 border-radius: 25px;
                 text-decoration: none;
-                font-weight: 500;
                 transition: all 0.3s ease;
                 
                 &.secondary {

@@ -7,6 +7,7 @@ pub mod page_types {
     pub mod category;
     pub mod categories;
     pub mod about_us;
+    pub mod contact;
 }
 
 pub mod sections {
@@ -20,7 +21,6 @@ pub mod parts {
     pub mod core_css;
     pub mod decrees;
     pub mod head_code;
-    pub mod sidebar;
     pub mod schema;
 }
 

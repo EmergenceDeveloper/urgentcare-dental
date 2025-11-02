@@ -48,9 +48,6 @@ pub fn construct_post(site: &mut Site<UCDPages>, page: &mut Page<UCDPages>) {
         "##)
     };
     
-    // Get the sidebar
-    let sidebar = construct_sidebar(site, &post.slug);
-    
     let html = format!(r##"
         <!DOCTYPE html>
         <html lang="en-US">
@@ -76,7 +73,6 @@ pub fn construct_post(site: &mut Site<UCDPages>, page: &mut Page<UCDPages>) {
                         {content}
                     </div>
                 </main>
-                {sidebar}
             </div>
             {footer}
         </body>
@@ -89,7 +85,6 @@ pub fn construct_post(site: &mut Site<UCDPages>, page: &mut Page<UCDPages>) {
         image = post.frontmatter.image,
         content = post.content,
         category = category,
-        sidebar = sidebar,
     );
     
     page.foundation.content = Some(html);

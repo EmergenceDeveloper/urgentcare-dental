@@ -42,7 +42,7 @@ pub fn construct_header<T, I>(site: &mut Site<T, I>, page: &PageFoundation) -> S
     
     let directive_item = NavWrappedItem { 
         name: "Jobs".to_owned(), 
-        path: "/jobs".to_owned(),
+        path: BOOKING_LINK.to_owned(),
         content: r##"Book Appointment"##.to_owned(),
         class: Some("directive".to_owned()),
     };

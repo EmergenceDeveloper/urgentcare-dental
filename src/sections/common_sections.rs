@@ -1168,7 +1168,6 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
             
             display: flex;
             padding: 128px var(--site-padding-x);
-            width: 100%;
             background-color: #029297;
             align-items: center;
             justify-content: center;
@@ -1179,6 +1178,7 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
                 
                 max-width: 1200px;
                 width: 100%;
+                margin: 0 auto;
                 
                 
                 .polka-dots {
@@ -1545,10 +1545,175 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
         }
 
     "##);
+    
+    site.declare_section("about_our_care",r##"
+    
+    <section class="about-our-care">
+        <div class="inner">
         
+            <div class="text-area">
+            
+                <div class="subtitle">About Our Emergency Care</div>
+                <h2>Fast Response, Professional Care</h2>
+                <p>Fast, reliable treatment when you need it most - at any time of day or night.</p>
+                
+            </div>
+            <div class="grid">
+                <div class="feature">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                            <path d="M239.35,70.08a13.41,13.41,0,0,0-11.77-9.28l-36.94-2.92L176.43,24.22a13.51,13.51,0,0,0-24.86,0L137.36,57.88,100.42,60.8a13.39,13.39,0,0,0-7.66,23.58l28.06,23.68-8.56,35.39a13.32,13.32,0,0,0,5.1,13.91,13.51,13.51,0,0,0,15,.69L164,139l31.65,19.06a13.54,13.54,0,0,0,15-.69,13.34,13.34,0,0,0,5.09-13.91l-8.56-35.39,28.06-23.68A13.32,13.32,0,0,0,239.35,70.08ZM193.08,99a8,8,0,0,0-2.61,8l8.28,34.21L168.13,122.8a8,8,0,0,0-8.25,0l-30.62,18.43L137.54,107a8,8,0,0,0-2.62-8L108,76.26l35.52-2.81a8,8,0,0,0,6.74-4.87L164,35.91l13.79,32.67a8,8,0,0,0,6.74,4.87l35.53,2.81Zm-105,24.18L29.66,181.66a8,8,0,0,1-11.32-11.32l58.45-58.45a8,8,0,0,1,11.32,11.32Zm10.81,49.87a8,8,0,0,1,0,11.31L45.66,237.66a8,8,0,0,1-11.32-11.32l53.27-53.26A8,8,0,0,1,98.92,173.08Zm73-1a8,8,0,0,1,0,11.32l-54.28,54.28a8,8,0,0,1-11.32-11.32l54.29-54.28A8,8,0,0,1,171.94,172.06Z"/>
+                        </svg>
+                    </div>
+                    <h3>Rapid Assessment</h3>
+                    <p>£20 initial consultation with treatment same day when needed.</p>
+                </div>
+
+                <div class="feature">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                            <path d="M244.8,150.4a8,8,0,0,1-11.2-1.6A51.6,51.6,0,0,0,192,128a8,8,0,0,1-7.37-4.89,8,8,0,0,1,0-6.22A8,8,0,0,1,192,112a24,24,0,1,0-23.24-30,8,8,0,1,1-15.5-4A40,40,0,1,1,219,117.51a67.94,67.94,0,0,1,27.43,21.68A8,8,0,0,1,244.8,150.4ZM190.92,212a8,8,0,1,1-13.84,8,57,57,0,0,0-98.16,0,8,8,0,1,1-13.84-8,72.06,72.06,0,0,1,33.74-29.92,48,48,0,1,1,58.36,0A72.06,72.06,0,0,1,190.92,212ZM128,176a32,32,0,1,0-32-32A32,32,0,0,0,128,176ZM72,120a8,8,0,0,0-8-8A24,24,0,1,1,87.24,82a8,8,0,1,0,15.5-4A40,40,0,1,0,37,117.51,67.94,67.94,0,0,0,9.6,139.19a8,8,0,1,0,12.8,9.61A51.6,51.6,0,0,1,64,128,8,8,0,0,0,72,120Z"/>
+                        </svg>
+                    </div>
+                    <h3>Experienced Team</h3>
+                    <p>Qualified dentists with emergency care training and years of experience handling urgent dental situations.</p>
+                </div>
+
+                <div class="feature">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                            <path d="M152,96H104a8,8,0,0,0-8,8v48a8,8,0,0,0,8,8h48a8,8,0,0,0,8-8V104A8,8,0,0,0,152,96Zm-8,48H112V112h32Zm88,0H216V112h16a8,8,0,0,0,0-16H216V56a16,16,0,0,0-16-16H160V24a8,8,0,0,0-16,0V40H112V24a8,8,0,0,0-16,0V40H56A16,16,0,0,0,40,56V96H24a8,8,0,0,0,0,16H40v32H24a8,8,0,0,0,0,16H40v40a16,16,0,0,0,16,16H96v16a8,8,0,0,0,16,0V216h32v16a8,8,0,0,0,16,0V216h40a16,16,0,0,0,16-16V160h16a8,8,0,0,0,0-16Zm-32,56H56V56H200v95.87s0,.09,0,.13,0,.09,0,.13V200Z"/>
+                        </svg>
+                    </div>
+                    <h3>Modern Equipment</h3>
+                    <p>Full emergency dental facilities at all locations.</p>
+                </div>
+
+                <div class="feature">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                            <path d="M232,64H208V48a8,8,0,0,0-8-8H56a8,8,0,0,0-8,8V64H24A16,16,0,0,0,8,80V96a40,40,0,0,0,40,40h3.65A80.13,80.13,0,0,0,120,191.61V216H96a8,8,0,0,0,0,16h64a8,8,0,0,0,0-16H136V191.58c31.94-3.23,58.44-25.64,68.08-55.58H208a40,40,0,0,0,40-40V80A16,16,0,0,0,232,64ZM48,120A24,24,0,0,1,24,96V80H48v32q0,4,.39,8Zm144-8.9c0,35.52-29,64.64-64,64.9a64,64,0,0,1-64-64V56H192ZM232,96a24,24,0,0,1-24,24h-.5a81.81,81.81,0,0,0,.5-8.9V80h24Z"/>
+                        </svg>
+                    </div>
+                    <h3>Fair Pricing</h3>
+                    <p>Clear costs with payment plans and finance available. Follow-ups after treatment are available free of charge.</p>
+                </div>
+
+                <div class="feature">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                            <path d="M216,88H168V40a16,16,0,0,0-16-16H104A16,16,0,0,0,88,40V88H40a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16H88v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V168h48a16,16,0,0,0,16-16V104A16,16,0,0,0,216,88Zm0,64H160a8,8,0,0,0-8,8v56H104V160a8,8,0,0,0-8-8H40V104H96a8,8,0,0,0,8-8V40h48V96a8,8,0,0,0,8,8h56Z"/>
+                        </svg>
+                    </div>
+                    <h3>Emergency Response Time</h3>
+                    <p>Our average response time to dental emergencies is just under 1 hour.</p>
+                </div>
+
+                <div class="feature">
+                    <div class="icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                            <path d="M230.33,141.06a24.34,24.34,0,0,0-18.61-4.77C230.5,117.33,240,98.48,240,80c0-26.47-21.29-48-47.46-48A47.58,47.58,0,0,0,156,48.75,47.58,47.58,0,0,0,119.46,32C93.29,32,72,53.53,72,80c0,11,3.24,21.69,10.06,33a31.87,31.87,0,0,0-14.75,8.4L44.69,144H16A16,16,0,0,0,0,160v40a16,16,0,0,0,16,16H120a7.93,7.93,0,0,0,1.94-.24l64-16a6.94,6.94,0,0,0,1.19-.4L226,182.82l.44-.2a24.6,24.6,0,0,0,3.93-41.56ZM119.46,48A31.15,31.15,0,0,1,148.6,67a8,8,0,0,0,14.8,0,31.15,31.15,0,0,1,29.14-19C209.59,48,224,62.65,224,80c0,19.51-15.79,41.58-45.66,63.9l-11.09,2.55A28,28,0,0,0,140,112H100.68C92.05,100.36,88,90.12,88,80,88,62.65,102.41,48,119.46,48ZM16,160H40v40H16Zm203.43,8.21-38,16.18L119,200H56V155.31l22.63-22.62A15.86,15.86,0,0,1,89.94,128H140a12,12,0,0,1,0,24H112a8,8,0,0,0,0,16h32a8.32,8.32,0,0,0,1.79-.2l67-15.41.31-.08a8.6,8.6,0,0,1,6.3,15.9Z"/>
+                        </svg>
+                    </div>
+                    <h3>Around-the-Clock Care</h3>
+                    <p>Professional treatment when other clinics are closed.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    "##);
+    
+    site.declare_css("about_our_care", r##"
         
-        
-        
+        section.about-our-care {
+            
+            .inner {
+                
+                position: relative;
+                max-width: 1200px;
+                margin: 0 auto;
+                padding: 120px var(--site-padding-x);
+                
+                .subtitle {
+                    font-size: 16px;
+                    color: var(--turquoise-30);
+                    font-weight: 600;
+                    margin-bottom: 24px;
+                }
+                
+                h2 {
+                    font-size: 36px;
+                    color: var(--turquoise-15);
+                    margin-bottom: 24px;
+                }
+                
+                p {
+                    font-size: 18px;
+                    line-height: 1.6;
+                    color: var(--grey-50);
+                    margin: 0 auto 20px;
+                    font-weight: 300;                      
+                }
+                
+                .text-area {
+                    margin: 0 auto 48px 0;
+                    max-width: 800px;
+                    width: 55%;
+                }
+            
+                .grid {
+                
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                    gap: 24px;
+                    max-width: 1200px;
+                    margin: 0 auto;
+
+                    .feature {
+                        background: rgb(245, 255, 255);
+                        border-radius: 2px;
+                        padding: 32px;
+                        transition: transform 0.2s ease, box-shadow 0.2s ease;
+                        display: relative;
+
+                        &:hover {
+                            transform: translateY(-2px);
+                            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                        }
+
+                        .icon {
+                            width: 48px;
+                            height: 48px;
+                            margin-bottom: 20px;
+                            color: rgb(2, 146, 151);
+
+                            svg {
+                                width: 48px;
+                                height: 48px;
+                                fill: currentColor;
+                            }
+                        }
+
+                        h3 {
+                            color: rgb(1, 73, 75);
+                            font-size: 20px;
+                            font-weight: 600;
+                            margin-bottom: 12px;
+                            line-height: 1.3;
+                        }
+
+                        p {
+                            color: rgb(128, 128, 128);
+                            font-size: 15px;
+                            line-height: 1.6;
+                        }
+                    }
+                }
+            }
+        }
+    "##);
+
         
         
         

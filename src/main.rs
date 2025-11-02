@@ -39,6 +39,13 @@ fn main() {
             },
             specification: AboutUs,
         },
+        Page {
+            foundation: PageFoundation { 
+                title: "Contact".to_owned(),
+                ..default() 
+            },
+            specification: Contact,
+        },
     
     ];
     
@@ -124,6 +131,7 @@ fn main() {
     .add_constructor(Category(String::new(), Vec::new()), construct_category)
     .add_constructor(CategoriesIndex, construct_categories)
     .add_constructor(AboutUs, construct_about_us)
+    .add_constructor(Contact, construct_contact)
     // Your constructors will go here
     .add_head_constructor()
     .add_pages(pages);

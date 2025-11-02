@@ -18,6 +18,10 @@ pub fn construct_footer<T, I>(site: &mut Site<T, I>) -> String {
         .inner {
         
         
+            max-width: 1200px;
+            margin: 0 auto;
+        
+        
             .site-title {
                 font-size: 24tem;
                 transition: transform 0.3s ease;
@@ -80,7 +84,7 @@ pub fn construct_footer<T, I>(site: &mut Site<T, I>) -> String {
                 justify-content: space-between;
                 position: relative;
                 padding-bottom: 48px;
-                margin-bottom: 48px;
+                margin: 0 auto 48px;
                 border-bottom: 1px solid #68f8fd;
                 z-index: 10;
                 nav {
@@ -128,7 +132,6 @@ pub fn construct_footer<T, I>(site: &mut Site<T, I>) -> String {
                 z-index: 10;
                 color: white;
                 font-size: 14px;
-            
             }
                 
         

@@ -9,6 +9,7 @@ pub use crate::{
         category::*,
         categories::*,
         about_us::*,
+        contact::*,
     },
     sections::{
         header::*,
@@ -20,7 +21,6 @@ pub use crate::{
         core_css::*,
         decrees::*,
         head_code::*,
-        sidebar::*,
         schema::*,
     },
     systems::{
