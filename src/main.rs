@@ -123,6 +123,10 @@ fn main() {
     let mut site = Site::<UCDPages, ()> {
         title: SITE_NAME.to_owned(),
         base_url: Url::parse(SITE_URL).unwrap(),
+        settings: Settings {
+            use_trailing_slashes: false,
+            ..default()
+        },
         ..default()  // No imperium needed for this simple site
     }
     .add_constructor(Homepage, construct_homepage)

@@ -11,8 +11,6 @@ pub fn construct_about_us(site: &mut Site<UCDPages>, page: &mut Page<UCDPages>) 
         <body>
             {header}
             <main class="about-us">
-            
-            
                 <section class="our-clinic-stats">
                     <div class="inner">
                     

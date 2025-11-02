@@ -2,9 +2,9 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Start Live Server",
+            "label": "Start Five Server",
             "type": "shell",
-            "command": "${command:extension.liveServer.goOnline}",
+            "command": "${command:fiveServer.start}",
             "presentation": {
                 "reveal": "silent",
                 "panel": "shared",
