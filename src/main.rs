@@ -7,7 +7,7 @@ fn main() {
     let mut pages = vec![
         Page {
             foundation: PageFoundation { 
-                title: SITE_NAME.to_owned(),
+                title: "UrgentCare Dental | £20 Visit (+ Free X-rays)".to_owned(),
                 slug: Some("/".to_owned()),
                 metadescription: Some(SITE_DESCRIPTION.to_owned()),
                 ..default() 
@@ -45,6 +45,13 @@ fn main() {
                 ..default() 
             },
             specification: Contact,
+        },
+        Page {
+            foundation: PageFoundation { 
+                title: "Pricing".to_owned(),
+                ..default() 
+            },
+            specification: Pricing,
         },
     
     ];
@@ -125,6 +132,7 @@ fn main() {
         base_url: Url::parse(SITE_URL).unwrap(),
         settings: Settings {
             use_trailing_slashes: false,
+            
             ..default()
         },
         ..default()  // No imperium needed for this simple site
@@ -136,6 +144,7 @@ fn main() {
     .add_constructor(CategoriesIndex, construct_categories)
     .add_constructor(AboutUs, construct_about_us)
     .add_constructor(Contact, construct_contact)
+    .add_constructor(Pricing, construct_pricing)
     // Your constructors will go here
     .add_head_constructor()
     .add_pages(pages);

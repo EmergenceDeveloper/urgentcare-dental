@@ -11,6 +11,7 @@ pub enum UCDPages {
     CategoriesIndex,
     AboutUs,
     Contact,
+    Pricing,
 }
 
 pub const SITE_NAME: &str = "UrgentCare Dental";

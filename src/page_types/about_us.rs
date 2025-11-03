@@ -12,6 +12,8 @@ pub fn construct_about_us(site: &mut Site<UCDPages>, page: &mut Page<UCDPages>) 
             {header}
             <main class="about-us">
                 <section class="our-clinic-stats">
+                    <div class="polka-dots"></div>
+                    <div class="background-fade"></div>
                     <div class="inner">
                     
                         <div class="intro-area">
@@ -137,30 +139,60 @@ fn css(site: &mut Site<UCDPages>) {
             section.our-clinic-stats {
                 
                 position: relative;
-                max-width: 1200px;
-                margin: 0 auto;
-                padding: 120px var(--site-padding-x) 0;
+                
+                
+                
+                
+                & > .polka-dots {
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background-color: transparent;
+                    background-image: radial-gradient(rgb(2, 220, 227) 1px, transparent 1px), radial-gradient(rgb(2, 220, 227) 1px, rgba(35, 84, 84, 0) 1px);
+                    background-position: 0px 0px, 20px 20px;
+                    background-size: 40px 40px;
+                    border-radius: 0px;
+                }
+                
+                & > .background-fade {
+                    position: absolute;
+                    z-index: 1;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background: linear-gradient(150deg, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 70%);
+                }
                 
                 
                 .inner {
+                    padding: 200px var(--site-padding-x) 0;
+                    z-index: 10;
+                    max-width: 1200px;
+                    margin: 0 auto;
                     
                     .intro-area {
                     
                         display: flex;
                         align-items: end;
                         padding-bottom: 48px;
+                        z-index: 10;
                         
                         .subtitle {
                             font-size: 16px;
                             color: var(--turquoise-30);
                             font-weight: 600;
                             margin-bottom: 24px;
+                            z-index: 10;
                         }
                         
                         h1 {
                             font-size: 48px;
                             color: var(--turquoise-15);
                             margin-bottom: 24px;
+                            z-index: 10;
                         }
                         
                         p {
@@ -168,7 +200,8 @@ fn css(site: &mut Site<UCDPages>) {
                             line-height: 1.6;
                             color: var(--grey-50);
                             margin: 0 auto 20px;
-                            font-weight: 300;  
+                            font-weight: 300; 
+                            z-index: 10; 
                             
                             &:last-child {
                                 margin-bottom: 0;
@@ -179,6 +212,7 @@ fn css(site: &mut Site<UCDPages>) {
                             margin: 0;
                             max-width: 500px;
                             width: 55%;
+                            z-index: 10;
                         }
                         
                         .image-area {
@@ -186,6 +220,7 @@ fn css(site: &mut Site<UCDPages>) {
                             width: 45%;
                             margin: 0 auto;
                             max-width: 400px;
+                            z-index: 10;
                         }
                         
                         
@@ -202,6 +237,7 @@ fn css(site: &mut Site<UCDPages>) {
                         width: 100%;
                         max-width: 1200px;
                         height: min-content;
+                        z-index: 10;
                             
                             
                         .statistic {
@@ -212,6 +248,7 @@ fn css(site: &mut Site<UCDPages>) {
                             padding: 48px;
                             position: relative;
                             background-color: rgb(1, 73, 75);
+                            z-index: 10;
                             
                             .background-fade {
                                 position: absolute;
@@ -223,6 +260,7 @@ fn css(site: &mut Site<UCDPages>) {
                                 right: 0;
                                 bottom: 0;
                                 background: linear-gradient(165deg, rgb(1, 73, 75) 54%, rgba(1, 72, 74, 0) 100%);
+                                z-index: 3;
                             }
                             
                             .polka-dots {
@@ -235,7 +273,7 @@ fn css(site: &mut Site<UCDPages>) {
                                 position: absolute;
                                 bottom: 0;
                                 right: 0;
-                                z-index: 0;
+                                z-index: 2;
                             }
                             
                             h2 {

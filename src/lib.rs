@@ -8,6 +8,7 @@ pub mod page_types {
     pub mod categories;
     pub mod about_us;
     pub mod contact;
+    pub mod pricing;
 }
 
 pub mod sections {

@@ -10,6 +10,7 @@ pub use crate::{
         categories::*,
         about_us::*,
         contact::*,
+        pricing::*,
     },
     sections::{
         header::*,

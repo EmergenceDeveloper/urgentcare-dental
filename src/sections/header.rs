@@ -5,23 +5,23 @@ pub fn construct_header<T, I>(site: &mut Site<T, I>, page: &PageFoundation) -> S
     let nav_items = vec![
         NavItem {
             name: "About Us".to_owned(), 
-            path: "/about-us/".to_owned(),
+            path: "/about-us".to_owned(),
         },
         NavItem {
             name: "Implants".to_owned(), 
-            path: "/implants/".to_owned(),
+            path: "/implants".to_owned(),
         },
         NavItem {
             name: "Plans".to_owned(),
-            path: "/plans/".to_owned(),
+            path: "/plans".to_owned(),
         },
         NavItem {
             name: "Pricing".to_owned(),
-            path: "/pricing/".to_owned(),
+            path: "/pricing".to_owned(),
         },
         NavItem {
             name: "Contact".to_owned(),
-            path: "/contact/".to_owned(),
+            path: "/contact".to_owned(),
         },
     ];
     

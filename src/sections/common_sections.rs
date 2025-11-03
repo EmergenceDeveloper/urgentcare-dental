@@ -747,7 +747,7 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
                                 <p>Complex cases handled by our experienced team. From root canals to oral surgery, we provide complete emergency care.</p>
                             </div>
                         </div>             
-                        <a class="small-button secondary" href="/pricing/" >View Pricing</a> 
+                        <a class="small-button secondary" href="/pricing" >View Pricing</a> 
                     </div>
                     <div class="image-area">
                         <img src="/images/homepage/m0Zzmss4wWYLkh6gcTTNvvdHXro.webp" alt="Dentist working" />
@@ -942,7 +942,7 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
                         </ul>
                     </div>
                 </div>
-                <a class="small-button secondary" href="/pricing/" >View Pricing</a>
+                <a class="small-button secondary" href="/pricing" >View Pricing</a>
             </div>
         
         </section>
