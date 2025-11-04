@@ -40,26 +40,21 @@ pub fn construct_blog(site: &mut Site<UCDPages>, page: &mut Page<UCDPages>) {
         };
 
         let post_item = format!(r##"
-        <div class="post-card">
-            <a href="{link}">
-                <div class="image-wrapper">
-                    {image_html}
-                    <div class="overlay">
-                        <div class="category">{category}</div>
-                        <h3 class="title">{title}</h3>
+            <article class="post">
+                <a href="{link}">
+                    <div class="image-area">
+                        {image_html}
                     </div>
-                </div>
-                <div class="content">
-                    <p>{description}</p>
-                    <div class="meta">
-                        <span class="date">{date}</span>
+                    <div class="text-area">
                         <div class="tags">
                             {tags_html}
                         </div>
+                        <h3 class="title">{title}</h3>
+                        <p>{description}</p>
+                        <div class="date"><p>{date}</p></div>
                     </div>
-                </div>
-            </a>
-        </div>
+                </a>
+            </article>
     "##);
 
         post_list.push(post_item);
@@ -70,18 +65,30 @@ pub fn construct_blog(site: &mut Site<UCDPages>, page: &mut Page<UCDPages>) {
     
     let html = format!(r##"
         <!DOCTYPE html>
+        
         <html lang="en-US">
         {head}
         <body>
             {header}
             <main class="blog">
-                <div class="blog-header">
-                    <h1>Blog</h1>
-                    <p>Description</p>
-                </div>
-                <div class="posts-grid">
-                    {posts}
-                </div>
+                <section class="blog-intro">
+                    <div class="polka-dots"></div>
+                    <div class="background-fade"></div>
+                    <div class="inner">
+                        <div class="text-area">
+                            <h1>Blog</h1>
+                            <p>Your complete UK dental information hub. We publish the latest data, costs, and trends across Britain's dental services - from emergency wait times to treatment pricing across major cities.</p>
+                        </div>
+                    </div>
+                
+                </section>
+                <section class="posts">
+                    <div class="inner">
+                        <div class="grid">
+                            {posts}
+                        </div>
+                    </div>
+                </section>
             </main>
             {footer}
         </body>
@@ -100,188 +107,239 @@ pub fn construct_blog(site: &mut Site<UCDPages>, page: &mut Page<UCDPages>) {
     
     site.declare_css("blog", r##"
     
-    
         main.blog {
-            max-width: 1000px;
-        }
-    
-        .blog-header {
-            text-align: center;
-            padding: 60px var(--site-padding-x) 40px;
-            max-width: 800px;
-            margin: 0 auto;
-            
-            h1 {
-                font-size: 42tem;
-                font-weight: 300;
-                letter-spacing: 2px;
-                margin-bottom: 15px;
-            }
-            
-            p {
-                font-size: 18tem;
-                color: #666;
-                line-height: 1.6;
-            }
-        }
         
-        .posts-grid {
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 0 var(--site-padding-x);
-            columns: 3;
-            column-gap: 20px;
-            
-            @media (max-width: 968px) {
-                columns: 2;
-            }
-            
-            @media (max-width: 640px) {
-                columns: 1;
-            }
-        }
         
-        .post-card {
-            break-inside: avoid;
-            margin-bottom: 20px;
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
-            transition: all 0.3s ease;
-            cursor: pointer;
-            animation: fadeIn 0.6s ease-out;
-            
-            &:hover {
-                transform: translateY(-5px);
-                box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        
+            /* Staggered animation */
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
             }
             
-            a {
-                text-decoration: none;
-                color: inherit;
+            
+            section.blog-intro {
+                
                 display: block;
-            }
-            
-            .image-wrapper {
                 position: relative;
-                overflow: hidden;
+                margin: 0 auto;
                 
-                img {
+                
+                
+                .polka-dots {
+                    position: absolute;
                     width: 100%;
-                    height: auto;
-                    display: block;
-                    transition: transform 0.5s ease;
+                    height: 100%;
+                    background-color: transparent;
+                    background-image: radial-gradient(rgb(2, 220, 227) 1px, transparent 1px), radial-gradient(rgb(2, 220, 227) 1px, rgba(35, 84, 84, 0) 1px);
+                    background-position: 0px 0px, 20px 20px;
+                    background-size: 40px 40px;
+                    border-radius: 0px;
                 }
                 
-                &:hover img {
-                    transform: scale(1.05);
+                .background-fade {
+                    position: absolute;
+                    z-index: 1;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background: linear-gradient(150deg, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 70%);
                 }
-            }
+                
             
-            .overlay {
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.7) 100%);
-                //opacity: 0;
-                transition: opacity 0.3s ease;
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-end;
-                padding: 20px;
                 
-                .category {
-                    color: var(--primary);
-                    font-size: 11tem;
-                    text-transform: uppercase;
-                    letter-spacing: 1px;
-                    margin-bottom: 5px;
-                }
-                
-                .title {
-                    color: white;
-                    font-size: 18tem;
-                    font-weight: 500;
-                    line-height: 1.3;
-                    margin: 0;
-                }
-            }
-            
-            /*&:hover .overlay {
-                opacity: 1;
-            }*/
-            
-            .content {
-                padding: 20px;
-                
-                h3 {
-                    font-size: 18tem;
-                    margin-bottom: 10px;
-                    color: #333;
-                    font-weight: 500;
-                    line-height: 1.3;
-                }
-                
-                p {
-                    font-size: 14tem;
-                    color: #666;
-                    line-height: 1.6;
-                    margin-bottom: 15px;
-                }
-            }
-            
-            .meta {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding-top: 15px;
-                border-top: 1px solid #f0f0f0;
-                
-                .date {
-                    font-size: 12tem;
-                    color: #999;
-                }
-                
-                .tags {
-                    display: flex;
-                    gap: 8px;
+                .inner {
                     
-                    .tag {
-                        display: inline-block;
-                        padding: 4px 12px;
-                        background: var(--primary);
-                        color: white;
-                        font-size: 11tem;
-                        border-radius: 15px;
-                        text-transform: uppercase;
-                        letter-spacing: 0.5px;
+                    max-width: 1200px;
+                    display: flex;
+                    align-items: end;
+                    padding-bottom: 48px;
+                    padding: 200px var(--site-padding-x) 0;
+                    margin: 0 auto;
+                    
+                    .text-area {
+                    
+                        margin: 0;
+                        z-index: 10;
+                    
+                        .subtitle {
+                            font-size: 16px;
+                            color: var(--turquoise-30);
+                            font-weight: 600;
+                            margin-bottom: 24px;
+                        }
+                        
+                        h1 {
+                            font-size: 48px;
+                            color: var(--turquoise-15);
+                            margin-bottom: 24px;
+                        }
+                        
+                        p {
+                            font-size: 18px;
+                            line-height: 1.6;
+                            color: var(--grey-50);
+                            margin: 0 auto 20px;
+                            font-weight: 300;  
+                            
+                            &:last-child {
+                                margin-bottom: 0;
+                            }
+                        }
+                        
+                        h2 {
+                            font-size: 16px;
+                            color: var(--turquoise-15);
+                            margin-bottom: 24px;
+                        }
+       
+                    
+                    
+                        
                     }
+
+                    
+                    
                 }
+                
             }
+            
+            
+            section.posts {
+            
+                .inner {
+                
+                    display: grid;
+                    grid-template-columns: (2, 1fr);
+                    grid-gap: 24px;
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    padding: 0 var(--site-padding-x);
+                    
+                    .grid {
+                    
+                        display: grid;
+                        grid-template-columns: repeat(2, 1fr);
+                        grid-auto-flow: row;
+                        gap: 2rem;
+                        padding: 48px 0 120px;
+                        
+                        a, a:hover {
+                            
+                            text-decoration: none;
+                            color: inherit;
+        
+                        }
+                    
+                        .post {
+
+                            animation: fadeIn 0.5s ease-in-out;
+                            
+                            &:nth-child(odd) {
+                                animation-delay: 0.1s;
+                            }
+                            
+                            &:nth-child(even) {
+                                animation-delay: 0.2s;
+                            }
+                            
+                            .image-area {
+                            
+                                margin-bottom: 12px;
+                            
+                                img {
+                                
+                                    aspect-ratio: 2/1;
+                                    object-fit: cover;
+                                }
+                                
+                            }
+                            
+                            .text-area {
+                            
+                                display: flex;
+                                flex-direction: column;
+                                gap: 12px;
+                                
+                                .tags {
+                                
+                                    place-content: center flex-start;
+                                    align-items: center;
+                                    display: flex;
+                                    flex: 0 0 auto;
+                                    flex-flow: wrap;
+                                    gap: 12px;
+                                    height: min-content;
+                                    overflow: visible;
+                                    padding: 0px;
+                                    position: relative;
+                                    width: 100%;
+                                    
+                                    
+                                    .tag {
+                                    
+                                        font-size: 14px;
+                                        background-color:rgb(204, 255, 255);
+                                        border-radius: 2px;
+                                        opacity: 1;
+                                        color: var(--turquoise-15);
+                                        place-content: center;
+                                        align-items: center;
+                                        display: flex;
+                                        flex-flow: row;
+                                        gap: 10px;
+                                        height: min-content;
+                                        overflow: visible;
+                                        padding: 2px 12px;
+                                        position: relative;
+                                    }
+                                }
+                            
+                                
+                                h2, h3 {
+                                    color: var(--turquoise-15);
+                                    font-size: 18px;
+                                    font-weight: 700;
+                                    margin-bottom: 0;
+                                }
+                                
+                                p {
+                                    font-size: 14px;
+                                    color: var(--grey-50);
+                                    margin-bottom: 0;
+                                
+                                }
+                            
+                            
+                            }
+                        }
+                        
+                    
+                    }
+                    
+                    
+
+                    
+                }
+                
+            
+            }
+            
+
         }
         
-        /* Staggered animation */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
         
-        .post-card:nth-child(odd) {
-            animation-delay: 0.1s;
-        }
         
-        .post-card:nth-child(even) {
-            animation-delay: 0.2s;
-        }
+        
     
     "##);
     

@@ -20,6 +20,10 @@ pub fn construct_header<T, I>(site: &mut Site<T, I>, page: &PageFoundation) -> S
             path: "/pricing".to_owned(),
         },
         NavItem {
+            name: "Blog".to_owned(),
+            path: "/blog".to_owned(),
+        },
+        NavItem {
             name: "Contact".to_owned(),
             path: "/contact".to_owned(),
         },
