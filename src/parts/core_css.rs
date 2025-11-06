@@ -150,8 +150,6 @@ pub fn add_core_css<T, I>(site: &mut Site<T, I>) {
     
     :root {
         
-        
-    
         --turquoise-15: #01494B;
         --turquoise-30: #029297;
         --turquoise-70: #68F8FD;
@@ -161,8 +159,8 @@ pub fn add_core_css<T, I>(site: &mut Site<T, I>) {
         --grey-25: #404040;
         --grey-50: #808080;
         
-        --primary: var(--turqoise-15);
-        --secondary: var(--turquoise-30);
+        --primary: #006f73;
+        --secondary: #003133;
         
         --link-color: var(--primary);
         --link-hover-color: var(--secondary);

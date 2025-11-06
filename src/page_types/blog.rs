@@ -25,10 +25,10 @@ pub fn construct_blog(site: &mut Site<UCDPages>, page: &mut Page<UCDPages>) {
             .map(|c| c.as_str())
             .unwrap_or("Uncategorized");
         
-        // Get up to two tags
+        // Get up to three tags
         let tags_html = post.frontmatter.tags
             .iter()
-            .take(2)
+            .take(3)
             .map(|tag| format!(r##"<span class="tag">{}</span>"##, tag))
             .collect::<Vec<_>>()
             .join("");
