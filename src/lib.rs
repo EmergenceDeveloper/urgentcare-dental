@@ -10,6 +10,7 @@ pub mod page_types {
     pub mod contact;
     pub mod pricing;
     pub mod implants;
+    pub mod policy_pages;
 }
 
 pub mod sections {

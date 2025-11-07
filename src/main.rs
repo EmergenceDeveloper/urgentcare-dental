@@ -59,6 +59,38 @@ fn main() {
             },
             specification: Implants,
         },
+        Page {
+            foundation: PageFoundation { 
+                title: "Privacy Policy".to_owned(),
+                slug: Some("privacy-policy".to_owned()),
+                ..default() 
+            },
+            specification: PolicyPage,
+        },
+        Page {
+            foundation: PageFoundation { 
+                title: "Terms and Conditions".to_owned(),
+                slug: Some("terms-and-conditions".to_owned()),
+                ..default() 
+            },
+            specification: PolicyPage,
+        },
+        Page {
+            foundation: PageFoundation { 
+                title: "Complaints Procedure".to_owned(),
+                slug: Some("complaints".to_owned()),
+                ..default() 
+            },
+            specification: PolicyPage,
+        },
+        Page {
+            foundation: PageFoundation { 
+                title: "Cookie Policy".to_owned(),
+                slug: Some("cookie-policy".to_owned()),
+                ..default() 
+            },
+            specification: PolicyPage,
+        },
     
     ];
     
@@ -152,6 +184,7 @@ fn main() {
     .add_constructor(Contact, construct_contact)
     .add_constructor(Pricing, construct_pricing)
     .add_constructor(Implants, construct_implants)
+    .add_constructor(PolicyPage, construct_policy_pages)
     // Your constructors will go here
     .add_head_constructor()
     .add_pages(pages);

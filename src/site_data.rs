@@ -13,6 +13,7 @@ pub enum UCDPages {
     Contact,
     Pricing,
     Implants,
+    PolicyPage,
 }
 
 pub const SITE_NAME: &str = "UrgentCare Dental";
