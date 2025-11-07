@@ -9,6 +9,7 @@ pub mod page_types {
     pub mod about_us;
     pub mod contact;
     pub mod pricing;
+    pub mod implants;
 }
 
 pub mod sections {

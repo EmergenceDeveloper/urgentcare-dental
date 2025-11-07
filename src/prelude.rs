@@ -11,6 +11,7 @@ pub use crate::{
         about_us::*,
         contact::*,
         pricing::*,
+        implants::*,
     },
     sections::{
         header::*,

@@ -23,11 +23,11 @@ pub fn construct_post(site: &mut Site<UCDPages>, page: &mut Page<UCDPages>) {
         .unwrap_or("Uncategorized");
 
     let category_slug = slugify(category);
-    let author = if !post.frontmatter.author.is_empty() {
+    /*let author = if !post.frontmatter.author.is_empty() {
         format!(" by {}", post.frontmatter.author)
     } else {
         String::new()
-    };
+    };*/
     
     // Build meta HTML with both date and updated
     let meta_html = if date.is_empty() && post.frontmatter.updated.is_empty() {

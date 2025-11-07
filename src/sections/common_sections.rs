@@ -461,6 +461,7 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
             align-items: center;
             justify-content: center;
             margin: 0 auto;
+            position: relative;
             
             .polka-dots {
                 width: 100%;
@@ -549,13 +550,20 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
             .person-area {
                 
                 z-index: 8;
+                width: 700px;
+                max-width: 55vw;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                position: relative;
                 
                 img {
                     object-position: center center;
                     object-fit: contain;
                     width: 100%;
-                    margin-bottom: -30vh;
                     z-index: 10;
+                    
                 }
                 
                 .shadow {
@@ -564,7 +572,7 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
                     border-radius: 2000px;
                     height: 1200px;
                     width: 640px;
-                    margin-top: 80px;
+                    bottom: -400px;
                     filter: blur(100px);
                     -webkit-filter: blur(100px);
                     opacity: .25;
@@ -1054,12 +1062,13 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
                         
                         p {
                             margin: 0;
+                            font-size: 14px;
                         }
                         
                         h3 {
                             font-size: 18px;
                             color: var(--turquoise-15);
-                            margin-bottom: 8px;
+                            margin-bottom: 24px;
                         }
                         
                         a {
@@ -1076,8 +1085,9 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
                                 color: var(--grey-50);
                                 position: relative;
                                 padding-left: 0;
-                                margin: 0;
+                                margin: 0 0 8px;
                                 line-height: 1.6;
+                                text-wrap: nowrap;
                                 
                                 &::before {
                                     content: "✓";

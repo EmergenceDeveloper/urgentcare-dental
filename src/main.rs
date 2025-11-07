@@ -14,7 +14,6 @@ fn main() {
             },
             specification: Homepage,
         },
-
         Page {
             foundation: PageFoundation { 
                 title: "Blog".to_owned(),
@@ -22,7 +21,6 @@ fn main() {
             },
             specification: PostList,
         },
-        
         Page {
             foundation: PageFoundation { 
                 title: "Categories".to_owned(),
@@ -52,6 +50,14 @@ fn main() {
                 ..default() 
             },
             specification: Pricing,
+        },
+        Page {
+            foundation: PageFoundation { 
+                title: "Dental Implants That Last a Lifetime | Free Consultations".to_owned(),
+                slug: Some("implants".to_owned()),
+                ..default() 
+            },
+            specification: Implants,
         },
     
     ];
@@ -145,6 +151,7 @@ fn main() {
     .add_constructor(AboutUs, construct_about_us)
     .add_constructor(Contact, construct_contact)
     .add_constructor(Pricing, construct_pricing)
+    .add_constructor(Implants, construct_implants)
     // Your constructors will go here
     .add_head_constructor()
     .add_pages(pages);
