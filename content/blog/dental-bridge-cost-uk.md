@@ -2,11 +2,9 @@
 +++
 title = "Dental Bridge Cost UK: What You'll Actually Pay in 2025"
 description = "Private dental bridge costs in the UK range from £350 to £4,800. UrgentCare Dental charges £595 per unit. Here's what determines the final price and how long bridges actually last."
-author = ""
 date = 2025-10-21
 image = "/images/blog/dental-bridge-cost-uk.avif"
-category = "Dental Costs"
-tags = ["Dental Bridges", "Private Dentistry", "Restorative Dentistry"]
+tags = ["Dental Bridges", "Restorative Dentistry", "Private Dentistry"]
 +++
 
 The thing about missing teeth is they don't stay missing in isolation. They take the rest of your mouth with them.

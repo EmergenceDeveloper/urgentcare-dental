@@ -508,11 +508,15 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
                     font-size: 18px;
                     color: #fff;
                     line-height: 1.4em;
-                    paragraph-spacing: 20px;
                     font-weight: 300;
+                    
+                    &:last-of-type {
+                        margin-bottom: 0px;
+                    }
                 }
                     
                 .buttons {
+                    margin-top: 48px;
                     display: flex;
                     gap: 10px;
                     font-size: 22px;
@@ -521,7 +525,7 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
                     height: min-content;
                     place-content: center flex-start;
                     align-items: center;
-                    max-width: 576px;
+                    max-width: 550px;
                 
                     
                     .primary {
@@ -546,7 +550,7 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
                     }
                 }
             }
-                
+
             .person-area {
                 
                 z-index: 8;

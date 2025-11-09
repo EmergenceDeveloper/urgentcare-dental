@@ -308,7 +308,7 @@ pub fn construct_blog(site: &mut Site<UCDPages>, page: &mut Page<UCDPages>) {
                                 h2, h3 {
                                     color: var(--turquoise-15);
                                     font-size: 18px;
-                                    font-weight: 700;
+                                    font-weight: 600;
                                     margin-bottom: 0;
                                 }
                                 

@@ -3,8 +3,8 @@
 title = "Dental Anxiety Treatment Options"
 description = "What treatment options exist for dental anxiety in the UK, from laughing gas to IV sedation, including costs and what actually happens with each approach."
 date = 2025-10-19
-tags = ["Dental Anxiety", "Sedation Options", "Treatment Costs"]
 image = "/images/blog/dental-anxiety-treatment-options.avif"
+tags = ["Dental Anxiety", "Treatment Costs", "Sedation Options"]
 +++
 
 Here's what nobody tells you about dental anxiety treatment: it's not about making you brave. It's about changing the fundamental experience of sitting in that chair.

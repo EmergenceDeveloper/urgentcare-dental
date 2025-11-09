@@ -18,6 +18,7 @@ pub fn add_core_css<T, I>(site: &mut Site<T, I>) {
             padding: 0;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
+            letter-spacing: -0.4px;
         }
 
         a {
