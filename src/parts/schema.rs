@@ -295,21 +295,26 @@ pub fn add_blog_post_schema(
         String::new()
     };
     
-    // Use author if set, otherwise use Organization
-    let author = if !post.frontmatter.author.is_empty() {
-        json!({
-            "@type": "Person",
-            "name": post.frontmatter.author
-        })
+    // Use author if set, otherwise use UCD Editorial Team
+    let (author, author_id) = if !post.frontmatter.author.is_empty() {
+        (
+            json!({
+                "@type": "Person",
+                "name": post.frontmatter.author
+            }),
+            format!("https://urgentcaredental.co.uk/author/{}#person", slugify(&post.frontmatter.author))
+        )
     } else {
-        json!({
-            "@type": "Organization",
-            "name": SITE_NAME,
-            "logo": {
-                "@type": "ImageObject",
-                "url": format!("{}images/logo.png", SITE_URL)
-            }
-        })
+        (
+            json!({
+                "@type": "Person",
+                "@id": "https://urgentcaredental.co.uk/author/editorial-team#person",
+                "name": "UCD Editorial Team",
+                "jobTitle": "Department of Dentistry Journalism",
+                "worksFor": {"@id": format!("{}#organization", SITE_URL)}
+            }),
+            "https://urgentcaredental.co.uk/author/editorial-team#person".to_owned()
+        )
     };
     
     // Build image array for better SEO
@@ -327,33 +332,54 @@ pub fn add_blog_post_schema(
         json!([format!("{}images/logo.png", SITE_URL)])
     };
     
+    let article_url = format!("{}{}", SITE_URL, post.slug);
+    
     let article_schema = json!({
         "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": format!("{}{}", SITE_URL, post.slug)
+        "@type": "Article",
+        "@id": format!("{}#article", article_url),
+        "isPartOf": {"@id": article_url},
+        "author": {
+            "name": if !post.frontmatter.author.is_empty() { 
+                post.frontmatter.author.clone() 
+            } else { 
+                "UCD Editorial Team".to_owned() 
+            },
+            "@id": author_id,
+            "jobTitle": if post.frontmatter.author.is_empty() { 
+                Some("Department of Dentistry Journalism") 
+            } else { 
+                None 
+            },
+            "worksFor": if post.frontmatter.author.is_empty() { 
+                Some(json!({"@id": format!("{}#organization", SITE_URL)})) 
+            } else { 
+                None 
+            }
         },
         "headline": post.frontmatter.title.clone(),
         "description": post.frontmatter.description.clone(),
         "image": image,
-        "author": author,
-        "publisher": {
-            "@type": "Organization",
-            "name": SITE_NAME,
-            "logo": {
-                "@type": "ImageObject",
-                "url": format!("{}images/logo.png", SITE_URL),
-                "width": 600,
-                "height": 60
-            }
-        },
         "datePublished": date_published,
         "dateModified": date_modified,
-        "articleSection": post.frontmatter.category.first().unwrap_or(&"General".to_owned()).clone(),
+        "mainEntityOfPage": {"@id": article_url},
+        "publisher": {"@id": format!("{}#organization", SITE_URL)},
+        "articleSection": post.frontmatter.category.first().map(|c| vec![c.clone()]).unwrap_or_else(Vec::new),
         "keywords": post.frontmatter.tags.join(", "),
         "wordCount": post.content.split_whitespace().count(),
-        "inLanguage": "en-US"
+        "inLanguage": "en-GB"
+    });
+    
+    let webpage_schema = json!({
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "@id": article_url,
+        "url": article_url,
+        "name": post.frontmatter.title.clone(),
+        "isPartOf": {"@id": format!("{}#website", SITE_URL)},
+        "datePublished": date_published,
+        "dateModified": date_modified,
+        "inLanguage": "en-GB"
     });
     
     // Add breadcrumb schema
@@ -404,7 +430,7 @@ pub fn add_blog_post_schema(
         None
     };
     
-    let mut graph_items = vec![article_schema, breadcrumb_schema];
+    let mut graph_items = vec![article_schema, webpage_schema, author, breadcrumb_schema];
     if let Some(faq) = faq_schema {
         graph_items.push(faq);
     }
