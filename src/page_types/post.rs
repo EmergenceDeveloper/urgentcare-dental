@@ -165,6 +165,12 @@ fn css(site: &mut Site<UCDPages>) {
                 z-index: 10;
                 margin: 0 auto;
                 box-sizing: border-box;
+                
+                @media (max-width: 768px) {
+                
+                    padding: 100px 12px 100px;
+                
+                }
 
                 article.content {
                 
@@ -176,12 +182,15 @@ fn css(site: &mut Site<UCDPages>) {
                     
                     .meta-area {
                     
-                        margin-bottom: 40px;
+                        margin-bottom: 32px;
                         display: flex;
                         justify-content: space-between;
+                        font-size: 14px;
+                        
+                        
                         
                             .breadcrumbs {
-                                font-size: 16px;
+                                
                                 /*border-bottom: 1px solid #eee;*/
                                 z-index: 10;
                                 
@@ -203,7 +212,6 @@ fn css(site: &mut Site<UCDPages>) {
                             }
                         
                             .meta {
-                                font-size: 16px;
                                 color: #666;
                             
                             
@@ -342,6 +350,10 @@ fn css(site: &mut Site<UCDPages>) {
                         line-height: 1.2;
                         margin-bottom: 48px;
                         color: var(--turquoise-15);
+                        
+                        @media (max-width: 768px) {
+                            font-size: 30px;
+                        }
                     }
                     
                     .content {
@@ -361,11 +373,15 @@ fn css(site: &mut Site<UCDPages>) {
                         }
                         
                         h2 {
-                            font-size: 27px;
+                            font-size: 36px;
                             font-weight: 600;
                             line-height: 1.2;
                             margin: 40px 0 20px;
-                            color: #333;
+                            color: var(--turquoise-15);
+                            
+                            @media (max-width: 768px) {
+                                font-size: 32px;
+                            }
                         }
                         
                         h3 {
@@ -373,7 +389,7 @@ fn css(site: &mut Site<UCDPages>) {
                             font-weight: 600;
                             line-height: 1.2;
                             margin: 30px 0 20px;
-                            color: #333;
+                            color: var(--turquoise-15);
                         }
                         
                         h4 {
@@ -381,7 +397,7 @@ fn css(site: &mut Site<UCDPages>) {
                             font-weight: 600;
                             line-height: 1.2;
                             margin: 25px 0 15px;
-                            color: #333;
+                            color: var(--turquoise-15);
                         }
                         
                         a {

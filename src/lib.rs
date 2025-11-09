@@ -11,6 +11,7 @@ pub mod page_types {
     pub mod pricing;
     pub mod implants;
     pub mod policy_pages;
+    pub mod plans;
 }
 
 pub mod sections {

@@ -2,39 +2,240 @@ use crate::prelude::*;
 use serde_json::json;
 
 pub fn add_sitewide_schema<T, I>(site: &mut Site<T, I>) {
-    let organization_schema = json!({
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": SITE_NAME,
-        "url": SITE_URL,
-        "description": SITE_DESCRIPTION,
-        "logo": {
-            "@type": "ImageObject",
-            "url": format!("{}images/logo.png", SITE_URL)
-        },
-        "sameAs": []
-    });
-    
     let website_schema = json!({
         "@context": "https://schema.org",
         "@type": "WebSite",
+        "@id": format!("{}#website", SITE_URL),
+        "url": SITE_URL,
+        "name": SITE_NAME,
+        "description": SITE_DESCRIPTION,
+        "publisher": {"@id": format!("{}#organization", SITE_URL)},
+        "inLanguage": "en-GB"
+    });
+    
+    let organization_schema = json!({
+        "@context": "https://schema.org",
+        "@type": ["Organization", "Dentist", "MedicalOrganization"],
+        "@id": format!("{}#organization", SITE_URL),
         "name": SITE_NAME,
         "url": SITE_URL,
-        "publisher": {
-            "@type": "Organization",
-            "name": SITE_NAME,
-            "logo": {
-                "@type": "ImageObject",
-                "url": format!("{}images/logo.png", SITE_URL)
-            }
+        "telephone": PHONE_NUMBER,
+        "priceRange": "££",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "313a Roundhay Rd Harehills",
+            "addressLocality": "Leeds",
+            "addressRegion": "West Yorkshire",
+            "postalCode": "LS8 4HT",
+            "addressCountry": "GB"
         },
-        "potentialAction": {
-            "@type": "SearchAction",
-            "target": {
-                "@type": "EntryPoint",
-                "urlTemplate": format!("{}search?q={{search_term_string}}", SITE_URL)
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "53.81877457313221",
+            "longitude": "-1.5152765134916233"
+        },
+        "areaServed": [
+            {
+                "@type": "City",
+                "name": "Leeds"
             },
-            "query-input": "required name=search_term_string"
+            {
+                "@type": "City",
+                "name": "Manchester"
+            },
+            {
+                "@type": "AdministrativeArea",
+                "name": "Northern England"
+            }
+        ],
+        "openingHoursSpecification": [
+            {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                    "Monday",
+                    "Tuesday",
+                    "Wednesday",
+                    "Thursday",
+                    "Friday",
+                    "Saturday",
+                    "Sunday"
+                ],
+                "opens": "00:00",
+                "closes": "23:59"
+            }
+        ],
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "292",
+            "bestRating": "5",
+            "worstRating": "1"
+        },
+        "review": [
+            {
+                "@type": "Review",
+                "author": {
+                    "@type": "Person",
+                    "name": "Sarah Mitchell"
+                },
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5"
+                },
+                "reviewBody": "Sorted my broken crown same evening. Clean modern practice, caring staff. Called several dentists but only these could help after hours. Quick response on the phone and clear pricing upfront. The dentist explained everything thoroughly."
+            },
+            {
+                "@type": "Review",
+                "author": {
+                    "@type": "Person",
+                    "name": "Emma Wilson"
+                },
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5"
+                },
+                "reviewBody": "Relief from abscess pain when my regular dentist was closed. Worth every penny for evening care. Was worried about needing emergency treatment but they made the whole process straightforward. Excellent follow-up care instructions too."
+            },
+            {
+                "@type": "Review",
+                "author": {
+                    "@type": "Person",
+                    "name": "Jennifer O'Connor"
+                },
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5"
+                },
+                "reviewBody": "Emergency visit for broken crown. Reception was efficient and got me in within 30 minutes. Thorough treatment and helpful aftercare advice. Great to know they're available when needed."
+            },
+            {
+                "@type": "Review",
+                "author": {
+                    "@type": "Person",
+                    "name": "David Thompson"
+                },
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5"
+                },
+                "reviewBody": "Sorted my broken crown same evening. Clean modern practice, caring staff. Called several dentists but only these could help after hours. Quick response on the phone and clear pricing upfront. The dentist explained everything thoroughly."
+            },
+            {
+                "@type": "Review",
+                "author": {
+                    "@type": "Person",
+                    "name": "David Chen"
+                },
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5"
+                },
+                "reviewBody": "Sudden toothache after work - really relieved they could see me same evening. Quick appointment and professional service. Dentist explained everything clearly and fixed the problem. Clean, modern clinic."
+            },
+            {
+                "@type": "Review",
+                "author": {
+                    "@type": "Person",
+                    "name": "Fatima Rahman"
+                },
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5",
+                    "bestRating": "5"
+                },
+                "reviewBody": "Called with severe pain from abscess. Professional team and prompt service got me sorted quickly. Clean facilities and caring staff made a stressful situation much easier. Very grateful for their help."
+            }
+        ],
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Emergency & Dental Services",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "MedicalProcedure",
+                        "name": "Emergency Dental Appointment",
+                        "description": "Immediate attention for urgent dental issues, including pain relief"
+                    },
+                    "price": "20",
+                    "priceCurrency": "GBP",
+                    "availability": "https://schema.org/InStock"
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "MedicalProcedure",
+                        "name": "Simple Tooth Extraction",
+                        "description": "Removal of damaged or impacted teeth"
+                    },
+                    "price": "149",
+                    "priceCurrency": "GBP",
+                    "availability": "https://schema.org/InStock"
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "MedicalProcedure",
+                        "name": "Complex Tooth Extraction",
+                        "description": "Removal of damaged or impacted teeth requiring specialized techniques"
+                    },
+                    "price": "349",
+                    "priceCurrency": "GBP",
+                    "availability": "https://schema.org/InStock"
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "MedicalProcedure",
+                        "name": "Surgical Tooth Extraction",
+                        "description": "Advanced surgical removal of impacted or difficult teeth"
+                    },
+                    "price": "549",
+                    "priceCurrency": "GBP",
+                    "availability": "https://schema.org/InStock"
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "MedicalProcedure",
+                        "name": "Dental Filling",
+                        "description": "Restoration of cavities to prevent further tooth decay"
+                    },
+                    "price": "99",
+                    "priceCurrency": "GBP",
+                    "availability": "https://schema.org/InStock"
+                },
+                {
+                    "@type": "Offer",
+                    "itemOffered": {
+                        "@type": "MedicalProcedure",
+                        "name": "Dental Implant",
+                        "description": "Permanent tooth replacement using surgical implants"
+                    },
+                    "price": "1999",
+                    "priceCurrency": "GBP",
+                    "availability": "https://schema.org/InStock"
+                }
+            ]
+        },
+        "paymentAccepted": ["Cash", "Credit Card", "Debit Card", "Bank Transfer"],
+        "currenciesAccepted": "GBP",
+        "availableLanguage": "en-GB",
+        "medicalSpecialty": "Emergency Dentistry",
+        "serviceType": "Emergency Dental Care",
+        "serviceArea": {
+            "@type": "GeoCircle",
+            "geoMidpoint": {
+                "@type": "GeoCoordinates",
+                "latitude": "53.81877457313221",
+                "longitude": "-1.5152765134916233"
+            },
+            "geoRadius": "50000"
         }
     });
     
@@ -56,7 +257,7 @@ pub fn add_sitewide_schema<T, I>(site: &mut Site<T, I>) {
     
     let graph = json!({
         "@context": "https://schema.org",
-        "@graph": [organization_schema, website_schema, weblog_schema]
+        "@graph": [website_schema, organization_schema, weblog_schema]
     });
     
     let schema_script = format!(

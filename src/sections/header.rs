@@ -47,7 +47,7 @@ pub fn construct_header<T, I>(site: &mut Site<T, I>, page: &PageFoundation) -> S
     let directive_item = NavWrappedItem { 
         name: "Jobs".to_owned(), 
         path: BOOKING_LINK.to_owned(),
-        content: r##"Book Appointment"##.to_owned(),
+        content: r##"Book<span> Appointment</span>"##.to_owned(),
         class: Some("directive".to_owned()),
     };
     
@@ -87,6 +87,35 @@ pub fn construct_header<T, I>(site: &mut Site<T, I>, page: &PageFoundation) -> S
             margin: 0 auto;
             max-width: 100%;
             background-color: white;
+            transition: backdrop-filter 0.3s ease, background-color 0.3s ease;
+            
+            &.transparent {
+                backdrop-filter: blur(25px);
+                background-color: rgba(255, 255, 255, 0);
+                
+                nav {
+                    a {
+                        color: white;
+                    }
+                    
+                    .site-title {
+                        color: white;
+                        
+                        .logo {
+                            content: url('/images/branding/UrgentCare-Dental-Logo-White.svg');
+                        }
+                        
+                        .urgent, .care, .dental {
+                            color: #ccffff;
+                        }
+                    }
+                    
+                    .directive {
+                        background-color: white;
+                        color: var(--turquoise-15);
+                    }
+                }
+            }
             
             nav {
                 --transform: scale(0.97);
@@ -158,6 +187,14 @@ pub fn construct_header<T, I>(site: &mut Site<T, I>, page: &PageFoundation) -> S
                 }
             }
         }
+        
+        @media screen and (max-width: 1180px) {
+            .directive span {
+            
+                display: none;
+            
+            }
+        }
 
         @media screen and (max-width: [mobile]) {
 
@@ -174,7 +211,15 @@ pub fn construct_header<T, I>(site: &mut Site<T, I>, page: &PageFoundation) -> S
                     gap: 0px;
                     
                     .directive {
+                        span {
+            
+                            display: revert;
+                        
+                        }
+                        
                         display: none;
+                        
+                        
                     }
                     
                     ul {

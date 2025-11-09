@@ -13,6 +13,7 @@ pub use crate::{
         pricing::*,
         implants::*,
         policy_pages::*,
+        plans::*,
     },
     sections::{
         header::*,

@@ -21,7 +21,7 @@ fn main() {
             },
             specification: PostList,
         },
-        Page {
+        /*Page {
             foundation: PageFoundation { 
                 title: "Categories".to_owned(),
                 slug: Some("categories".to_owned()),
@@ -29,7 +29,7 @@ fn main() {
                 ..default() 
             },
             specification: CategoriesIndex,
-        },
+        },*/
         Page {
             foundation: PageFoundation { 
                 title: "About Us".to_owned(),
@@ -91,10 +91,17 @@ fn main() {
             },
             specification: PolicyPage,
         },
+        Page {
+            foundation: PageFoundation { 
+                title: "Plans".to_owned(),
+                ..default() 
+            },
+            specification: Plans,
+        },
     
     ];
     
-    // Add blog posts
+    // Collect blog posts
     /*for post in get_all_posts_and_post_pages() {
         pages.push(Page {
             foundation: PageFoundation {
@@ -111,7 +118,7 @@ fn main() {
     let all_posts = get_all_posts_and_post_pages();
     
     // Build a map of categories to their posts
-    let mut categories: HashMap<String, Vec<PostData<UCDFrontmatter>>> = HashMap::new();
+    /*let mut categories: HashMap<String, Vec<PostData<UCDFrontmatter>>> = HashMap::new();*/
     
     // Add blog posts and collect categories
     for post in &all_posts {
@@ -127,7 +134,7 @@ fn main() {
         });
         
         // Collect posts by category
-        if !post.frontmatter.exclude {  // Only include non-excluded posts in categories
+        /*if !post.frontmatter.exclude {  // Only include non-excluded posts in categories
             if post.frontmatter.category.is_empty() {
                 // Add to Uncategorized if no categories
                 categories
@@ -143,11 +150,11 @@ fn main() {
                         .push(post.clone());
                 }
             }
-        }
+        }*/
     }
     
     // Create category pages
-    for (category_name, mut category_posts) in categories {
+    /*for (category_name, mut category_posts) in categories {
         // Sort posts by date (newest first) within each category
         category_posts.sort_by(|a, b| b.frontmatter.date.cmp(&a.frontmatter.date));
         
@@ -163,7 +170,7 @@ fn main() {
             },
             specification: UCDPages::Category(category_name, category_posts),
         });
-    }
+    }*/
     
     let mut site = Site::<UCDPages, ()> {
         title: SITE_NAME.to_owned(),
@@ -178,13 +185,14 @@ fn main() {
     .add_constructor(Homepage, construct_homepage)
     .add_constructor(BlogPost(default()), construct_post)
     .add_constructor(PostList, construct_blog)
-    .add_constructor(Category(String::new(), Vec::new()), construct_category)
-    .add_constructor(CategoriesIndex, construct_categories)
+    /*.add_constructor(Category(String::new(), Vec::new()), construct_category)
+    .add_constructor(CategoriesIndex, construct_categories)*/
     .add_constructor(AboutUs, construct_about_us)
     .add_constructor(Contact, construct_contact)
     .add_constructor(Pricing, construct_pricing)
     .add_constructor(Implants, construct_implants)
     .add_constructor(PolicyPage, construct_policy_pages)
+    .add_constructor(Plans, construct_plans)
     // Your constructors will go here
     .add_head_constructor()
     .add_pages(pages);
