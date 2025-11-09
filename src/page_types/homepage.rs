@@ -85,7 +85,7 @@ fn css(site: &mut Site<UCDPages>) {
                         transform: translateY(-2px);
                     }
                 }
-                
+
             }
         
 

@@ -761,6 +761,10 @@ fn css(site: &mut Site<UCDPages>) {
                             font-size: 48px;
                             color: var(--turquoise-15);
                             margin-bottom: 24px;
+                            
+                            @media (max-width: 768px) {
+                                font-size: 32px;
+                            }
                         }
                         
                         p {
@@ -821,6 +825,10 @@ fn css(site: &mut Site<UCDPages>) {
                         font-size: 28px;
                         color: var(--turquoise-15);
                         margin: 120px 0 48px;
+                        
+                        @media (max-width: 768px) {
+                            font-size: 24px;
+                        }
                     }
                         
                     h3 {
@@ -838,6 +846,14 @@ fn css(site: &mut Site<UCDPages>) {
                         padding: 0 0 48px 48px;
                         
                         box-sizing: border-box;
+                        
+                        @media (max-width: 768px) {
+                        
+                            padding: 0 0 48px 0;
+                        
+                        }
+                        
+                        
                         
                         
                         
@@ -872,6 +888,11 @@ fn css(site: &mut Site<UCDPages>) {
                             td {
                             
                                 padding: 11px 0;
+                                
+                                &:last-child {
+                                    text-align: right;
+                                    min-width: 120px;
+                                }
                             
                             }
                         

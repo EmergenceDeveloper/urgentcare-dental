@@ -87,8 +87,16 @@ pub fn construct_footer<T, I>(site: &mut Site<T, I>) -> String {
                 margin: 0 auto 48px;
                 border-bottom: 1px solid #68f8fd;
                 z-index: 10;
+                
+                @media (max-width: 768px) {
+                    flex-direction: column;
+                    gap: 2rem;
+                }
+                
                 nav {
+                
                 z-index: 10;
+                
                 
                 
                     p {

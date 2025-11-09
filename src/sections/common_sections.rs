@@ -118,6 +118,11 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
                     padding: 0;
                     display: grid;
                     
+                    @media (max-width: 768px) {
+                        grid-template-columns: 1fr;
+                        align-items: center;
+                    }
+                    
                     
                     
                     .team-member {
@@ -261,9 +266,22 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
                 gap: 80px;
                 max-width: 1200px;
                 
+                @media (max-width: 768px) {
+                    flex-direction: column;
+                    
+                    padding: 120px 0;
+                    
+                }
+                
                 .image-area {
                     flex: 1;
                     position: relative;
+                    
+                    @media (max-width: 768px) {
+                        width: 100%;
+                        box-sizing: content-box;
+                        max-height: 240px;
+                    }
                     
                     .polka-dots {
                         position: absolute;
@@ -286,6 +304,10 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
                         box-shadow: 0 20px 60px rgba(0,0,0,0.1);
                         aspect-ratio: 1/1;
                         object-fit: cover;
+                        
+                        @media (max-width: 768px) {
+                             max-height: 240px;
+                        }
                     }
                     
                     .view-locations-button {
@@ -305,6 +327,10 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
                         place-content: center;
                         gap: 12px;
                         
+                        @media (max-width: 768px) {
+                            font-size: 14px;
+                        }
+                        
                         p {
                             margin: 0;
                             width: 150px;
@@ -315,6 +341,10 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
                             height: 100%;
                             max-width: 48px;
                             display: inline-block;
+                            
+                            @media (max-width: 768px) {
+                                max-width: 42px;
+                            }
                         }
                         
                         &:hover {
@@ -326,6 +356,10 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
             
                 .text-area {
                     flex: 1;
+                    
+                    @media (max-width: 768px) {
+                        padding: 0 var(--site-padding-x);
+                    }
                     
                     .subtitle {
                         font-size: 16px;
@@ -391,6 +425,11 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
                     .buttons {
                         display: flex;
                         gap: 16px;
+                        
+                        @media (max-width: 768px) {
+                            margin: 0 auto;
+                            justify-content: center;
+                        }
                         
                         a {
                             padding: 14px 32px;
@@ -463,6 +502,15 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
             margin: 0 auto;
             position: relative;
             
+            @media (max-width: 768px) {
+                padding: 140px var(--site-padding-x) 0;
+                min-height: 100vh;
+                height: auto;
+                flex-direction: column;
+                box-sizing: border-box;
+                gap: 48px;
+            }
+            
             .polka-dots {
                 width: 100%;
                 height: 100%;
@@ -502,6 +550,10 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
                     font-size: 48px;
                     color: var(--turquoise-70);
                     line-height: 1.4em;
+                    
+                    @media (max-width: 768px) {
+                        font-size: 32px;
+                    }
                 }
                     
                 p {
@@ -512,6 +564,10 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
                     
                     &:last-of-type {
                         margin-bottom: 0px;
+                    }
+                    
+                    @media (max-width: 768px) {
+                        font-size: 16px;
                     }
                 }
                     
@@ -526,6 +582,13 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
                     place-content: center flex-start;
                     align-items: center;
                     max-width: 550px;
+                    
+                    
+                    @media (max-width: 768px) {
+                        flex-direction: column;
+                        place-content: center center;
+                        width: 100%;
+                    }
                 
                     
                     .primary {
@@ -547,6 +610,11 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
                         text-decoration: none;
                         align-self: center;
                         place-content: center;
+                        @media (max-width: 768px) {
+                            box-sizing: border-box;
+                            text-align: center;
+                            width: 100%;
+                        }
                     }
                 }
             }
@@ -680,6 +748,10 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
                     gap: 40px;
                     margin-top: 40px;
                     
+                    @media (min-width: 768px) {
+                        grid-template-columns: 1;
+                    }
+                    
                     .location {
                         
                         align-items: center;
@@ -691,6 +763,7 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
                         
                         iframe {
                             height: 320px;
+                            max-width: 100%;
                         }
                         
                         p {
@@ -809,6 +882,10 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
                     margin: 0 auto 48px 0;
                     max-width: 800px;
                     width: 55%;
+                    
+                     @media (max-width: 768px) {
+                        width: 100%;
+                    }
                 }
                 
                 .details-area {
@@ -816,6 +893,12 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
                     display: flex;
                     max-width: 100%;
                     margin: 0 auto;
+                    
+                    @media (max-width: 768px) {
+                        flex-direction: column;
+                        flex-flow: column-reverse;
+                        gap: 48px;
+                    }
                     
                     .grid-area {
                                             
@@ -827,9 +910,15 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
                         margin: 0 auto 48px;
                         height: min-content;
                         
+                        @media (max-width: 768px) {
+                            box-sizing: border-box;
+                            padding: 0;
+                            width: 100%;
+                        }
+                        
                         
                         .grid {
-                            grid-template-columns: repeat(2, minmax(200px, 1fr));
+                            grid-template-columns: repeat(2, minmax(100px, 1fr));
                             grid-auto-rows: minmax(0, 1fr);
                             justify-content: center;
                             gap: 24px;
@@ -851,6 +940,13 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
                             
                             
                                                 
+                        }
+                        
+                        
+                        @media (max-width: 768px) {
+                            .small-button {
+                                margin: 0 auto;
+                            }
                         }
                         
                         
@@ -1020,6 +1116,11 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
                     gap: 40px;
                     margin-top: 40px;
                     
+                    @media (max-width: 768px) {
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                    
                     .service {
                         
                         align-items: center;
@@ -1187,7 +1288,7 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
             justify-content: center;
             margin: 0 auto;
             position: relative;
-            
+
             .inner {
                 
                 max-width: 1200px;
@@ -1289,6 +1390,11 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
                     
                     z-index: 10;
                     
+                    @media (max-width: 768px) {
+                        flex-direction: column;
+                        align-items: center;
+                    }
+                    
                     
                     
                     
@@ -1334,6 +1440,12 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
                                 }
                             }
                         }
+                        
+                        @media (max-width: 768px) {
+                            box-sizing: border-box;
+                            width: 100%;
+                            padding: 48px 24px;
+                        }
                     }
                     
                     .image-area {
@@ -1350,6 +1462,11 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
                         position: relative;
                         z-index: 10;
                         
+                        @media (max-width: 768px) {
+                            box-sizing: border-box;
+                            width: 100%;
+                            max-height: 350px;
+                        }
                         
                         
                         .buttons {
@@ -1507,6 +1624,10 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
                 gap: 32px;
                 max-width: 1200px;
                 margin: 0 auto;
+                
+                @media (max-width: 768px) {
+                    grid-template-columns: repeat(1, 1fr);
+                }
                 
                 .testimonial {
                     padding: 32px;
@@ -1674,6 +1795,12 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
                     margin: 0 auto 48px 0;
                     max-width: 800px;
                     width: 55%;
+                    @media (max-width: 768px) {
+                        
+                        width: 100%;
+                        box-sizing: border-box;
+                    
+                    }
                 }
             
                 .grid {
@@ -1683,6 +1810,7 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
                     gap: 24px;
                     max-width: 1200px;
                     margin: 0 auto;
+                
 
                     .feature {
                         background: rgb(245, 255, 255);

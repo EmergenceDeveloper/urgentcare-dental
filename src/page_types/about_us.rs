@@ -180,6 +180,13 @@ fn css(site: &mut Site<UCDPages>) {
                         padding-bottom: 48px;
                         z-index: 10;
                         
+                        @media (max-width: 768px) {
+                            flex-direction: column;
+                            gap: 24px;
+                            padding-bottom: 24px;
+                        }
+                        
+                        
                         .subtitle {
                             font-size: 16px;
                             color: var(--turquoise-30);
@@ -193,6 +200,10 @@ fn css(site: &mut Site<UCDPages>) {
                             color: var(--turquoise-15);
                             margin-bottom: 24px;
                             z-index: 10;
+                            
+                            @media (max-width: 768px) {
+                                font-size: 32px;
+                            }
                         }
                         
                         p {
@@ -213,6 +224,10 @@ fn css(site: &mut Site<UCDPages>) {
                             max-width: 500px;
                             width: 55%;
                             z-index: 10;
+                            
+                            @media (max-width: 768px) {
+                                width: 100%;
+                            }
                         }
                         
                         .image-area {
@@ -221,6 +236,11 @@ fn css(site: &mut Site<UCDPages>) {
                             margin: 0 auto;
                             max-width: 400px;
                             z-index: 10;
+                            
+                            @media (max-width: 768px) {
+                                width: auto;
+                                max-width: 300px;
+                            }
                         }
                         
                         
@@ -238,6 +258,12 @@ fn css(site: &mut Site<UCDPages>) {
                         max-width: 1200px;
                         height: min-content;
                         z-index: 10;
+                        
+                        @media (max-width: 768px) {
+                        
+                            grid-template-columns: 1fr;
+                        
+                        }
                             
                             
                         .statistic {
@@ -283,6 +309,10 @@ fn css(site: &mut Site<UCDPages>) {
                                 margin: 0 auto;
                                 font-size: 48px;
                                 text-align: center;
+                                
+                                @media (max-width: 768px) {
+                                    font-size: 24px;
+                                }
                                 
                                 span {
                                     
@@ -358,6 +388,8 @@ fn css(site: &mut Site<UCDPages>) {
                     z-index: 10;
                     
                     
+                    
+                    
                     .subtitle {
                         font-size: 16px;
                         color: var(--turquoise-30);
@@ -396,6 +428,12 @@ fn css(site: &mut Site<UCDPages>) {
                         display: grid;
                         position: relative;
                         
+                        @media (max-width: 768px) {
+                        
+                            grid-template-columns: 1fr;
+                        
+                        }
+                            
                         
                         .mission {
                             

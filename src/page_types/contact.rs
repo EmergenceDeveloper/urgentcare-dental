@@ -115,6 +115,10 @@ fn css(site: &mut Site<UCDPages>) {
                         max-width: 500px;
                         width: 55%;
                         z-index: 10;
+                        
+                        @media (max-width: 768px) {
+                            width: 100%;
+                        }
                     
                         .subtitle {
                             font-size: 16px;
@@ -127,6 +131,10 @@ fn css(site: &mut Site<UCDPages>) {
                             font-size: 48px;
                             color: var(--turquoise-15);
                             margin-bottom: 24px;
+                            
+                            @media (max-width: 768px) {
+                                font-size: 32px;
+                            }
                         }
                         
                         p {

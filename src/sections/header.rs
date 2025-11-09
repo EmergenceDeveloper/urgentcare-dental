@@ -98,6 +98,7 @@ pub fn construct_header<T, I>(site: &mut Site<T, I>, page: &PageFoundation) -> S
                 gap: 40px;
                 margin: 0 auto;
 
+
                 ul {
                     display: flex;
                     list-style: none;
@@ -109,6 +110,7 @@ pub fn construct_header<T, I>(site: &mut Site<T, I>, page: &PageFoundation) -> S
                         list-style: none;
                         transition: transform 0.3s ease;
                         width: fit-content;
+                        text-align: center;
                         
                         &:hover {
                             transform: var(--transform);
@@ -131,6 +133,7 @@ pub fn construct_header<T, I>(site: &mut Site<T, I>, page: &PageFoundation) -> S
                     font-size: 24tem;
                     color: #333;
                     transition: transform 0.3s ease;
+                    min-width: fit-content;
                     
                     &:hover {
                         transform: scale(0.97);
@@ -145,6 +148,14 @@ pub fn construct_header<T, I>(site: &mut Site<T, I>, page: &PageFoundation) -> S
                 input {
                     display: none;
                 }
+                
+                .directive {
+                    background-color: var(--turquoise-15);
+                    padding: 6px 24px;
+                    color: white;
+                    font-weight: 600;
+                    text-align: center;
+                }
             }
         }
 
@@ -153,16 +164,22 @@ pub fn construct_header<T, I>(site: &mut Site<T, I>, page: &PageFoundation) -> S
             header {
 
                 &:has(#nav-toggle-checkbox:checked){
-                    position: relative;
+                    position: fixed;
                     padding-bottom: 30px;
                 }
                 
                 nav {
                     
                     --transform: translateX(6px) scale(0.98);
+                    gap: 0px;
+                    
+                    .directive {
+                        display: none;
+                    }
                     
                     ul {
                         display: none;
+                        
                         
                         li {
                             a {
