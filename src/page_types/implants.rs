@@ -3,10 +3,11 @@ use crate::prelude::*;
 pub fn construct_implants(site: &mut Site<UCDPages>, page: &mut Page<UCDPages>) {
     
     let head = site.construct_head(page);
+    add_default_og_image(page);
     
     let html = format!(r##"
         <!DOCTYPE html>
-        <html lang="en-US">
+        <html lang="en-GB">
         {head}
         <body>
             {header}

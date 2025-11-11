@@ -272,6 +272,7 @@ pub fn add_blog_post_schema(
     page: &mut Page<UCDPages>,
     post: &PostData<UCDFrontmatter>
 ) {
+
     // Format dates to ISO 8601 - handle dates that may already have T in them
     let date_published = if !post.frontmatter.date.is_empty() {
         if post.frontmatter.date.contains('T') {

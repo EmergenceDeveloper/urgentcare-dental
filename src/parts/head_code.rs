@@ -45,4 +45,42 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     });
     </script>"#
     );
+    
+    site.declare_placement(
+        PlacementPosition::HeadTop,
+        r##"<link href="/images/branding/UrgentCare-Dental-Logo.svg" rel="icon" media="(prefers-color-scheme: light)">
+<link href="/images/branding/UrgentCare-Dental-Logo-White.svg" rel="icon" media="(prefers-color-scheme: dark)">"##
+    );
+    
+    /*site.declare_placement(
+    PlacementPosition::HeadTop,
+    &format!(r##"<meta property="og:image" content="{SITE_URL}images/branding/Google Business Cover.png">
+<meta name="twitter:image" content="{SITE_URL}images/branding/Google Business Cover.png">"##)
+);*/
+}
+
+
+
+pub fn add_default_og_image(page: &mut Page<UCDPages>) {
+    page.declare_placement(
+    PlacementPosition::HeadTop,
+    &format!(r##"<meta property="og:image" content="{SITE_URL}/images/branding/Google Business Cover.png">
+<meta name="twitter:image" content="{SITE_URL}/images/branding/Google Business Cover.png">"##)
+);
+}
+
+pub fn add_post_og_image(page: &mut Page<UCDPages>, post: &PostData<UCDFrontmatter>) {
+// Add OG image meta tags for blog posts
+    let og_image = if !post.frontmatter.image.is_empty() {
+        format!("{SITE_URL}{}", &post.frontmatter.image)
+    } else {
+        format!("{SITE_URL}/images/branding/Google Business Cover.png")
+    };
+    
+    page.declare_placement(
+        PlacementPosition::HeadTop,
+        &format!(r##"<meta property="og:image" content="{}">
+<meta name="twitter:image" content="{}">"##, og_image, og_image)
+    );
+
 }

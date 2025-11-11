@@ -5,6 +5,7 @@ use std::collections::HashMap;
 pub fn construct_categories(site: &mut Site<UCDPages>, page: &mut Page<UCDPages>) {
     
     let head = site.construct_head(page);
+    add_default_og_image(page);
     
     // Get all posts and build category map
     let all_posts = get_all_posts();
@@ -50,7 +51,7 @@ pub fn construct_categories(site: &mut Site<UCDPages>, page: &mut Page<UCDPages>
     
     let html = format!(r##"
         <!DOCTYPE html>
-        <html lang="en-US">
+        <html lang="en-GB">
         {head}
         <body>
             {header}

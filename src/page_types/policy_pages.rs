@@ -7,12 +7,13 @@ pub fn construct_policy_pages(site: &mut Site<UCDPages>, page: &mut Page<UCDPage
     let header = construct_header(site, &page.foundation);
     let footer = construct_footer(site);
     let content = policy_page_content(page);
+    add_default_og_image(page);
     
     
     let html = format!(r##"
     
     <!DOCTYPE html>
-        <html lang="en-US">
+        <html lang="en-GB">
         {head}
         <body>
             {header}

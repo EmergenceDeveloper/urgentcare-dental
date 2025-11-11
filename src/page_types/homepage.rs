@@ -3,6 +3,7 @@ use crate::prelude::*;
 pub fn construct_homepage(site: &mut Site<UCDPages>, page: &mut Page<UCDPages>) {
     
     let head = site.construct_head(page);
+    add_default_og_image(page);
     
     css(site);
     
@@ -21,7 +22,7 @@ pub fn construct_homepage(site: &mut Site<UCDPages>, page: &mut Page<UCDPages>) 
     
     let html = format!(r##"
         <!DOCTYPE html>
-        <html lang="en-US">
+        <html lang="en-GB">
         {head}
         <body>
             {header}

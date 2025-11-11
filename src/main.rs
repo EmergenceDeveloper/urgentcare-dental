@@ -16,7 +16,8 @@ fn main() {
         },
         Page {
             foundation: PageFoundation { 
-                title: "Blog - UrgentCare Dental".to_owned(),
+                title: "Blog".to_owned(),
+                slug: Some("blog".to_owned()),
                 metadescription: Some("This is your complete UK dental information hub. Learn facts, data, and trends about dental care across Britain.".to_owned()),
                 ..default() 
             },
@@ -33,7 +34,8 @@ fn main() {
         },*/
         Page {
             foundation: PageFoundation { 
-                title: "About Us - UrgentCare Dental".to_owned(),
+                title: "About Us".to_owned(),
+                slug: Some("about-us".to_owned()),
                 metadescription: Some("This is your trusted emergency dental team in Northern England. Learn how our experienced dentists provide 24/7 urgent care and same-day treatment in our Leeds and Manchester clinics.".to_owned()),
                 ..default() 
             },
@@ -41,7 +43,8 @@ fn main() {
         },
         Page {
             foundation: PageFoundation { 
-                title: "Contact - UrgentCare Dental".to_owned(),
+                title: "Contact".to_owned(),
+                slug: Some("contact".to_owned()),
                 metadescription: Some("This is your direct line to emergency dental care. Learn how to reach our 24/7 team in Leeds and Manchester by phone, WhatsApp, or online booking from £20.".to_owned()),
                 ..default() 
             },
@@ -49,7 +52,8 @@ fn main() {
         },
         Page {
             foundation: PageFoundation { 
-                title: "Pricing - UrgentCare Dental".to_owned(),
+                title: "Pricing".to_owned(),
+                slug: Some("pricing".to_owned()),
                 metadescription: Some("This is your complete emergency dental pricing guide. Learn how our transparent fees start from £20 for pain relief, with clear costs for all urgent and routine treatments across our clinics.".to_owned()),
                 ..default() 
             },
@@ -66,7 +70,7 @@ fn main() {
         },
         Page {
             foundation: PageFoundation { 
-                title: "Privacy Policy - UrgentCare Dental".to_owned(),
+                title: "Privacy Policy".to_owned(),
                 slug: Some("privacy-policy".to_owned()),
                 metadescription: Some("This is UrgentCare Dental's privacy policy. Learn how we collect, protect, and use your personal information when providing emergency dental care services.".to_owned()),
                 ..default() 
@@ -75,7 +79,7 @@ fn main() {
         },
         Page {
             foundation: PageFoundation { 
-                title: "Terms and Conditions - UrgentCare Dental".to_owned(),
+                title: "Terms and Conditions".to_owned(),
                 slug: Some("terms-and-conditions".to_owned()),
                 metadescription: Some("This is UrgentCare Dental's terms and conditions. Learn about our terms of service and policies here.".to_owned()),
                 ..default() 
@@ -84,7 +88,7 @@ fn main() {
         },
         Page {
             foundation: PageFoundation { 
-                title: "Complaints Procedure - UrgentCare Dental".to_owned(),
+                title: "Complaints Procedure".to_owned(),
                 slug: Some("complaints".to_owned()),
                 metadescription: Some("This is UrgentCare Dental's complaints procedure. Learn how we resolve your complaints, and how to contact us.".to_owned()),
                 ..default() 
@@ -93,7 +97,7 @@ fn main() {
         },
         Page {
             foundation: PageFoundation { 
-                title: "Cookie Policy - UrgentCare Dental".to_owned(),
+                title: "Cookie Policy".to_owned(),
                 slug: Some("cookie-policy".to_owned()),
                 metadescription: Some("This is UrgentCare Dental's cookie policy. Learn how we use cookies and similar technologies to improve your emergency dental care experience.".to_owned()),
                 ..default() 
@@ -102,7 +106,8 @@ fn main() {
         },
         Page {
             foundation: PageFoundation { 
-                title: "Dental Membership Plans - UrgentCare Dental".to_owned(),
+                title: "Dental Membership Plans".to_owned(),
+                slug: Some("plans".to_owned()),
                 metadescription: Some("These are UrgentCare Dental's membership plans. Learn how you can save on your dental treatment costs with our Protection Plan and Proactive Recovery Plan.".to_owned()),
                 ..default() 
             },
@@ -187,6 +192,7 @@ fn main() {
         base_url: Url::parse(SITE_URL).unwrap(),
         settings: Settings {
             use_trailing_slashes: false,
+            title_append: Some(" - UrgentCare Dental".to_owned()),
             
             ..default()
         },

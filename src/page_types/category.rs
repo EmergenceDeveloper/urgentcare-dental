@@ -10,6 +10,7 @@ pub fn construct_category(site: &mut Site<UCDPages>, page: &mut Page<UCDPages>) 
     
     // Add schema for this category page
     add_category_schema(page, &category_name, &posts);
+    add_default_og_image(page);
 
     let head = site.construct_head(page);
 
@@ -72,7 +73,7 @@ pub fn construct_category(site: &mut Site<UCDPages>, page: &mut Page<UCDPages>) 
     
     let html = format!(r##"
         <!DOCTYPE html>
-        <html lang="en-US">
+        <html lang="en-GB">
         {head}
         <body>
             {header}

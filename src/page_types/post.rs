@@ -10,6 +10,7 @@ pub fn construct_post(site: &mut Site<UCDPages>, page: &mut Page<UCDPages>) {
     
     // Add schema for this blog post
     add_blog_post_schema(page, &post);
+    add_post_og_image(page, &post);
 
     css(site);
 
@@ -71,7 +72,7 @@ pub fn construct_post(site: &mut Site<UCDPages>, page: &mut Page<UCDPages>) {
     
     let html = format!(r##"
         <!DOCTYPE html>
-        <html lang="en-US">
+        <html lang="en-GB">
         {head}
         <body>
             {header}
