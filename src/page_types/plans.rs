@@ -2,10 +2,11 @@ use crate::prelude::*;
 
 pub fn construct_plans(site: &mut Site<UCDPages>, page: &mut Page<UCDPages>) {
     
+    add_default_og_image(page);
     let head = site.construct_head(page);
     let header = construct_header(site, &page.foundation);
     let footer = construct_footer(site);
-    add_default_og_image(page);
+    
     
     css(site);
     

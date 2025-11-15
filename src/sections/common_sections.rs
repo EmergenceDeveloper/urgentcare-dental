@@ -467,7 +467,7 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
     
     
     site.declare_section("dentist_splash_hero",&format!(r##"
-        <section class="dentist-splash-hero">
+        <section class="dentist-splash-hero transparent-header">
             <div class="polka-dots"></div>
             <div class="background-fade"></div>
             <div class="text-area">
@@ -674,7 +674,14 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
                 </div>
                 <div class="grid">
                     <div class="location">
-                        <iframe src="https://maps.google.com/maps?q=53.520984213115455,-2.166727319008508&amp;z=10&amp;output=embed" style="height: 320px; width: 100%; border: 0px;"></iframe>
+                        <iframe src="https://maps.google.com/maps?q=53.778967093492355,-1.6108727204946882&amp;z=11&amp;output=embed" style="height: 320px; width: 100%; border: 0px;" loading="lazy"></iframe>
+                        <h3>Leeds</h3>
+                        <p>Unit 2 Ashfield Way<br>Whitehall Estate<br>Leeds<br>LS12 5JB</p>
+                        <a href="{PHONE_NUMBER_LINK}">Call Us at {PHONE_NUMBER}</a>
+                        <a href="{BOOKING_LINK}">Book Online</a>
+                    </div>
+                    <div class="location">
+                        <iframe src="https://maps.google.com/maps?q=53.520984213115455,-2.166727319008508&amp;z=10&amp;output=embed" style="height: 320px; width: 100%; border: 0px;" loading="lazy"></iframe>
                         <h3>Manchester</h3>
                         <p>8 Broadway<br>Manchester<br>M40 3LN</p>
                         <a href="{PHONE_NUMBER_LINK}">Call Us at {PHONE_NUMBER}</a>

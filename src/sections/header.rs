@@ -4,12 +4,12 @@ pub fn construct_header<T, I>(site: &mut Site<T, I>, page: &PageFoundation) -> S
     // Define the navigation items
     let nav_items = vec![
         NavItem {
-            name: "About Us".to_owned(), 
-            path: "/about-us".to_owned(),
-        },
-        NavItem {
             name: "Implants".to_owned(), 
             path: "/implants".to_owned(),
+        },
+        NavItem {
+            name: "Hair Transplants".to_owned(), 
+            path: "/hair-transplants".to_owned(),
         },
         NavItem {
             name: "Plans".to_owned(),

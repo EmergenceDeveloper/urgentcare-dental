@@ -14,6 +14,7 @@ pub use crate::{
         implants::*,
         policy_pages::*,
         plans::*,
+        hair_transplants::*,
     },
     sections::{
         header::*,

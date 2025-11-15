@@ -9,8 +9,9 @@ pub fn construct_category(site: &mut Site<UCDPages>, page: &mut Page<UCDPages>) 
     };
     
     // Add schema for this category page
-    add_category_schema(page, &category_name, &posts);
     add_default_og_image(page);
+    add_category_schema(page, &category_name, &posts);
+    
 
     let head = site.construct_head(page);
 

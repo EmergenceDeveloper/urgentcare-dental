@@ -3,11 +3,12 @@ use crate::prelude::*;
 pub fn construct_policy_pages(site: &mut Site<UCDPages>, page: &mut Page<UCDPages>) {
 
 
+    add_default_og_image(page);
     let head = site.construct_head(page);
     let header = construct_header(site, &page.foundation);
     let footer = construct_footer(site);
     let content = policy_page_content(page);
-    add_default_og_image(page);
+    
     
     
     let html = format!(r##"

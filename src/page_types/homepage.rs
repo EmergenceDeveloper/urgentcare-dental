@@ -2,8 +2,9 @@ use crate::prelude::*;
 
 pub fn construct_homepage(site: &mut Site<UCDPages>, page: &mut Page<UCDPages>) {
     
-    let head = site.construct_head(page);
     add_default_og_image(page);
+    let head = site.construct_head(page);
+    
     
     css(site);
     

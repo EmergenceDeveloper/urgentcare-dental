@@ -12,6 +12,7 @@ pub mod page_types {
     pub mod implants;
     pub mod policy_pages;
     pub mod plans;
+    pub mod hair_transplants;
 }
 
 pub mod sections {

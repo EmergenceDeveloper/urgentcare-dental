@@ -113,7 +113,15 @@ fn main() {
             },
             specification: Plans,
         },
-
+        Page {
+            foundation: PageFoundation { 
+                title: "FUE Hair Transplant Manchester & Leeds | From £2,500".to_owned(),
+                slug: Some("hair-transplants".to_owned()),
+                metadescription: Some("Expert FUE hair transplant in Manchester & Leeds. 3,500-4,000 grafts with PRP included for £2,500. Free e-consultation. Natural results from experienced specialists.".to_owned()),
+                ..default() 
+            },
+            specification: HairTransplants,
+        },
     ];
     
     // Collect blog posts
@@ -209,6 +217,7 @@ fn main() {
     .add_constructor(Implants, construct_implants)
     .add_constructor(PolicyPage, construct_policy_pages)
     .add_constructor(Plans, construct_plans)
+    .add_constructor(HairTransplants, construct_hair_transplants)
     // Your constructors will go here
     .add_head_constructor()
     .add_pages(pages);

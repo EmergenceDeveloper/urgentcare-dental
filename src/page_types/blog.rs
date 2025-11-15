@@ -2,13 +2,13 @@ use crate::prelude::*;
 
 pub fn construct_blog(site: &mut Site<UCDPages>, page: &mut Page<UCDPages>) {
 
-
+    add_default_og_image(page);
     let head = site.construct_head(page);
 
     let all_posts = get_all_posts();
     
     add_blog_index_schema(page, &all_posts);
-    add_default_og_image(page);
+    
 
     let mut post_list = Vec::new();
 

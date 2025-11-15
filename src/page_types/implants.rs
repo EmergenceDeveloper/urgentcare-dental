@@ -2,8 +2,9 @@ use crate::prelude::*;
 
 pub fn construct_implants(site: &mut Site<UCDPages>, page: &mut Page<UCDPages>) {
     
-    let head = site.construct_head(page);
     add_default_og_image(page);
+    let head = site.construct_head(page);
+    
     
     let html = format!(r##"
         <!DOCTYPE html>
@@ -183,9 +184,9 @@ pub fn construct_implants(site: &mut Site<UCDPages>, page: &mut Page<UCDPages>) 
                 <section class="cta-section">
                     <div class="container">
                         <h2>Start Your Journey to a Complete Smile</h2>
-                        <p>Book your consultation today and discover how implants can transform your life</p>
+                        <p>Book your free consultation today and discover how implants can transform your life</p>
                         <div class="cta-buttons">
-                            <a href="{BOOKING_LINK}" class="book-now">Book Consultation</a>
+                            <a href="{BOOKING_LINK}" class="book-now">Book Free Consultation</a>
                             <a href="tel:01234567890" class="call-now">Call Now</a>
                         </div>
                     </div>

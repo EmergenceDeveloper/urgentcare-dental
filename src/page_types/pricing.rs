@@ -2,8 +2,9 @@ use crate::prelude::*;
 
 pub fn construct_pricing(site: &mut Site<UCDPages>, page: &mut Page<UCDPages>) {
     
-    let head = site.construct_head(page);
     add_default_og_image(page);
+    let head = site.construct_head(page);
+    
     
     let html = format!(r##"
         <!DOCTYPE html>
