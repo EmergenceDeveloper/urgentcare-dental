@@ -15,7 +15,7 @@ pub fn construct_implants(site: &mut Site<UCDPages>, page: &mut Page<UCDPages>) 
             <main class="implants">
             
             
-                <section class="dentist-splash-hero">
+                <section class="dentist-splash-hero transparent-header">
                     <div class="polka-dots"></div>
                     <div class="background-fade"></div>
                     <div class="text-area">

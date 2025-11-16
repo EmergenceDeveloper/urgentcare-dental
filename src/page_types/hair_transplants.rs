@@ -21,9 +21,10 @@ pub fn construct_hair_transplants(site: &mut Site<UCDPages>, page: &mut Page<UCD
                         <div class="text">
                             <h1>Expert FUE Hair Transplant</h1>
                             <p>Natural-looking results from experienced specialists in Manchester and Leeds</p>
+                            <div class="full-price">£6,000</div>
                             <div class="price">£2,500</div>
                             <p class="price-detail">Includes PRP treatment | 3,500-4,000 grafts</p>
-                            <a href="#consultation" class="cta-button">Get Started</a>
+                            <a href="#consultation" class="cta-button">Book a Free Video Consultation</a>
                         </div>
                         <div class="auto-slider">
                             <img class="before" src="/images/hair-transplants/1b.webp" alt="Before">
@@ -343,17 +344,56 @@ fn css(site: &mut Site<UCDPages>) {
                         margin-bottom: 1.5rem;
                         opacity: 0.95;
                     }
+                    
+                    .full-price {
+                        font-size: 1.8rem;
+                        font-weight: 700;
+                        margin: 0 0 0;
+                        
+                        position: relative;
+                        display: inline-block;
+                        color: var(--turquoise-30);
+                        
+                        &::after {
+                            content: '';
+                            position: absolute;
+                            left: 0;
+                            top: 50%;
+                            width: 100%;
+                            height: 3px;
+                            background: currentColor;
+                            transform: translateY(-50%) rotate(-10deg);
+                        }
+                    }
+
 
                     .price {
                         font-size: 2.5rem;
                         font-weight: 700;
-                        margin: 1.5rem 0 0.5rem;
+                        /*margin: 1.5rem 0 0.5rem;*/
+                        margin: 0 0 1.5rem 0;
                     }
 
                     .price-detail {
                         font-size: 1rem;
                         opacity: 0.9;
                         margin-bottom: 2rem;
+                    }
+                    
+                    @media (max-width: 768px) {
+                    
+                        h1 {
+                            font-size: 1.8rem;
+                        }
+                        
+                        .full-price {
+                            font-size: 1.44rem;
+                        }
+
+                        .price {
+                            font-size: 2rem;
+                        }
+                    
                     }
 
                     .cta-button {
@@ -1137,18 +1177,6 @@ fn css(site: &mut Site<UCDPages>) {
                     grid-template-columns: 1fr;
                     gap: 2rem;
                 
-
-                    .text {
-                    
-                        h1 {
-                            font-size: 1.8rem;
-                        }
-
-                        .price {
-                            font-size: 2rem;
-                        }
-                    }
-                
                 }
 
                 .about .features {
@@ -1168,6 +1196,8 @@ fn css(site: &mut Site<UCDPages>) {
                     .guarantee-stats {
                         grid-template-columns: repeat(3, 1fr);
                         flex-direction: row;
+                        
+                    }
 
                     .stat-card {
                         padding: 1.5rem 1rem;
