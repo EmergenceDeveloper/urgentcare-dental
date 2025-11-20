@@ -1,12 +1,11 @@
 use crate::prelude::*;
 
 pub fn construct_pricing(site: &mut Site<UCDPages>, page: &mut Page<UCDPages>) {
-    
     add_default_og_image(page);
     let head = site.construct_head(page);
-    
-    
-    let html = format!(r##"
+
+    let html = format!(
+        r##"
         <!DOCTYPE html>
         <html lang="en-GB">
         {head}
@@ -497,6 +496,41 @@ pub fn construct_pricing(site: &mut Site<UCDPages>, page: &mut Page<UCDPages>) {
                         </tbody>
                         </table>
 
+                        <h3>Hair Restoration</h3>
+
+                        <table>
+                        <tbody>
+                            <tr>
+                            <td>
+                                <p>Hair Transplant Consultation</p>
+                                <p>Comprehensive assessment of your hair loss pattern and discussion of restoration options.</p>
+                            </td>
+                            <td>Free</td>
+                            </tr>
+                            <tr>
+                            <td>
+                                <p>FUE Hair Transplant</p>
+                                <p>Advanced hair restoration with 3,500-4,000 grafts. Includes PRP treatment, complete aftercare kit, and 12-month follow-up.</p>
+                            </td>
+                            <td>£2,500</td>
+                            </tr>
+                        </tbody>
+                        </table>
+
+                        <h3>Skin Treatments</h3>
+
+                        <table>
+                        <tbody>
+                            <tr>
+                            <td>
+                                <p>Skin Consultation</p>
+                                <p>Professional skin assessment and personalized treatment recommendations with our aestheticians.</p>
+                            </td>
+                            <td>Free</td>
+                            </tr>
+                        </tbody>
+                        </table>
+
                         <h3>Anti-Wrinkle Injections</h3>
 
                         <table>
@@ -688,11 +722,10 @@ pub fn construct_pricing(site: &mut Site<UCDPages>, page: &mut Page<UCDPages>) {
         header = construct_header(site, &page.foundation),
         footer = construct_footer(site),
         open_times = &site.sections["open_times"],
-        
     );
-    
+
     css(site);
-    
+
     page.foundation.content = Some(html);
 }
 

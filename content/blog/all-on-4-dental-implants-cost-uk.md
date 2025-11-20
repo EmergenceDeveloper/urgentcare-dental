@@ -1,6 +1,6 @@
 +++
-title = "All-on-4 Dental Implants Cost UK: Complete Price Breakdown for 2025"
-description = "Discover the real cost of All-on-4 dental implants in the UK for 2025. From £12,000 to £25,000 per jaw, we break down exactly what drives these prices and what patients actually pay."
+title = "All-on-4 Dental Implants Cost UK: Complete Price Breakdown for [YEAR]"
+description = "Discover the real cost of All-on-4 dental implants in the UK for [YEAR]. From £12,000 to £25,000 per jaw, we break down exactly what drives these prices and what patients actually pay."
 date = 2025-10-03
 image = "/images/blog/all-on-4-dental-implants-cost-uk.avif"
 tags = ["Dental Implants", "Full Mouth Restoration", "Cost Analysis"]

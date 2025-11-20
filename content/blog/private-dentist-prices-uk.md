@@ -1,5 +1,5 @@
 +++
-title = "Private Dentist Prices UK 2025: What Everything Actually Costs"
+title = "Private Dentist Prices UK [YEAR]: What Everything Actually Costs"
 description = "Private dentist prices in the UK: Check-ups £60-120, fillings £90-250, crowns £500-1,200, root canals £400-900. Here's what determines the cost and where to find value."
 date = 2025-10-01
 image = "/images/blog/private-dentist-prices-uk.avif"

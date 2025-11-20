@@ -1,7 +1,6 @@
 use crate::prelude::*;
 
 pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
-    
     site.declare_section("meet_us", &format!(r##"
         <section class="meet-us">
             <div class="inner">
@@ -63,8 +62,10 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
             </div>
         </section>
     "##));
-        
-    site.declare_css("meet_us", r##"
+
+    site.declare_css(
+        "meet_us",
+        r##"
     
         {}
     
@@ -202,14 +203,9 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
             }
 
         }
-    "##);
-        
-        
-        
-        
-    
-        
-        
+    "##,
+    );
+
     site.declare_section("about_our_clinics",&format!(r##"    
         <section class="about-our-clinics">
             <div class="inner">
@@ -248,8 +244,8 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
                 </div>
             </div>
         </section>
-    "##)); 
-        
+    "##));
+
     site.declare_css("about_our_clinics", r##"    
         section.about-our-clinics {
             position: relative;
@@ -464,8 +460,7 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
             }
         }
     "##);
-    
-    
+
     site.declare_section("dentist_splash_hero",&format!(r##"
         <section class="dentist-splash-hero transparent-header">
             <div class="polka-dots"></div>
@@ -749,15 +744,18 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
                 
                 .grid {
                     display: grid;
-                    grid-template-columns: repeat(1, minmax(200px, 1fr));
+                    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
                     grid-auto-rows: minmax(0, 1fr);
                     justify-content: center;
                     gap: 40px;
-                    margin-top: 40px;
+                    margin: 40px auto 0;
                     
-                    @media (min-width: 768px) {
-                        grid-template-columns: 1;
-                    }
+                    /* This contrains it while there's less than 3 columns */
+                    max-width: 800px;
+                    
+                    /*(@media (min-width: 768px) {
+                        grid-template-columns: repeat(1, minmax(200px, 1fr));
+                    }*/
                     
                     .location {
                         
@@ -850,7 +848,9 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
         </section>
     "##));
 
-    site.declare_css("services", r##"
+    site.declare_css(
+        "services",
+        r##"
     
         section.services {
                 
@@ -995,7 +995,8 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
         }
 
 
-    "##);
+    "##,
+    );
 
     site.declare_section("general_services",&format!(r##"
         <section class="general-services">
@@ -1541,7 +1542,7 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
                     </div>
                     <div class="stars">★★★★★</div>
                     <p>"Sorted my broken crown same evening. Clean modern practice, caring staff. Called several dentists but only these could help after hours. Quick response on the phone and clear pricing upfront. The dentist explained everything thoroughly."</p>
-                    <cite>— Sarah Mitchell</cite>
+                    <cite> -  Sarah Mitchell</cite>
                 </div>
                 <div class="testimonial">
                     <div class="image-circle">
@@ -1549,7 +1550,7 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
                     </div>
                     <div class="stars">★★★★★</div>
                     <p>"Relief from abscess pain when my regular dentist was closed. Worth every penny for evening care. Was worried about needing emergency treatment but they made the whole process straightforward. Excellent follow-up care instructions too."</p>
-                    <cite>— Emma Wilson</cite>
+                    <cite> -  Emma Wilson</cite>
                 </div>
                 <div class="testimonial">
                     <div class="image-circle">
@@ -1557,7 +1558,7 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
                     </div>
                     <div class="stars">★★★★★</div>
                     <p>"Emergency visit for broken crown. Reception was efficient and got me in within 30 minutes. Thorough treatment and helpful aftercare advice. Great to know they're available when needed."</p>
-                    <cite>— Jennifer O'Connor</cite>
+                    <cite> -  Jennifer O'Connor</cite>
                 </div>
                 <div class="testimonial">
                     <div class="image-circle">
@@ -1565,7 +1566,7 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
                     </div>
                     <div class="stars">★★★★★</div>
                     <p>"Sorted my broken crown same evening. Clean modern practice, caring staff. Called several dentists but only these could help after hours. Quick response on the phone and clear pricing upfront. The dentist explained everything thoroughly."</p>
-                    <cite>— David Thompson</cite>
+                    <cite> -  David Thompson</cite>
                 </div>
                 <div class="testimonial">
                     <div class="image-circle">
@@ -1573,7 +1574,7 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
                     </div>
                     <div class="stars">★★★★★</div>
                     <p>"Sudden toothache after work - really relieved they could see me same evening. Quick appointment and professional service. Dentist explained everything clearly and fixed the problem. Clean, modern clinic."</p>
-                    <cite>— David Chen</cite>
+                    <cite> -  David Chen</cite>
                 </div>
                 <div class="testimonial">
                     <div class="image-circle">
@@ -1581,14 +1582,16 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
                     </div>
                     <div class="stars">★★★★★</div>
                     <p>"Called with severe pain from abscess. Professional team and prompt service got me sorted quickly. Clean facilities and caring staff made a stressful situation much easier. Very grateful for their help."</p>
-                    <cite>— Fatima Rahman</cite>
+                    <cite> -  Fatima Rahman</cite>
                 </div>
             </div>
         </section>
         
     "##));
 
-    site.declare_css("patient_stories", r##"
+    site.declare_css(
+        "patient_stories",
+        r##"
         section.patient-stories {
             padding: 100px var(--site-padding-x);
             background: white;
@@ -1686,8 +1689,9 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
             }
         }
 
-    "##);
-    
+    "##,
+    );
+
     site.declare_section("about_our_care",r##"
     
     <section class="about-our-care">
@@ -1765,8 +1769,10 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
     </section>
     
     "##);
-    
-    site.declare_css("about_our_care", r##"
+
+    site.declare_css(
+        "about_our_care",
+        r##"
         
         section.about-our-care {
             
@@ -1861,10 +1867,6 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
                 }
             }
         }
-    "##);
-
-        
-        
-        
-        
+    "##,
+    );
 }

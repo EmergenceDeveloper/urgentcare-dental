@@ -1,14 +1,13 @@
 use crate::prelude::*;
 
 pub fn construct_hair_transplants(site: &mut Site<UCDPages>, page: &mut Page<UCDPages>) {
-    
     add_default_og_image(page);
     let head = site.construct_head(page);
-    
-    
+
     let auto_slider_script = auto_slider_script();
-    
-    let html = format!(r##"
+
+    let html = format!(
+        r##"
         <!DOCTYPE html>
         <html lang="en-GB">
         {head}
@@ -60,12 +59,12 @@ pub fn construct_hair_transplants(site: &mut Site<UCDPages>, page: &mut Page<UCD
                         <div class="guarantee-content">
                             <div class="guarantee-text">
                                 <h3>Our Satisfaction Guarantee</h3>
-                                <p>We don't just promise results—we guarantee them. Every hair transplant procedure at UrgentCare Dental comes with our satisfaction guarantee. Our surgeons have successfully completed thousands of procedures, achieving natural-looking results that restore both hair and confidence. We stand behind every transplant we perform.</p>
+                                <p>We don't just promise results - we guarantee them. Every hair transplant procedure at UrgentCare Dental comes with our satisfaction guarantee. Our surgeons have successfully completed thousands of procedures, achieving natural-looking results that restore both hair and confidence. We stand behind every transplant we perform.</p>
 
                                 <h3>The Gold Standard: FUE Hair Transplantation</h3>
                                 <p>Our Follicular Unit Extraction (FUE) method is the gold standard in hair restoration. Unlike older strip methods, FUE leaves no linear scarring and offers faster recovery times. We extract individual hair follicles from donor areas and transplant them with precision to create a natural hairline and optimal density.</p>
 
-                                <p>Each graft is carefully handled to ensure maximum survival rate—our advanced techniques achieve graft survival rates of 95-98%, meaning almost every transplanted follicle successfully takes root and grows. With 3,500-4,000 grafts per procedure, we provide significantly more coverage than many clinics offer at this price point.</p>
+                                <p>Each graft is carefully handled to ensure maximum survival rate - our advanced techniques achieve graft survival rates of 95-98%, meaning almost every transplanted follicle successfully takes root and grows. With 3,500-4,000 grafts per procedure, we provide significantly more coverage than many clinics offer at this price point.</p>
                             </div>
 
                             <div class="guarantee-stats">
@@ -99,7 +98,7 @@ pub fn construct_hair_transplants(site: &mut Site<UCDPages>, page: &mut Page<UCD
                                 <h3>Comprehensive Aftercare Programme</h3>
                                 <p>Your success doesn't end when you leave our clinic. We provide a complete aftercare kit including specialised shampoo, healing solutions, and detailed recovery instructions. Our team remains available throughout your recovery period to answer questions and provide guidance.</p>
 
-                                <p>We include PRP therapy with every procedure to enhance healing and accelerate growth—a treatment that typically costs £500-800 as a standalone service. We schedule check-ins at key milestones and offer a complimentary 12-month review to document your transformation and ensure you're delighted with your results.</p>
+                                <p>We include PRP therapy with every procedure to enhance healing and accelerate growth - a treatment that typically costs £500-800 as a standalone service. We schedule check-ins at key milestones and offer a complimentary 12-month review to document your transformation and ensure you're delighted with your results.</p>
 
                                 <div class="track-features">
                                     <div class="feature">
@@ -295,11 +294,10 @@ pub fn construct_hair_transplants(site: &mut Site<UCDPages>, page: &mut Page<UCD
     "##,
         header = construct_header(site, &page.foundation),
         footer = construct_footer(site),
-        
     );
-    
+
     css(site);
-    
+
     page.foundation.content = Some(html);
 }
 
@@ -1255,7 +1253,6 @@ fn css(site: &mut Site<UCDPages>) {
     "##);
 }
 
-
 fn auto_slider_script() -> String {
     r##"
         <script>
@@ -1329,5 +1326,6 @@ fn auto_slider_script() -> String {
                 });
             });
         </script>
-    "##.to_owned()
+    "##
+    .to_owned()
 }

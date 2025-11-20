@@ -43,6 +43,7 @@ But even this might not work when the initial damage was too severe.
 The tooth that could have been saved for £99 now needs extraction. Surgical extractions are more complex and therefore more expensive. The price can range from £200 to £450 or more per tooth.
 
 Now you have a gap. In Manchester, where aesthetic expectations meet professional requirements, most people can't leave it. The choices are:
+
 - Bridge: £595 per unit at [UrgentCare Dental](https://urgentcaredental.co.uk/pricing), but requires grinding down adjacent healthy teeth
 - [Dental implant](https://urgentcaredental.co.uk/blog/single-tooth-implant-cost-uk): £1,999, the gold standard replacement
 
@@ -57,6 +58,7 @@ When infection spreads beyond the tooth, costs explode. The treatment for an abs
 Hospital admission for dental abscess isn't just about the immediate treatment. We believe that a doubling in a preventable condition that can have major consequences and even cause death constitutes a major public health problem that requires urgent action.
 
 The cascading costs:
+
 - Emergency hospital admission: Not directly charged but requires time off work
 - IV antibiotics: Part of hospital treatment
 - Surgical drainage: Covered in hospital but follow-up isn't
@@ -74,6 +76,7 @@ At Aligned Orthodontics, we specialise in private orthodontic care, so you don't
 Manchester's working population faces an additional penalty. Patients will pay anywhere from £100 to £250 privately to be seen immediately by an emergency dentist, with prices varying depending on the time of appointment, for example, weekends or out-of-hours.
 
 The mathematics are brutal:
+
 - Weekday 9-5 emergency: £100-150
 - Evening appointment: £150-350
 - Weekend emergency: £200-400
@@ -92,6 +95,7 @@ Manchester's average daily wage is £120. A week off work for dental complicatio
 Dental problems don't exist in isolation. Extracting a tooth can lead to complications, such as misalignment of the remaining teeth, difficulty chewing, and a potential need for further restorative procedures.
 
 When you lose a tooth:
+
 - Adjacent teeth drift into the space
 - Opposing teeth over-erupt
 - Bite changes cause TMJ problems

@@ -122,6 +122,7 @@ fn main() {
             },
             specification: HairTransplants,
         },
+        
     ];
     
     // Collect blog posts

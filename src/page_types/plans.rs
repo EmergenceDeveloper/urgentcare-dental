@@ -43,6 +43,8 @@ pub fn construct_plans(site: &mut Site<UCDPages>, page: &mut Page<UCDPages>) {
                                     <li>Priority for same-day emergency bookings</li>
                                     <li>10% savings on all additional treatments</li>
                                     <li>Free whitening top-up (2 syringes per year)</li>
+                                    <li>Free skin consultations</li>
+                                    <li>Free hair transplant consultations</li>
                                 </ul>
                                 
                                 <div class="ideal-for">
@@ -70,6 +72,8 @@ pub fn construct_plans(site: &mut Site<UCDPages>, page: &mut Page<UCDPages>) {
                                     <li>Priority for same-day emergency bookings</li>
                                     <li>10% savings on all additional treatments</li>
                                     <li>Free whitening top-up (2 syringes per year for adults)</li>
+                                    <li>Free skin consultations</li>
+                                    <li>Free hair transplant consultations</li>
                                 </ul>
                                 
                                 <div class="ideal-for">
@@ -109,6 +113,8 @@ pub fn construct_plans(site: &mut Site<UCDPages>, page: &mut Page<UCDPages>) {
                                     <li>Priority for same-day emergency bookings</li>
                                     <li>Enhanced 15% savings on all additional treatments</li>
                                     <li>Free whitening top-up (2 syringes per year)</li>
+                                    <li>Free skin consultations</li>
+                                    <li>Free hair transplant consultations</li>
                                 </ul>
                                 
                                 <div class="ideal-for">

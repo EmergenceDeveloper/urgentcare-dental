@@ -101,12 +101,15 @@ pub fn add_core_css<T, I>(site: &mut Site<T, I>) {
         * {
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
         }
         
         *:where(:not(html, iframe, canvas, img, svg, video, audio):not(svg *, symbol *)) {
             all: unset;
             display: revert;
+        }
+        
+        * {
+            box-sizing: border-box;
         }
         
         html, body {

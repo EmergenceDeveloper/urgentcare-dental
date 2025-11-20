@@ -1,5 +1,5 @@
 +++
-title = "Single Tooth Implant Costs for 2026 (What You'll Actually Pay)"
+title = "Single Tooth Implant Costs for [YEAR] (What You'll Actually Pay)"
 description = "A single tooth implant in the UK costs £1,500 to £3,500. Here's exactly what creates that £2,000 spread and what most patients actually end up paying."
 date = 2025-10-04
 image = "/images/blog/single-tooth-implant-cost-uk.avif"
@@ -8,7 +8,7 @@ tags = ["Dental Implants", "Tooth Replacement", "Cost Analysis"]
 
 You've lost a tooth. Maybe it cracked on a popcorn kernel, maybe it finally gave up after years of root canals. Doesn't matter. What matters is the quote sitting in front of you: £2,500 for a single dental implant.
 
-That number probably came as a shock. But here's what you've already discovered if you've called around: single tooth implants in the UK cost anywhere from £1,500 to £3,500. The average patient pays £2,200-2,500. Those are the real numbers for 2025.
+That number probably came as a shock. But here's what you've already discovered if you've called around: single tooth implants in the UK cost anywhere from £1,500 to £3,500. The average patient pays £2,200-2,500. Those are the real numbers for [YEAR].
 
 ## What You're Actually Buying
 

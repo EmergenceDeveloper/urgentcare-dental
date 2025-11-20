@@ -18,10 +18,9 @@ On the upside, private emergency dental care is highly accessible, with some eme
 
 Private extraction costs [have jumped 32% since 2022](https://dentistry.co.uk/2025/01/02/private-tooth-extraction-charges-rise-by-one-third/), but between one practice and the next, there are two main factors that affect the final price a patient pays for an emergency tooth extraction:
 
-1.  What kind of extraction they classify it as
-    
-2.  The emergency consultation cost
-    
+1. What kind of extraction they classify it as
+
+2. The emergency consultation cost
 
 The cost of the emergency consultation cost itself is an overlooked contribution to the overall price. The price of the emergency appointment is just the consultation fee, and it's separate from treatment costs, meaning you're paying for both the assessment _and then_ the procedure on top of it.
 
@@ -49,7 +48,7 @@ However, if the the wisdom tooth is impacted, the extraction is complex or even 
 
 ### Regional Cost Variations Across the UK
 
-Where you live makes a significant difference in what you'll pay for an emergency tooth extraction, and the price disparities can be substantial — up to 80% difference between the most and least expensive regions.
+Where you live makes a significant difference in what you'll pay for an emergency tooth extraction, and the price disparities can be substantial: up to 80% difference between the most and least expensive regions.
 
 While you'd expect London to be the most expensive place in the UK, that crown actually belongs to the South West. Bristol dental practices frequently charges about £200, more than central London for extractions, and regionally, the most expensive prices in the UK for tooth extractions are consistently in the South West.
 
@@ -63,7 +62,7 @@ Major dental chains like Bupa and Mydentist tend to offer more standardized pric
 
 ### NHS Pricing (When You Can Actually Get It)
 
-NHS dental charges follow a structured band system that looks straightforward on paper — if you can actually access it. The challenge isn't NHS pricing — **it's NHS access**. Current data shows [97% of new patients cannot access NHS dental care](https://www.bda.org/media-centre/dentists-97-of-new-patients-unable-to-access-nhs-care/). Across the UK, over 90% of practices are refusing new NHS adult patients, with waiting lists extending up to 2 years in the few practices who do accept very small numbers of new NHS patients.
+NHS dental charges follow a structured band system that looks straightforward on paper - if you can actually access it. The challenge isn't NHS pricing: **it's NHS access**. Current data shows [97% of new patients cannot access NHS dental care](https://www.bda.org/media-centre/dentists-97-of-new-patients-unable-to-access-nhs-care/). Across the UK, over 90% of practices are refusing new NHS adult patients, with waiting lists extending up to 2 years in the few practices who do accept very small numbers of new NHS patients.
 
 For most people, this means you're only likely to be able to access NHS dentistry if you are already an existing NHS patient at your local dental practice. Under the NHS (as of April 2025's new prices), emergency dental treatment costs £27.40 for immediate pain relief and temporary measures, while tooth extractions fall under Band 2 treatment at £75.30, which includes examination, X-rays, and the extraction procedure all together. Complex surgical extractions requiring specialist techniques fall under Band 3 at £326.70.
 

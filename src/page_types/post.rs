@@ -18,12 +18,12 @@ pub fn construct_post(site: &mut Site<UCDPages>, page: &mut Page<UCDPages>) {
     let date = format_date(&post.frontmatter.date);
     
     // Get the first category for breadcrumbs
-    let category = post.frontmatter.category
+    /*let category = post.frontmatter.category
         .first()
         .map(|c| c.as_str())
         .unwrap_or("Uncategorized");
 
-    let category_slug = slugify(category);
+    let category_slug = slugify(category);*/
     /*let author = if !post.frontmatter.author.is_empty() {
         format!(" by {}", post.frontmatter.author)
     } else {
@@ -86,8 +86,6 @@ pub fn construct_post(site: &mut Site<UCDPages>, page: &mut Page<UCDPages>) {
                                 <a href="/">Home</a>
                                 <span class="separator">›</span>
                                 <a href="/blog">Blog</a>
-                                <span class="separator">›</span>
-                                <a href="/{category_slug}">{category}</a>
                             </div>
                             {meta_html}
                         </div>
@@ -115,7 +113,6 @@ pub fn construct_post(site: &mut Site<UCDPages>, page: &mut Page<UCDPages>) {
         meta_html = meta_html,
         image = post.frontmatter.image,
         content = post.content,
-        category = category,
     );
     
     page.foundation.content = Some(html);
