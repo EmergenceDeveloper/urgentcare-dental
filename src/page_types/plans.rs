@@ -1,16 +1,15 @@
 use crate::prelude::*;
 
 pub fn construct_plans(site: &mut Site<UCDPages>, page: &mut Page<UCDPages>) {
-    
     add_default_og_image(page);
     let head = site.construct_head(page);
     let header = construct_header(site, &page.foundation);
     let footer = construct_footer(site);
-    
-    
+
     css(site);
-    
-    let html = format!(r##"
+
+    let html = format!(
+        r##"
         <!DOCTYPE html>
         <html lang="en-GB">
         {head}
@@ -144,17 +143,29 @@ pub fn construct_plans(site: &mut Site<UCDPages>, page: &mut Page<UCDPages>) {
             {footer}
             
             <script>
+                // NEW:
                 function updateFamilyPrice() {{
                     const select = document.getElementById('children-select');
                     const priceElement = document.getElementById('family-price');
                     const totalElement = document.getElementById('family-total');
+                    const buyButton = document.querySelector('.plan-card.featured .btn-primary');
                     
                     const basePrice = 35;
                     const childPrice = 15;
                     const numberOfChildren = parseInt(select.value);
                     const totalPrice = basePrice + (numberOfChildren * childPrice);
                     
+                    const paymentLinks = [
+                        'https://buy.stripe.com/3cI8wR2RI24ccYpdypg7e0F',
+                        'https://buy.stripe.com/cNi5kF9g6bEM6A17a1g7e0m',
+                        'https://buy.stripe.com/5kQ28t77YbEMbUl65Xg7e0G',
+                        'https://buy.stripe.com/7sYdRb4ZQ8sA7E59i9g7e0H',
+                        'https://buy.stripe.com/dRmaEZ9g624caQheCtg7e0I',
+                        'https://buy.stripe.com/3cIaEZ2RI9wE3nPbqhg7e0J'
+                    ];
+                    
                     priceElement.textContent = `£${{totalPrice.toFixed(2)}}`;
+                    buyButton.href = paymentLinks[numberOfChildren];
                     
                     if (numberOfChildren === 0) {{
                         totalElement.textContent = 'Base price for 2 adults';
@@ -167,8 +178,9 @@ pub fn construct_plans(site: &mut Site<UCDPages>, page: &mut Page<UCDPages>) {
             </script>
         </body>
         </html> 
-    "##);
-    
+    "##
+    );
+
     page.foundation.content = Some(html);
 }
 
