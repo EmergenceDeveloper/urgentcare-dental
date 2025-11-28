@@ -122,6 +122,15 @@ fn main() {
             },
             specification: HairTransplants,
         },
+        Page {
+            foundation: PageFoundation { 
+                title: "Smile Preview".to_owned(),
+                slug: Some("smile-preview".to_owned()),
+                metadescription: Some("See what straighter, whiter teeth could look like on you. Preview the results of straightening, composite bonding or implants before you book.".to_owned()),
+                ..default() 
+            },
+            specification: SmilePreview,
+        },
         
     ];
     
@@ -219,6 +228,7 @@ fn main() {
     .add_constructor(PolicyPage, construct_policy_pages)
     .add_constructor(Plans, construct_plans)
     .add_constructor(HairTransplants, construct_hair_transplants)
+    .add_constructor(SmilePreview, construct_smile_preview)
     // Your constructors will go here
     .add_head_constructor()
     .add_pages(pages);

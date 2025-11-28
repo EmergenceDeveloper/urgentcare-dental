@@ -1,6 +1,6 @@
 use crate::prelude::*;
-use time::OffsetDateTime;
 use std::sync::OnceLock;
+use time::OffsetDateTime;
 
 #[derive(Hash, Eq, PartialEq, Clone)]
 pub enum UCDPages {
@@ -16,6 +16,7 @@ pub enum UCDPages {
     PolicyPage,
     Plans,
     HairTransplants,
+    SmilePreview,
 }
 
 pub const SITE_NAME: &str = "UrgentCare Dental";
@@ -35,7 +36,7 @@ pub fn get_year() -> u32 {
     *YEAR.get_or_init(|| {
         let now = OffsetDateTime::now_utc();
         let current_year = now.year() as u32;
-        
+
         if now.month() >= time::Month::October {
             current_year + 1
         } else {

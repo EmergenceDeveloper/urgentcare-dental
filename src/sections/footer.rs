@@ -1,8 +1,9 @@
 use crate::prelude::*;
 
 pub fn construct_footer<T, I>(site: &mut Site<T, I>) -> String {
-    
-    site.declare_css("footer", r##"
+    site.declare_css(
+        "footer",
+        r##"
         
     
     footer {
@@ -151,9 +152,11 @@ pub fn construct_footer<T, I>(site: &mut Site<T, I>) -> String {
         
         
         
-    "##);
-    
-    format!(r##"
+    "##,
+    );
+
+    format!(
+        r##"
         <footer>
             <div class="inner">
                 <div class="polka-dots"></div>
@@ -163,11 +166,12 @@ pub fn construct_footer<T, I>(site: &mut Site<T, I>) -> String {
                     <nav class="menu" aria-label="Footer menu navigation">
                         <p>Menu</p>
                         <ul>
-                            <li><a href="/about-us/">About Us</a></li>
-                            <li><a href="/services/">Services</a></li>
-                            <li><a href="/pricing/">Pricing</a></li>
-                            <li><a href="/blog/">Blog</a></li>
-                            
+                            <li><a href="/smile-preview">Smile Preview</a></li>
+                            <li><a href="/hair-transplants">Hair Transplants</a></li>
+                            <li><a href="/about-us">About Us</a></li>
+                            <li><a href="/services">Services</a></li>
+                            <li><a href="/pricing">Pricing</a></li>
+                            <li><a href="/blog">Blog</a></li>
                             <li><a href="/contact">Contact</a></li>
                         </ul>
                     </nav>
@@ -194,5 +198,7 @@ pub fn construct_footer<T, I>(site: &mut Site<T, I>) -> String {
                 <p class="copyright">© Copyright {year} · [SITE_NAME] · All rights reserved</p>
             </div>
         </footer>
-    "##, year = get_current_year())
+    "##,
+        year = get_current_year()
+    )
 }

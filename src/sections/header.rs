@@ -4,12 +4,12 @@ pub fn construct_header<T, I>(site: &mut Site<T, I>, page: &PageFoundation) -> S
     // Define the navigation items
     let nav_items = vec![
         NavItem {
-            name: "Implants".to_owned(), 
+            name: "Implants".to_owned(),
             path: "/implants".to_owned(),
         },
         NavItem {
-            name: "Hair Transplants".to_owned(), 
-            path: "/hair-transplants".to_owned(),
+            name: "Smile Preview".to_owned(),
+            path: "/smile-preview".to_owned(),
         },
         NavItem {
             name: "Plans".to_owned(),
@@ -28,31 +28,30 @@ pub fn construct_header<T, I>(site: &mut Site<T, I>, page: &PageFoundation) -> S
             path: "/contact".to_owned(),
         },
     ];
-    
+
     let home_nav_item = NavWrappedItem {
         name: SITE_NAME.to_owned(),
         path: "/".to_owned(),
         content: format!(r##"<img class="logo" src="/images/branding/UrgentCare-Dental-Logo.svg">{SITE_NAME_BRANDED}"##).to_owned(),
         class: Some("site-title".to_owned()),
     };
-    
+
     let home_link = site.construct_nav_wrapped_link(&home_nav_item, &page);
-    
+
     // Generate the navigation links using Citadel's nav system
     let nav_links = site.construct_nav_links(&nav_items, page);
-    
+
     let (nav_checkbox, nav_button) = construct_nav_toggle(site);
-    
-    
-    let directive_item = NavWrappedItem { 
-        name: "Jobs".to_owned(), 
+
+    let directive_item = NavWrappedItem {
+        name: "Jobs".to_owned(),
         path: BOOKING_LINK.to_owned(),
         content: r##"Book<span> Appointment</span>"##.to_owned(),
         class: Some("directive".to_owned()),
     };
-    
+
     let directive = site.construct_nav_wrapped_link(&directive_item, &page);
-    
+
     let content = format!(
         r####"
         <header>
@@ -69,11 +68,10 @@ pub fn construct_header<T, I>(site: &mut Site<T, I>, page: &PageFoundation) -> S
         
         "####
     );
-    
-    
-    
-    
-    site.declare_css("header", r##"
+
+    site.declare_css(
+        "header",
+        r##"
     
         /* Header */
         {}
@@ -276,8 +274,8 @@ pub fn construct_header<T, I>(site: &mut Site<T, I>, page: &PageFoundation) -> S
     
     
     
-    "##);
-    
-    
+    "##,
+    );
+
     content
 }
