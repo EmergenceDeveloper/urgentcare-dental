@@ -1156,6 +1156,7 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
                         text-align: center;
                         
                         .icon {
+                            margin: 0 auto;
                             background-color: transparent;
                             background-image: radial-gradient(rgb(2, 220, 227) 1px, transparent 1px), radial-gradient(rgb(2, 220, 227) 1px, rgba(35, 84, 84, 0) 1px);
                             background-position: 0 0, 12px 12px;
@@ -1166,6 +1167,7 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
                             place-content: center;
                             
                             .circle {
+                                margin: 0 auto;
                                 border: 1px solid rgb(2, 146, 151);
                                 background-color: white;
                                 border-radius: 96px;
