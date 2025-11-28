@@ -474,6 +474,7 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
                     <a href="{BOOKING_LINK}" class="primary">Book an Appointment</a>
                     <a href="{PHONE_NUMBER_LINK}" class="secondary">Call {PHONE_NUMBER}</a>
                     <a href="https://wa.me/447383502032" class="secondary">WhatsApp Us</a>
+                    <a href="/smile-preview" class="tertiary">Try Our Smile Preview</a>
                 </div>
             </div>
             <div class="person-area">
@@ -597,6 +598,22 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
                         background-color: #fff;
                         color: var(--turquoise-15);
                         
+                    }
+
+                    .tertiary {
+                        background: linear-gradient(135deg, #73faff 0%, #a8ffff 50%, #73faff 100%);
+                        background-size: 200% 200%;
+                        color: var(--turquoise-15);
+                        transition: background-position 0.5s ease;
+                        
+                        &:hover {
+                            background-position: 100% 100%;
+                        }
+
+                        &::after {
+                            content: '✨';
+                            margin-left: 8px;
+                        }
                     }
                     
                     a {

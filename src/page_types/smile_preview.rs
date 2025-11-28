@@ -21,45 +21,45 @@ pub fn construct_smile_preview(site: &mut Site<UCDPages>, page: &mut Page<UCDPag
                     <div class="background-fade"></div>
                     <div class="inner">
                         <div class="text-area">
-                            <h1>Preview Your Results</h1>
-                            <p>See what straighter, whiter teeth could look like on you - before you book.</p>
-                            <p class="treatments-note">Whether you're considering straightening, composite bonding, or implants for missing teeth - preview the end of your smile journey.</p>
+                            <h1>Preview Your <span>New</span> Smile</h1>
+                            <p>What if you smiled without thinking about it? One selfie, and you'll see.</p>
+                            <p class="treatments-note">Works for straightening, whitening, bonding, implants, and more.</p>
                         </div>
                     </div>
                 </section>
                 
                 <section class="tool-section">
                     <div class="inner">
-                        <form hx-post="https://smile-preview.info-urgentcaredental.workers.dev"
-                              hx-target="#result" 
-                              hx-encoding="multipart/form-data"
-                              hx-indicator="#loading">
+                        <div id="tool-content">
+                            <form hx-post="https://smile-preview.info-urgentcaredental.workers.dev"
+                                  hx-target="#tool-content"
+                                  hx-swap="innerHTML"
+                                  hx-encoding="multipart/form-data">
+                                
+                                <div class="upload-area" id="upload-area">
+                                    <label for="selfie">
+                                        <span class="upload-icon">📸</span>
+                                        <span class="upload-text">Choose a photo or take a selfie</span>
+                                        <span class="upload-hint">For best results, smile with teeth showing</span>
+                                    </label>
+                                    <input type="file" 
+                                           id="selfie" 
+                                           name="selfie" 
+                                           accept="image/*" 
+                                           capture="user" 
+                                           required />
+                                </div>
+                                
+                                <button type="submit" class="btn-primary">
+                                    Preview My Smile
+                                </button>
+                            </form>
                             
-                            <div class="upload-area" id="upload-area">
-                                <label for="selfie">
-                                    <span class="upload-icon">📸</span>
-                                    <span class="upload-text">Choose a photo or take a selfie</span>
-                                    <span class="upload-hint">For best results, smile with teeth showing</span>
-                                </label>
-                                <input type="file" 
-                                       id="selfie" 
-                                       name="selfie" 
-                                       accept="image/*" 
-                                       capture="user" 
-                                       required />
+                            <div id="loading">
+                                <div class="loading-spinner"></div>
+                                <p class="loading-text">Creating your preview... this takes about 15-20 seconds</p>
                             </div>
-                            
-                            <button type="submit" class="btn-primary">
-                                Preview My Smile
-                            </button>
-                        </form>
-                        
-                        <div id="loading" class="htmx-indicator">
-                            <div class="loading-spinner"></div>
-                            <p class="loading-text">Creating your preview...</p>
                         </div>
-                        
-                        <div id="result"></div>
                     </div>
                 </section>
                 
@@ -70,17 +70,17 @@ pub fn construct_smile_preview(site: &mut Site<UCDPages>, page: &mut Page<UCDPag
                             <div class="step">
                                 <span class="step-number">1</span>
                                 <h3>Upload a Selfie</h3>
-                                <p>Take a photo showing your smile, or upload an existing one.</p>
+                                <p>Show us your smile. A quick photo is all we need.</p>
                             </div>
                             <div class="step">
                                 <span class="step-number">2</span>
-                                <h3>We Create Your Preview</h3>
-                                <p>Your photo is analysed and we generate a preview with aligned teeth, composite bonding, and implants for any missing teeth.</p>
+                                <h3>See Your Transformation</h3>
+                                <p>Within moments, your photo shows straighter, brighter teeth, with gaps filled in.</p>
                             </div>
                             <div class="step">
                                 <span class="step-number">3</span>
                                 <h3>See the Difference</h3>
-                                <p>Compare before and after to visualise your potential transformation.</p>
+                                <p>Before and after, side by side. Your future smile, right there.</p>
                             </div>
                         </div>
                         
@@ -93,6 +93,53 @@ pub fn construct_smile_preview(site: &mut Site<UCDPages>, page: &mut Page<UCDPag
             </main>
             {footer}
             <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+            <script>
+                document.getElementById('selfie').addEventListener('change', function(e) {{
+                    const file = e.target.files[0];
+                    if (file) {{
+                        const reader = new FileReader();
+                        reader.onload = function(event) {{
+                            const uploadArea = document.getElementById('upload-area');
+                            uploadArea.style.borderStyle = 'solid';
+                            uploadArea.style.borderColor = '#0a6b6d';
+                            uploadArea.style.background = '#f0fafb';
+                            
+                            const existingPreview = uploadArea.querySelector('.preview-img');
+                            if (existingPreview) existingPreview.remove();
+                            
+                            const img = document.createElement('img');
+                            img.src = event.target.result;
+                            img.className = 'preview-img';
+                            img.style.cssText = 'max-width: 100%; max-height: 300px; border-radius: 8px; margin-top: 1rem; pointer-events: none;';
+                            uploadArea.appendChild(img);
+                            
+                            uploadArea.querySelector('.upload-icon').textContent = '✓';
+                            uploadArea.querySelector('.upload-icon').style.color = '#0a6b6d';
+                            uploadArea.querySelector('.upload-text').textContent = 'Ready! Click below to preview your smile.';
+                            uploadArea.querySelector('.upload-hint').style.display = 'none';
+                            
+                            // Smooth scroll to button and add glow
+                            const btn = document.querySelector('.tool-section .btn-primary');
+                            setTimeout(() => {{
+                                btn.scrollIntoView({{ behavior: 'smooth', block: 'center' }});
+                                setTimeout(() => btn.classList.add('glow-pulse'), 450);
+                            }}, 500);
+                        }};
+                        reader.readAsDataURL(file);
+                    }}
+                }});
+
+                document.body.addEventListener('htmx:afterSwap', function(e) {{
+                    if (e.detail.target.id === 'tool-content') {{
+                        setTimeout(() => {{
+                            const result = document.querySelector('.smile-result');
+                            if (result) {{
+                                result.scrollIntoView({{ behavior: 'smooth', block: 'center' }});
+                            }}
+                        }}, 100);
+                    }}
+                }});
+            </script>
         </body>
         </html> 
     "##
@@ -103,6 +150,29 @@ pub fn construct_smile_preview(site: &mut Site<UCDPages>, page: &mut Page<UCDPag
 
 fn css(site: &mut Site<UCDPages>) {
     site.declare_css("smile-preview", r##"
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        @keyframes glow-pulse {
+            0% { box-shadow: 0 0 0 0 rgba(104, 248, 253, 0.8); }
+            70% { box-shadow: 0 0 0 15px rgba(104, 248, 253, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(104, 248, 253, 0); }
+        }
+
+        @keyframes sparkle-left {
+            0% { opacity: 0; transform: scale(0); }
+            40% { opacity: 1; transform: scale(1.3) translate(-15px, -15px); }
+            100% { opacity: 0; transform: scale(0.8) translate(-25px, -30px); }
+        }
+
+        @keyframes sparkle-right {
+            0% { opacity: 0; transform: scale(0); }
+            40% { opacity: 1; transform: scale(1.3) translate(15px, -15px); }
+            100% { opacity: 0; transform: scale(0.8) translate(25px, -30px); }
+        }
+
         main.smile-preview {
             background: #f8f9fa;
             
@@ -143,6 +213,11 @@ fn css(site: &mut Site<UCDPages>) {
                         font-size: 48tem;
                         margin-bottom: 1.5rem;
                         font-weight: 700;
+
+                        span {
+                            color: #0ca1a6;
+                            font-style: italic;
+                        }
                     }
                     
                     p {
@@ -163,7 +238,7 @@ fn css(site: &mut Site<UCDPages>) {
                 padding: 60px 20px;
                 
                 .inner {
-                    max-width: 600px;
+                    max-width: 800px;
                     margin: 0 auto;
                     text-align: center;
                 }
@@ -229,18 +304,44 @@ fn css(site: &mut Site<UCDPages>) {
                     &:hover {
                         background: #085456;
                     }
+                    
+                    &.glow-pulse {
+                        animation: glow-pulse 0.8s ease-out;
+                        position: relative;
+                        overflow: visible;
+
+                        &::before,
+                        &::after {
+                            content: '✨';
+                            position: absolute;
+                            animation: sparkle 0.8s ease-out forwards;
+                            pointer-events: none;
+                        }
+
+                        &::before {
+                            top: -5px;
+                            left: 10px;
+                            animation: sparkle-left 0.7s ease-out both;
+                        }
+
+                        &::after {
+                            top: -5px;
+                            right: 10px;
+                            animation: sparkle-right 0.7s ease-out both;
+                        }
+                    }
                 }
                 
-                .htmx-indicator {
+                #loading {
                     display: none;
                     padding: 40px;
                 }
                 
-                .htmx-request .htmx-indicator {
+                form.htmx-request ~ #loading {
                     display: block;
                 }
                 
-                .htmx-request form {
+                form.htmx-request {
                     opacity: 0.5;
                     pointer-events: none;
                 }
@@ -255,55 +356,51 @@ fn css(site: &mut Site<UCDPages>) {
                     margin: 0 auto 1rem;
                 }
                 
-                @keyframes spin {
+                /*@keyframes spin {
                     to { transform: rotate(360deg); }
-                }
+                }*/
                 
                 .loading-text {
                     color: #0a6b6d;
                     font-size: 1.1rem;
                 }
                 
-                #result {
+                .smile-result {
+                    background: white;
+                    padding: 30px;
+                    border-radius: 12px;
+                    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
                     
-                    .smile-result {
-                        margin-top: 2rem;
-                        background: white;
-                        padding: 30px;
-                        border-radius: 12px;
-                        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+                    .comparison {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        gap: 20px;
                         
-                        .comparison {
-                            display: grid;
-                            grid-template-columns: 1fr 1fr;
-                            gap: 20px;
-                            
-                            @media (max-width: 500px) {
-                                grid-template-columns: 1fr;
-                            }
+                        @media (max-width: 500px) {
+                            grid-template-columns: 1fr;
+                        }
+                    }
+                    
+                    .before, .after {
+                        
+                        h3 {
+                            margin-bottom: 0.75rem;
+                            color: #333;
+                            font-size: 1.1rem;
                         }
                         
-                        .before, .after {
-                            
-                            h3 {
-                                margin-bottom: 0.75rem;
-                                color: #333;
-                                font-size: 1.1rem;
-                            }
-                            
-                            img {
-                                width: 100%;
-                                border-radius: 8px;
-                                box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-                            }
+                        img {
+                            width: 100%;
+                            border-radius: 8px;
+                            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
                         }
-                        
-                        .disclaimer {
-                            margin-top: 1.5rem;
-                            font-size: 0.875rem;
-                            color: #999;
-                            font-style: italic;
-                        }
+                    }
+                    
+                    .next-step  {
+                        margin-top: 1.5rem;
+                        font-size: 0.875rem;
+                        color: #999;
+                        font-style: italic;
                     }
                 }
             }
@@ -313,7 +410,7 @@ fn css(site: &mut Site<UCDPages>) {
                 background: white;
                 
                 .inner {
-                    max-width: 900px;
+                    max-width: 960px;
                     margin: 0 auto;
                 }
                 
