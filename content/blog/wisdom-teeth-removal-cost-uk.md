@@ -2,7 +2,7 @@
 title = "Wisdom Teeth Removal Cost UK: What You'll Pay to Get Them Out in [YEAR]"
 description = "Wisdom teeth removal costs between £200 and £600 per tooth for most people in the UK. Here's what makes some extractions cost more than others and what to expect."
 date = "2025-12-05"
-image = "/images/blog/wisdom-teeth-removal-cost-uk.jpg"
+image = "/images/blog/wisdom-teeth-removal-cost-uk.webp"
 tags = ["Oral Surgery", "Wisdom Teeth", "Dental Costs"]
 +++
 

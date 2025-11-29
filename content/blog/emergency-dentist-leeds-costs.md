@@ -1,8 +1,8 @@
 +++
 title = "Emergency Dentist in Leeds: What It Costs and Where to Find One Fast"
 description = "Emergency dental appointments in Leeds cost between £50 and £200 for the consultation alone. Here's what you'll actually pay, where to go, and how to get seen quickly."
-date = "2025-12-11"
-image = "/images/blog/emergency-dentist-leeds.jpg"
+date = "2025-12-10"
+image = "/images/blog/emergency-dentist-leeds-costs.webp"
 tags = ["Emergency Dentistry", "Leeds", "Dental Costs"]
 +++
 

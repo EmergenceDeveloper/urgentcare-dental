@@ -2,7 +2,7 @@
 title = "Porcelain Veneers Cost UK: What You'll Pay Per Tooth in [YEAR]"
 description = "Porcelain veneers cost between £700 and £1,200 per tooth for most people in the UK. Here's what you're getting for that money and why they cost what they do."
 date = "2025-12-02"
-image = "/images/blog/porcelain-veneers-cost-uk.jpg"
+image = "/images/blog/porcelain-veneers-cost-uk.webp"
 tags = ["Cosmetic Dentistry", "Veneers", "Dental Costs"]
 +++
 

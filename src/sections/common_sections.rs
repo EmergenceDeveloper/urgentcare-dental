@@ -800,6 +800,7 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
                         
                         a {
                             color: var(--grey-50);
+                            display: block;
                         }
                         
                     }
