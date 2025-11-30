@@ -1,27 +1,26 @@
 use crate::prelude::*;
 
 pub fn construct_homepage(site: &mut Site<UCDPages>, page: &mut Page<UCDPages>) {
-    
     add_default_og_image(page);
     let head = site.construct_head(page);
-    
-    
+
     css(site);
-    
-    
+
     let header = construct_header(site, &page.foundation);
     let footer = construct_footer(site);
-    
+
     let dentist_splash_hero = &site.sections["dentist_splash_hero"];
+    let patient_stories = &site.sections["patient_stories"];
     let about_our_clinics = &site.sections["about_our_clinics"];
     let locations = &site.sections["locations"];
     let services = &site.sections["services"];
     let general_services = &site.sections["general_services"];
     let meet_us = &site.sections["meet_us"];
     let open_times = &site.sections["open_times"];
-    let patient_stories = &site.sections["patient_stories"];
-    
-    let html = format!(r##"
+    let patient_reviews = &site.sections["patient_reviews"];
+
+    let html = format!(
+        r##"
         <!DOCTYPE html>
         <html lang="en-GB">
         {head}
@@ -30,13 +29,14 @@ pub fn construct_homepage(site: &mut Site<UCDPages>, page: &mut Page<UCDPages>) 
             <main class="home">
 
                 {dentist_splash_hero}
+                {patient_stories}
                 {about_our_clinics}
                 {locations}
                 {services}
                 {general_services}
                 {meet_us}
                 {open_times}
-                {patient_stories}
+                {patient_reviews}
                 
             </main>
             {footer}
@@ -44,13 +44,14 @@ pub fn construct_homepage(site: &mut Site<UCDPages>, page: &mut Page<UCDPages>) 
         </html>
     "##
     );
-    
-    
+
     page.foundation.content = Some(html);
 }
 
 fn css(site: &mut Site<UCDPages>) {
-    site.declare_css("homepage", r##"
+    site.declare_css(
+        "homepage",
+        r##"
         {}
         
         main.home {
@@ -93,5 +94,6 @@ fn css(site: &mut Site<UCDPages>) {
 
             
         }
-    "##);
+    "##,
+    );
 }

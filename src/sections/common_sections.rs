@@ -13,7 +13,7 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
                     <div class="team-member">
                         <div class="image-area">
                             <div class="circle"></div>
-                            <img loading="lazy" src="/images/dentists/Dr. Zain Chishty.png" />
+                            <img loading="lazy" src="/images/dentists/Dr. Zain Chishty.webp" />
                         </div>
                         <h3>Dr. Zain Chishty</h3>
                         <p>General & Implant Dentist</p>
@@ -21,7 +21,7 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
                     <div class="team-member">
                         <div class="image-area">
                             <div class="circle"></div>
-                            <img loading="lazy" src="/images/dentists/Dr. Parasto Farshchi.png" />
+                            <img loading="lazy" src="/images/dentists/Dr. Parasto Farshchi.webp" />
                         </div>
                         <h3>Dr. Parasto Farshchi</h3>
                         <p>Cosmetic Dentist and Facial Aesthetician</p>
@@ -29,7 +29,7 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
                     <div class="team-member">
                         <div class="image-area">
                             <div class="circle"></div>
-                            <img loading="lazy" src="/images/dentists/Dr. Anoop Kizaekka.png" />
+                            <img loading="lazy" src="/images/dentists/Dr. Anoop Kizaekka.webp" />
                         </div>
                         <h3>Dr. Anoop Kizaekka</h3>
                         <p>Oral Surgeon</p>
@@ -37,7 +37,7 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
                     <div class="team-member">
                         <div class="image-area">
                             <div class="circle"></div>
-                            <img loading="lazy" src="/images/dentists/Dr. Mohammed Fahhr Hussain.png" />
+                            <img loading="lazy" src="/images/dentists/Dr. Mohammed Fahhr Hussain.webp" />
                         </div>
                         <h3>Dr. Mohammed Fahhr Hussain</h3>
                         <p>Oral Surgery & Endodontics</p>
@@ -45,7 +45,7 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
                     <div class="team-member">
                         <div class="image-area">
                             <div class="circle"></div>
-                            <img loading="lazy" src="/images/dentists/Dr. Shahee Ahmed.png" />
+                            <img loading="lazy" src="/images/dentists/Dr. Shahee Ahmed.webp" />
                         </div>
                         <h3>Dr. Shahee Ahmed</h3>
                         <p>Oral Surgery and Paediatric Dentistry</p>
@@ -53,7 +53,7 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
                     <div class="team-member">
                         <div class="image-area">
                             <div class="circle"></div>
-                            <img loading="lazy" src="/images/dentists/Dr. Rafaela Fernandes Zancan.png" />
+                            <img loading="lazy" src="/images/dentists/Dr. Rafaela Fernandes Zancan.webp" />
                         </div>
                         <h3>Dr. Rafaela Fernandes Zancan</h3>
                         <p>Special Interest in Endodontics</p>
@@ -1548,8 +1548,8 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
         }
     "##);
 
-    site.declare_section("patient_stories",&format!(r##"
-        <section class="patient-stories">
+    site.declare_section("patient_reviews",&format!(r##"
+        <section class="patient-reviews">
             <div class="text-area">
                 <div class="subtitle">Testimonials</div>
                 <h2>Kind Words from Our Patients</h2>
@@ -1610,9 +1610,9 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
     "##));
 
     site.declare_css(
-        "patient_stories",
+        "patient_reviews",
         r##"
-        section.patient-stories {
+        section.patient-reviews {
             padding: 100px var(--site-padding-x);
             background: white;
             
@@ -1889,4 +1889,270 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
         }
     "##,
     );
+
+    site.declare_section("patient_stories", r##"
+    <section class="patient-stories">
+        <div class="inner">
+            <div class="header">
+                <div class="subtitle">Real Results</div>
+                <h2>Patient Stories</h2>
+                <p>Hear directly from our patients about their experience at UrgentCare Dental.</p>
+            </div>
+            
+            <div class="videos-grid">
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <video src="https://assets.urgentcaredental.co.uk/Kayleigh_LA_S.mp4" playsinline preload="metadata"></video>
+                        <div class="play-overlay">
+                            <div class="play-button">
+                                <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="patient-info">
+                        <div class="name">Kayleigh</div>
+                        <div class="treatment">Emergency Extraction</div>
+                    </div>
+                </div>
+                
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <video src="https://assets.urgentcaredental.co.uk/Aryan_LA_S.mp4" playsinline preload="metadata"></video>
+                        <div class="play-overlay">
+                            <div class="play-button">
+                                <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="patient-info">
+                        <div class="name">Aryan</div>
+                        <div class="treatment">Same-Day Extraction</div>
+                    </div>
+                </div>
+                
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <video src="https://assets.urgentcaredental.co.uk/George_LA_S.mp4?v=2" playsinline preload="metadata"></video>
+                        <div class="play-overlay">
+                            <div class="play-button">
+                                <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="patient-info">
+                        <div class="name">George</div>
+                        <div class="treatment">Cracked Tooth Repair</div>
+                    </div>
+                </div>
+                
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <video src="https://assets.urgentcaredental.co.uk/Beth_LA_S.mp4?v=2" playsinline preload="metadata"></video>
+                        <div class="play-overlay">
+                            <div class="play-button">
+                                <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="patient-info">
+                        <div class="name">Beth</div>
+                        <div class="treatment">Checkup & Clean</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+        document.querySelectorAll('.patient-stories .video-wrapper').forEach(wrapper => {
+            const video = wrapper.querySelector('video');
+            const overlay = wrapper.querySelector('.play-overlay');
+            
+            overlay.addEventListener('click', () => {
+                if (video.paused) {
+                    document.querySelectorAll('.patient-stories video').forEach(v => {
+                        if (v !== video) {
+                            v.pause();
+                            v.closest('.video-wrapper').classList.remove('playing');
+                        }
+                    });
+                    video.play();
+                    wrapper.classList.add('playing');
+                }
+            });
+            
+            video.addEventListener('click', () => {
+                if (!video.paused) {
+                    video.pause();
+                    wrapper.classList.remove('playing');
+                }
+            });
+            
+            video.addEventListener('ended', () => {
+                wrapper.classList.remove('playing');
+            });
+        });
+        </script>
+    </section>
+"##);
+
+    site.declare_css("patient_stories", r##"
+    section.patient-stories {
+        background: linear-gradient(180deg, #f5ffff 0%, #fff 100%);
+        padding: 120px var(--site-padding-x);
+        position: relative;
+        overflow: hidden;
+        
+        &::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: radial-gradient(rgba(2, 146, 151, 0.08) 1px, transparent 1px);
+            background-size: 24px 24px;
+            pointer-events: none;
+        }
+        
+        .inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            
+            .header {
+                text-align: center;
+                margin-bottom: 64px;
+                
+                .subtitle {
+                    font-size: 14px;
+                    font-weight: 600;
+                    color: var(--turquoise-30);
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    margin-bottom: 16px;
+                }
+                
+                h2 {
+                    font-size: 42px;
+                    font-weight: 700;
+                    color: var(--turquoise-15);
+                    margin-bottom: 20px;
+                    letter-spacing: -1px;
+                }
+                
+                p {
+                    font-size: 18px;
+                    color: var(--grey-50);
+                    max-width: 600px;
+                    margin: 0 auto;
+                    line-height: 1.6;
+                    font-weight: 300;
+                }
+            }
+            
+            .videos-grid {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 24px;
+                
+                @media (max-width: 1024px) {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+                
+                @media (max-width: 600px) {
+                    grid-template-columns: 1fr;
+                    max-width: 320px;
+                    margin: 0 auto;
+                }
+                
+                .video-card {
+                    position: relative;
+                    border-radius: 20px;
+                    overflow: hidden;
+                    background: var(--turquoise-15);
+                    box-shadow: 0 8px 32px rgba(1, 73, 75, 0.15);
+                    transition: transform 0.3s ease, box-shadow 0.3s ease;
+                    
+                    &:hover {
+                        transform: translateY(-8px);
+                        box-shadow: 0 16px 48px rgba(1, 73, 75, 0.25);
+                    }
+                    
+                    .video-wrapper {
+                        position: relative;
+                        aspect-ratio: 9/16;
+                        
+                        video {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            display: block;
+                        }
+                        
+                        .play-overlay {
+                            position: absolute;
+                            inset: 0;
+                            background: linear-gradient(180deg, transparent 50%, rgba(1, 73, 75, 0.8) 100%);
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            cursor: pointer;
+                            transition: opacity 0.3s ease;
+                            
+                            .play-button {
+                                width: 72px;
+                                height: 72px;
+                                background: rgba(255, 255, 255, 0.95);
+                                border-radius: 50%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: center;
+                                box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+                                transition: transform 0.3s ease, background 0.3s ease;
+                                
+                                svg {
+                                    width: 28px;
+                                    height: 28px;
+                                    fill: var(--turquoise-30);
+                                    margin-left: 4px;
+                                }
+                            }
+                            
+                            &:hover .play-button {
+                                transform: scale(1.1);
+                                background: #fff;
+                            }
+                        }
+                        
+                        &.playing .play-overlay {
+                            opacity: 0;
+                            pointer-events: none;
+                        }
+                    }
+                    
+                    .patient-info {
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        right: 0;
+                        padding: 20px;
+                        background: linear-gradient(180deg, transparent 0%, rgba(1, 73, 75, 0.9) 100%);
+                        pointer-events: none;
+                        
+                        .name {
+                            font-size: 18px;
+                            font-weight: 600;
+                            color: #fff;
+                            margin-bottom: 4px;
+                        }
+                        
+                        .treatment {
+                            font-size: 14px;
+                            color: var(--turquoise-70);
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+        }
+    }
+"##);
+    // Script is inline at the end of the section HTML
 }

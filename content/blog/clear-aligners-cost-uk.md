@@ -1,5 +1,5 @@
 +++
-title = "Clear Aligners Cost UK: What Invisalign and Alternatives Actually Cost in 2025"
+title = "Clear Aligners Cost UK: What Invisalign and Alternatives Actually Cost in [YEAR]"
 description = "Clear aligners cost most people around £3,000 in the UK. Here's what you're paying for and why those before-and-after transformations are more accessible than you'd think."
 date = "2025-11-28"
 image = "/images/blog/clear-aligners-cost-uk.jpg"
