@@ -16,7 +16,7 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
                             <img loading="lazy" src="/images/dentists/Dr. Zain Chishty.webp" />
                         </div>
                         <h3>Dr. Zain Chishty</h3>
-                        <p>General & Implant Dentist</p>
+                        <p>Clinical Director and Implant Dentist</p>
                     </div>
                     <div class="team-member">
                         <div class="image-area">
@@ -1941,7 +1941,7 @@ pub fn add_common_sections<T, I>(site: &mut Site<T, I>) {
                     </div>
                     <div class="patient-info">
                         <div class="name">George</div>
-                        <div class="treatment">Cracked Tooth Repair</div>
+                        <div class="treatment">Cracked Tooth Extraction</div>
                     </div>
                 </div>
                 
