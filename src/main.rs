@@ -211,7 +211,6 @@ fn main() {
         settings: Settings {
             use_trailing_slashes: false,
             title_append: Some(" - UrgentCare Dental".to_owned()),
-            
             ..default()
         },
         ..default()  // No imperium needed for this simple site

@@ -2,12 +2,11 @@
 use crate::prelude::*;
 
 pub fn construct_post(site: &mut Site<UCDPages>, page: &mut Page<UCDPages>) {
-    
     let post = match page.specification.clone() {
         UCDPages::BlogPost(post) => post,
         _ => return,
     };
-    
+
     // Add schema for this blog post
     add_blog_post_schema(page, &post);
     add_post_og_image(page, &post);
@@ -16,7 +15,7 @@ pub fn construct_post(site: &mut Site<UCDPages>, page: &mut Page<UCDPages>) {
 
     let head = site.construct_head(page);
     let date = format_date(&post.frontmatter.date);
-    
+
     // Get the first category for breadcrumbs
     /*let category = post.frontmatter.category
         .first()
@@ -29,7 +28,7 @@ pub fn construct_post(site: &mut Site<UCDPages>, page: &mut Page<UCDPages>) {
     } else {
         String::new()
     };*/
-    
+
     // Build meta HTML with both date and updated
     let meta_html = if date.is_empty() && post.frontmatter.updated.is_empty() {
         String::new()
@@ -40,17 +39,19 @@ pub fn construct_post(site: &mut Site<UCDPages>, page: &mut Page<UCDPages>) {
         } else {
             String::new()
         };
-        
-        format!(r##"
+
+        format!(
+            r##"
             <div class="meta">
                 <div class="published">Published: {date}</div>
                 {updated_html}
             </div>
-        "##)
+        "##
+        )
     };
-    
-    
-    let author_card = format!(r##"
+
+    let author_card = format!(
+        r##"
         <div class="author-card">
             <div class="image-box">
                 <img src="/images/branding/UrgentCare-Dental-Logo.svg" alt="Urgent Care Dental Logo">
@@ -61,16 +62,20 @@ pub fn construct_post(site: &mut Site<UCDPages>, page: &mut Page<UCDPages>) {
                 <p class="organization">UrgentCare Dental</p>
             </div>
         </div>
-    "##);
-    
-    let tags_html = post.frontmatter.tags
+    "##
+    );
+
+    let tags_html = post
+        .frontmatter
+        .tags
         .iter()
         .take(3)
         .map(|tag| format!(r##"<span class="tag">{}</span>"##, tag))
         .collect::<Vec<_>>()
         .join("");
-    
-    let html = format!(r##"
+
+    let html = format!(
+        r##"
         <!DOCTYPE html>
         <html lang="en-GB">
         {head}
@@ -114,10 +119,9 @@ pub fn construct_post(site: &mut Site<UCDPages>, page: &mut Page<UCDPages>) {
         image = post.frontmatter.image,
         content = post.content,
     );
-    
+
     page.foundation.content = Some(html);
 }
-
 
 fn css(site: &mut Site<UCDPages>) {
     site.declare_css("post", r##"
@@ -480,34 +484,31 @@ fn css(site: &mut Site<UCDPages>) {
                             width: 100%;
                             border-collapse: collapse;
                             margin: 30px 0;
-
                             overflow-x: auto;
                             position: relative;
-                            display: block;
                             
                             tr {
-                                background-color: #fffefc;
+                                background-color: #fff;
                                 word-break: normal;
                                 
                                 &:nth-child(even) {
-                                    background-color: #fcfce3;
+                                    background-color: var(--turquoise-98);
                                 }
                             }
                             
                             tbody:only-child {
                                 tr {
                                     &:nth-child(odd) {
-                                        background-color: #fcfce3;
+                                        background-color: var(--turquoise-98);
                                     }
                                     
                                     &:nth-child(even) {
-                                        background-color: #fffefc;
+                                        background-color: #fff;
                                     }
                                     
                                     &:first-child {
-                                        background-color: #f2ec2c;
-                                        font-weight: 600;
-                                        color: #cd7f32;
+                                        background-color: var(--turquoise-30);
+                                        color: #fff;
                                         
                                         td {
                                             font-weight: 600;
@@ -517,22 +518,19 @@ fn css(site: &mut Site<UCDPages>) {
                             }
                             
                             th {
-                                background-color: #f2ec2c;
+                                background-color: var(--turquoise-30);
                                 font-weight: 600;
-                                color: #cd7f32;
+                                color: #fff;
                                 text-align: left;
                                 padding: 12px;
+                                border: 1px solid var(--turquoise-15);
                             }
                             
                             td {
                                 padding: 12px;
-                                border: 1px solid #e3d4af;
+                                border: 1px solid var(--turquoise-90);
                                 text-align: left;
                                 vertical-align: middle;
-                            }
-                            
-                            th {
-                                border: 1px solid #e3d4af;
                             }
                         }
                         
