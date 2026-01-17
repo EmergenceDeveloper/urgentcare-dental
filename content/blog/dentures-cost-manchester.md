@@ -84,7 +84,7 @@ We position our denture pricing to be straightforward and accessible for Manches
 
 Full or partial dentures at UrgentCare cost £699 per arch. This includes comprehensive evaluation, precise fitting, and necessary adjustments. Our initial consultation is £20, which gives you a clear picture of what your specific case needs before committing to treatment.
 
-If you need [tooth extractions](/blog/emergency-tooth-extraction-costs-uk) before dentures can be fitted, simple extractions are £149, complex extractions £349, and surgical extractions £549. We handle the entire process in-house, which means you're not coordinating between multiple practices.
+If you need [tooth extractions](/blog/emergency-tooth-extraction-costs-uk) before dentures can be fitted, simple extractions are £149, complex extractions £399, and surgical extractions £549. We handle the entire process in-house, which means you're not coordinating between multiple practices.
 
 For patients considering [dental implants](/blog/dental-implant-costs-uk) instead of or in combination with dentures, our implant cost is £1,999 per implant. This is competitive with other Manchester practices while maintaining the quality standards necessary for long-term success.
 

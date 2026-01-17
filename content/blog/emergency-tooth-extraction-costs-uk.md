@@ -74,7 +74,7 @@ The practical reality means most patients pay private rates whether they prefer 
 
 While most emergency dental providers add consultation premiums and complexity surcharges to base extraction costs, some practices offer transparent, all-inclusive pricing that eliminates billing surprises during stressful situations.
 
-[UrgentCare Dental](https://urgentcaredental.co.uk/) operates on fixed-rate pricing regardless of timing or complexity classification. Simple tooth extractions cost £149, complex extractions £349, and surgical extractions £549 - with no additional consultation fees, emergency premiums, or hidden charges. [Emergency appointments start at £20](https://urgentcaredental.setmore.com/) including X-rays, making them **among the most accessible options for immediate dental care in Northern England**.
+[UrgentCare Dental](https://urgentcaredental.co.uk/) operates on fixed-rate pricing regardless of timing or complexity classification. Simple tooth extractions cost £149, complex extractions £399, and surgical extractions £549 - with no additional consultation fees, emergency premiums, or hidden charges. [Emergency appointments start at £20](https://urgentcaredental.setmore.com/) including X-rays, making them **among the most accessible options for immediate dental care in Northern England**.
 
 This transparent approach contrasts with the variable "from" pricing common across the industry, where initial quotes can double after consultation fees, X-ray charges, and complexity reclassification come into play.
 

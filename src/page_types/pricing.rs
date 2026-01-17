@@ -97,7 +97,7 @@ pub fn construct_pricing(site: &mut Site<UCDPages>, page: &mut Page<UCDPages>) {
                                 <p>Complex Tooth Extractions</p>
                                 <p>Removal of damaged or impacted teeth.</p>
                             </td>
-                            <td>£349 / extraction</td>
+                            <td>£399 / extraction</td>
                             </tr>
                             <tr>
                             <td>
@@ -237,7 +237,14 @@ pub fn construct_pricing(site: &mut Site<UCDPages>, page: &mut Page<UCDPages>) {
                                 <p>IV Sedation</p>
                                 <p>Intravenous sedation for deeper relaxation during extensive procedures.</p>
                             </td>
-                            <td>£300 - £500 / session</td>
+                            <td>£399 / session</td>
+                            </tr>
+                            <tr>
+                            <td>
+                                <p>Extraction with sedation</p>
+                                <p>Extraction of a tooth with sedation.</p>
+                            </td>
+                            <td>£695</td>
                             </tr>
                         </tbody>
                         </table>

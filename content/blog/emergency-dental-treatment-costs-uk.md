@@ -81,7 +81,7 @@ While the prices listed by traditional dental practices can appear low at first 
 
 However, fortunately for patients, the rise of specialized emergency dental services in the UK in the wake of the widespread unavailability of NHS treatment have disrupted this model with transparent, all-inclusive pricing. Emergency dental services are almost always seen to offer fixed-rate pricing for appointments regardless of timing or complexity of the diagnosis.
 
-UrgentCare Dental is a clear example of this approach, with £20 emergency appointments including free X-rays and free follow-up visits, combined with [transparent pricing](../pricing): simple extractions are £149, complex extractions are £349, and surgical extractions are £549, for instance. The lack of hidden fees and emergency premiums make emergency-focused dental services an option growing rapidly in popularity in the UK.
+UrgentCare Dental is a clear example of this approach, with £20 emergency appointments including free X-rays and free follow-up visits, combined with [transparent pricing](../pricing): simple extractions are £149, complex extractions are £399, and surgical extractions are £549, for instance. The lack of hidden fees and emergency premiums make emergency-focused dental services an option growing rapidly in popularity in the UK.
 
 The key to understanding why lower up-front costs are economically viable for emergency dental practices, is to realize that they are intimately familiar with the 85-95% treatment acceptance rates by emergency dental patients.
 
