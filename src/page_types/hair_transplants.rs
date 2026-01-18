@@ -197,39 +197,84 @@ pub fn construct_hair_transplants(site: &mut Site<UCDPages>, page: &mut Page<UCD
                     </div>
                 </section>
 
+                <section class="reviews">
+                    <div class="container">
+                        <h2>What Our Patients Say</h2>
+                        <div class="reviews-grid">
+                            <div class="review-card">
+                                <div class="stars">★★★★★</div>
+                                <p>"Went in not really knowing what to expect but they talked me through everything. Six months on and I'm actually styling my hair again for the first time in years."</p>
+                                <div class="reviewer">Michael T., Leeds</div>
+                            </div>
+                            <div class="review-card">
+                                <div class="stars">★★★★★</div>
+                                <p>"Did a lot of research before deciding. The price was genuinely unbeatable for what you get - other places wanted double for fewer grafts."</p>
+                                <div class="reviewer">James R., Manchester</div>
+                            </div>
+                            <div class="review-card">
+                                <div class="stars">★★★★☆</div>
+                                <p>"The procedure itself was longer than I expected but totally painless. Still waiting on full results but the team have been great with follow-ups."</p>
+                                <div class="reviewer">David H., Bradford</div>
+                            </div>
+                            <div class="review-card">
+                                <div class="stars">★★★★★</div>
+                                <p>"Wish I'd done it sooner honestly. The wife noticed the difference before I did. Aftercare kit was a nice touch too."</p>
+                                <div class="reviewer">Chris M., Sheffield</div>
+                            </div>
+                            <div class="review-card">
+                                <div class="stars">★★★★★</div>
+                                <p>"Was nervous about the video consultation but it was really relaxed, no hard sell. Booked in the same week."</p>
+                                <div class="reviewer">Andy S., Huddersfield</div>
+                            </div>
+                            <div class="review-card">
+                                <div class="stars">★★★★★</div>
+                                <p>"Fantastic results. Looks completely natural and the recovery was easier than I thought. Highly recommend."</p>
+                                <div class="reviewer">Mark L., Wakefield</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
                 <section class="process">
                     <div class="container">
                         <h2>The Hair Transplant Process</h2>
-                        <div class="steps">
-                            <div class="step">
-                                <div class="number">1</div>
+                        <p class="process-intro">From consultation to full results, we support you every step of the way</p>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot">1</div>
                                 <h3>Free Consultation</h3>
-                                <p>We'll conduct a complimentary consultation to assess your hair loss and discuss your restoration goals.</p>
+                                <p class="timeline-duration">30 minutes</p>
+                                <p>We'll assess your hair loss pattern, discuss your goals, and create a personalised treatment plan.</p>
                             </div>
-                            <div class="step">
-                                <div class="number">2</div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot">2</div>
                                 <h3>Personalised Plan</h3>
-                                <p>Our specialists create a customised treatment plan tailored to your specific needs and desired results.</p>
+                                <p class="timeline-duration">Same day</p>
+                                <p>Our specialists design a customised approach tailored to your specific needs and desired results.</p>
                             </div>
-                            <div class="step">
-                                <div class="number">3</div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot">3</div>
                                 <h3>FUE Procedure</h3>
-                                <p>The procedure takes 6-8 hours as our team carefully extracts and transplants 3,500-4,000 healthy hair grafts.</p>
+                                <p class="timeline-duration">6-8 hours</p>
+                                <p>Our team carefully extracts and transplants 3,500-4,000 healthy hair grafts with precision.</p>
                             </div>
-                            <div class="step">
-                                <div class="number">4</div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot">4</div>
                                 <h3>PRP Treatment</h3>
-                                <p>Included PRP therapy enhances graft survival and promotes faster, healthier hair growth.</p>
+                                <p class="timeline-duration">Included</p>
+                                <p>Platelet-rich plasma therapy enhances graft survival and promotes faster, healthier growth.</p>
                             </div>
-                            <div class="step">
-                                <div class="number">5</div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot">5</div>
                                 <h3>Aftercare Support</h3>
-                                <p>Full aftercare programme with all products provided and ongoing support throughout your recovery.</p>
+                                <p class="timeline-duration">Ongoing</p>
+                                <p>Full aftercare programme with all products provided and support throughout your recovery.</p>
                             </div>
-                            <div class="step">
-                                <div class="number">6</div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot">6</div>
                                 <h3>12 Month Review</h3>
-                                <p>Complimentary follow-up appointment to review your results and ensure your satisfaction.</p>
+                                <p class="timeline-duration">Complimentary</p>
+                                <p>Follow-up appointment to review your transformation and ensure you're delighted with results.</p>
                             </div>
                         </div>
                     </div>
@@ -971,7 +1016,7 @@ fn css(site: &mut Site<UCDPages>) {
                 }
             }
 
-            .process {
+            .reviews {
                 background: #f8f9fa;
                 padding: 4rem 5%;
 
@@ -987,34 +1032,155 @@ fn css(site: &mut Site<UCDPages>) {
                     text-align: center;
                 }
 
-                .steps {
+                .reviews-grid {
                     display: grid;
-                    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-                    gap: 2rem;
+                    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+                    gap: 1.5rem;
                 }
 
-                .step {
+                .review-card {
                     background: white;
                     padding: 2rem;
                     border-radius: 8px;
                     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+                    border-left: 4px solid #00bfb3;
 
-                    .number {
-                        display: inline-block;
-                        width: 40px;
-                        height: 40px;
-                        background: #00bfb3;
-                        color: white;
-                        border-radius: 50%;
-                        text-align: center;
-                        line-height: 40px;
-                        font-weight: bold;
+                    .stars {
+                        color: #f5a623;
+                        font-size: 1.2rem;
                         margin-bottom: 1rem;
+                        letter-spacing: 2px;
                     }
 
-                    h3 {
+                    p {
+                        color: #555;
+                        line-height: 1.7;
+                        margin-bottom: 1rem;
+                        font-style: italic;
+                    }
+
+                    .reviewer {
                         color: #0a5959;
-                        margin-bottom: 0.5rem;
+                        font-weight: 600;
+                        font-size: 0.95rem;
+                    }
+                }
+            }
+
+            .process {
+                background: #f8f9fa;
+                padding: 4rem 5%;
+
+                .container {
+                    max-width: 1200px;
+                    margin: 0 auto;
+                }
+
+                h2 {
+                    text-align: center;
+                    font-size: 2rem;
+                    margin-bottom: 1rem;
+                    color: #0a5959;
+                }
+
+                .process-intro {
+                    text-align: center;
+                    font-size: 1.1rem;
+                    color: #666;
+                    margin-bottom: 3rem;
+                    max-width: 600px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+
+                .timeline {
+                    position: relative;
+                    max-width: 900px;
+                    margin: 0 auto;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        left: 50%;
+                        top: 0;
+                        bottom: 0;
+                        width: 2px;
+                        background: #00bfb3;
+
+                        @media (max-width: 768px) {
+                            left: 20px;
+                        }
+                    }
+
+                    .timeline-item {
+                        padding: 20px 0;
+                        position: relative;
+                        width: 50%;
+                        box-sizing: border-box;
+
+                        &:nth-child(odd) {
+                            left: 2px;
+                            padding-right: 40px;
+                            text-align: right;
+                        }
+
+                        &:nth-child(even) {
+                            left: 50%;
+                            padding-left: 40px;
+                        }
+
+                        @media (max-width: 768px) {
+                            width: 100%;
+                            left: 0 !important;
+                            padding-left: 60px !important;
+                            padding-right: 0 !important;
+                            text-align: left !important;
+                        }
+
+                        .timeline-dot {
+                            position: absolute;
+                            width: 28px;
+                            height: 28px;
+                            background: #00bfb3;
+                            border: 4px solid white;
+                            border-radius: 50%;
+                            top: 26px;
+                            color: white;
+                            font-size: 0.85rem;
+                            font-weight: 600;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+
+                            @media (max-width: 768px) {
+                                left: 7px !important;
+                            }
+                        }
+
+                        &:nth-child(odd) .timeline-dot {
+                            right: -13px;
+                        }
+
+                        &:nth-child(even) .timeline-dot {
+                            left: -13px;
+                        }
+
+                        h3 {
+                            font-size: 1.3rem;
+                            color: #0a5959;
+                            margin-bottom: 0.5rem;
+                        }
+
+                        .timeline-duration {
+                            color: #00bfb3;
+                            font-weight: 600;
+                            margin-bottom: 0.5rem;
+                        }
+
+                        p {
+                            color: #555;
+                            line-height: 1.6;
+                        }
                     }
                 }
             }
