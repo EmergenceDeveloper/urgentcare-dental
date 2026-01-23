@@ -1817,7 +1817,6 @@ fn css(site: &mut Site<UCDPages>) {
                     transition: transform 0.3s ease;
 
                     &.drawer-open,
-                    &:hover,
                     &:focus-within {
                         transform: translateY(0);
                     }
