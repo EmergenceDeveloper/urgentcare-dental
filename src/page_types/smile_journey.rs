@@ -83,7 +83,10 @@ pub fn construct_smile_journey(site: &mut Site<UCDPages>, page: &mut Page<UCDPag
                                 <div class="estimator-header">
                                     <h3>Your Journey Estimate</h3>
                                 </div>
-                                <div class="estimator-body">
+                                <div class="estimator-empty" id="estimator-empty">
+                                    <p>Select your smile goals above to see your personalised estimate</p>
+                                </div>
+                                <div class="estimator-body" id="estimator-body">
                                     <div class="estimate-row">
                                         <span class="label">Timeline</span>
                                         <span class="value" id="est-timeline">—</span>
@@ -97,14 +100,14 @@ pub fn construct_smile_journey(site: &mut Site<UCDPages>, page: &mut Page<UCDPag
                                         <span class="value" id="est-monthly">—</span>
                                     </div>
                                 </div>
-                                <div class="estimator-actions">
+                                <div class="estimator-actions" id="estimator-actions">
                                     <button class="btn-secondary" id="btn-save">
                                         <span class="save-icon">💾</span>
                                         Save My Journey
                                     </button>
                                     <a href="{BOOKING_LINK}" class="btn-primary">Book Free Consultation</a>
                                 </div>
-                                <div class="estimator-note">
+                                <div class="estimator-note" id="estimator-note">
                                     <p>Estimates are guidelines. Your consultation will provide an exact quote.</p>
                                 </div>
                             </aside>
@@ -686,16 +689,25 @@ fn journey_script() -> &'static str {
     function updateEstimator() {
         const est = calculateEstimate();
         const estimator = document.getElementById('estimator');
+        const emptyEl = document.getElementById('estimator-empty');
+        const bodyEl = document.getElementById('estimator-body');
+        const actionsEl = document.getElementById('estimator-actions');
+        const noteEl = document.getElementById('estimator-note');
 
         if (state.goals.length === 0) {
             estimator.classList.remove('active');
-            document.getElementById('est-timeline').textContent = '—';
-            document.getElementById('est-cost').textContent = '—';
-            document.getElementById('est-monthly').textContent = '—';
+            emptyEl.style.display = 'block';
+            bodyEl.style.display = 'none';
+            actionsEl.style.display = 'none';
+            noteEl.style.display = 'none';
             return;
         }
 
         estimator.classList.add('active');
+        emptyEl.style.display = 'none';
+        bodyEl.style.display = 'block';
+        actionsEl.style.display = 'flex';
+        noteEl.style.display = 'block';
 
         // Timeline
         let timeline = '';
@@ -783,13 +795,17 @@ fn journey_script() -> &'static str {
         renderJourney();
         updateSaveButton();
 
-        // Scroll to journey on first selection
+        // Scroll to journey on first selection and show hint
         if (state.goals.length === 1) {
             setTimeout(() => {
                 document.getElementById('journey-section').scrollIntoView({
                     behavior: 'smooth',
                     block: 'start'
                 });
+                // Show hint after scroll completes
+                setTimeout(() => {
+                    showHint('You can scroll back up to add more goals anytime');
+                }, 800);
             }, 300);
         }
     }
@@ -907,7 +923,7 @@ fn journey_script() -> &'static str {
         const toast = document.createElement('div');
         toast.className = 'toast';
         toast.textContent = message;
-        document.body.appendChild(toast);
+        document.querySelector('main.smile-journey').appendChild(toast);
 
         requestAnimationFrame(() => toast.classList.add('visible'));
 
@@ -915,6 +931,20 @@ fn journey_script() -> &'static str {
             toast.classList.remove('visible');
             setTimeout(() => toast.remove(), 300);
         }, 3000);
+    }
+
+    function showHint(message) {
+        const hint = document.createElement('div');
+        hint.className = 'top-hint';
+        hint.innerHTML = `<span>💡</span> ${message}`;
+        document.querySelector('main.smile-journey').appendChild(hint);
+
+        requestAnimationFrame(() => hint.classList.add('visible'));
+
+        setTimeout(() => {
+            hint.classList.remove('visible');
+            setTimeout(() => hint.remove(), 300);
+        }, 4000);
     }
     "##
 }
@@ -1677,6 +1707,18 @@ fn css(site: &mut Site<UCDPages>) {
                     animation: pulse-border 0.4s ease;
                 }
 
+                .estimator-empty {
+                    padding: 32px 24px;
+                    text-align: center;
+
+                    p {
+                        font-size: 15px;
+                        color: var(--grey-50);
+                        margin: 0;
+                        line-height: 1.5;
+                    }
+                }
+
                 .estimator-header {
                     background: var(--turquoise-15);
                     padding: 20px 24px;
@@ -2038,6 +2080,37 @@ fn css(site: &mut Site<UCDPages>) {
 
                 @media (max-width: 900px) {
                     bottom: 160px;
+                }
+            }
+
+            /* ═══════════════════════════════════════════════════════════ */
+            /* TOP HINT */
+            /* ═══════════════════════════════════════════════════════════ */
+
+            .top-hint {
+                position: fixed;
+                top: 80px;
+                left: 50%;
+                transform: translateX(-50%) translateY(-20px);
+                background: white;
+                color: var(--turquoise-15);
+                padding: 12px 24px;
+                border-radius: 12px;
+                font-size: 14px;
+                font-weight: 500;
+                z-index: 1000;
+                opacity: 0;
+                transition: all 0.3s ease;
+                box-shadow: 0 4px 20px rgba(0, 111, 115, 0.15);
+                border: 1px solid var(--turquoise-70);
+
+                span {
+                    margin-right: 6px;
+                }
+
+                &.visible {
+                    opacity: 1;
+                    transform: translateX(-50%) translateY(0);
                 }
             }
         }
