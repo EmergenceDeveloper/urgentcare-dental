@@ -1,7 +1,6 @@
 use crate::prelude::*;
 
 pub fn add_core_css<T, I>(site: &mut Site<T, I>) {
-
     site.declare_css("typography", r##"
         {}
         
@@ -91,9 +90,10 @@ pub fn add_core_css<T, I>(site: &mut Site<T, I>) {
         }
     
     "##);
-    
-    
-    site.declare_css("foundation", r##"
+
+    site.declare_css(
+        "foundation",
+        r##"
     
     {}
         
@@ -112,14 +112,17 @@ pub fn add_core_css<T, I>(site: &mut Site<T, I>) {
             box-sizing: border-box;
         }
         
-        html, body {
+        html {
             overflow-x: hidden;
         }
                   
         
-    "##);
-    
-    site.declare_css("layout", r##"
+    "##,
+    );
+
+    site.declare_css(
+        "layout",
+        r##"
     
     {}
     
@@ -143,11 +146,9 @@ pub fn add_core_css<T, I>(site: &mut Site<T, I>) {
         
     
     
-    "##);
-    
-    
-    
-    
+    "##,
+    );
+
     site.declare_css("colors", r##"
     
     {}
@@ -175,13 +176,4 @@ pub fn add_core_css<T, I>(site: &mut Site<T, I>) {
     
     
     "##);
-    
-    
-    
-    
-    
-    
-    
-    
-    
 }
