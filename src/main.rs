@@ -131,6 +131,15 @@ fn main() {
             },
             specification: SmilePreview,
         },
+        Page {
+            foundation: PageFoundation { 
+                title: "Smile Journey".to_owned(),
+                slug: Some("smile-journey".to_owned()),
+                metadescription: Some("Follow the real treatment journeys of our patients as they transform their smiles with dental implants, veneers, and smile makeovers.".to_owned()),
+                ..default() 
+            },
+            specification: SmileJourney,
+        },
         
     ];
     
@@ -228,6 +237,7 @@ fn main() {
     .add_constructor(Plans, construct_plans)
     .add_constructor(HairTransplants, construct_hair_transplants)
     .add_constructor(SmilePreview, construct_smile_preview)
+    .add_constructor(SmileJourney, construct_smile_journey)
     // Your constructors will go here
     .add_head_constructor()
     .add_pages(pages);

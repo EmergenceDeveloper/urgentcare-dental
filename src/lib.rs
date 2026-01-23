@@ -11,6 +11,7 @@ pub mod page_types {
     pub mod policy_pages;
     pub mod post;
     pub mod pricing;
+    pub mod smile_journey;
     pub mod smile_preview;
 }
 
