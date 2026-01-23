@@ -917,6 +917,24 @@ fn journey_script() -> &'static str {
                 }, 100);
             }
         });
+
+        // Mobile drawer tap-to-toggle
+        if (window.innerWidth <= 900) {
+            const estimator = document.getElementById('estimator');
+            const header = estimator.querySelector('.estimator-header');
+
+            header.addEventListener('click', (e) => {
+                e.stopPropagation();
+                estimator.classList.toggle('drawer-open');
+            });
+
+            // Close when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!estimator.contains(e.target)) {
+                    estimator.classList.remove('drawer-open');
+                }
+            });
+        }
     });
 
     function showToast(message) {
@@ -1798,10 +1816,7 @@ fn css(site: &mut Site<UCDPages>) {
                     transform: translateY(calc(100% - 140px));
                     transition: transform 0.3s ease;
 
-                    &.active {
-                        transform: translateY(calc(100% - 140px));
-                    }
-
+                    &.drawer-open,
                     &:hover,
                     &:focus-within {
                         transform: translateY(0);
@@ -1811,6 +1826,7 @@ fn css(site: &mut Site<UCDPages>) {
                         position: sticky;
                         top: 0;
                         z-index: 1;
+                        cursor: pointer;
 
                         &::before {
                             content: '';
