@@ -226,6 +226,7 @@ fn journey_script() -> &'static str {
             stage: 2,
             stageLabel: 'Health First',
             goals: ['fill-gaps', 'straighten', 'brighten', 'perfect-shape', 'complete'],
+            link: '/blog/gum-disease-treatment-prices',
             details: [
                 'Ultrasonic scaling',
                 'Air polish treatment',
@@ -246,7 +247,7 @@ fn journey_script() -> &'static str {
             stageLabel: 'Structure',
             goals: ['fill-gaps', 'complete'],
             branch: 'structure',
-            link: '/dental-implants/',
+            link: '/implants',
             details: [
                 'Implant placement (90 mins)',
                 'Healing period (3-4 months)',
@@ -266,7 +267,7 @@ fn journey_script() -> &'static str {
             stageLabel: 'Structure',
             goals: ['straighten', 'complete'],
             branch: 'structure',
-            link: '/teeth-straightening/',
+            link: '/blog/clear-aligners-cost-uk',
             details: [
                 'Digital smile design',
                 'Custom aligner trays',
@@ -306,7 +307,7 @@ fn journey_script() -> &'static str {
             stageLabel: 'Perfection',
             goals: ['perfect-shape'],
             branch: 'perfection',
-            link: '/composite-bonding/',
+            link: '/blog/composite-bonding-cost-uk-pricing',
             details: [
                 'Color matching',
                 'Tooth preparation (minimal)',
@@ -327,7 +328,7 @@ fn journey_script() -> &'static str {
             stageLabel: 'Perfection',
             goals: ['perfect-shape', 'complete'],
             branch: 'perfection',
-            link: '/porcelain-veneers/',
+            link: '/blog/porcelain-veneers-cost-uk',
             details: [
                 'Digital smile design preview',
                 'Tooth preparation',
