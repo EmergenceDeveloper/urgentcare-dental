@@ -166,6 +166,7 @@ pub fn construct_footer<T, I>(site: &mut Site<T, I>) -> String {
                     <nav class="menu" aria-label="Footer menu navigation">
                         <p>Menu</p>
                         <ul>
+                            <li><a href="/smile-journey">Smile Journey</a></li>
                             <li><a href="/smile-preview">Smile Preview</a></li>
                             <li><a href="/hair-transplants">Hair Transplants</a></li>
                             <li><a href="/about-us">About Us</a></li>
