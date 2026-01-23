@@ -221,7 +221,7 @@ fn journey_script() -> &'static str {
             subtitle: 'Deep Clean & Therapy',
             description: 'Professional cleaning removes plaque buildup and treats any gum issues - the foundation for lasting results.',
             icon: '✨',
-            cost: { min: 150, max: 180 },
+            cost: { min: 49.99, max: 199 },
             duration: { min: 0, max: 0, unit: 'days' },
             stage: 2,
             stageLabel: 'Health First',
@@ -261,7 +261,7 @@ fn journey_script() -> &'static str {
             subtitle: 'Invisible Straightening',
             description: 'Custom clear trays gradually shift your teeth over 6-18 months. Removable for eating and photos.',
             icon: '😁',
-            cost: { min: 2999, max: 2999 },
+            cost: { min: 1499, max: 3499 },
             duration: { min: 6, max: 18, unit: 'months' },
             stage: 3,
             stageLabel: 'Structure',
@@ -272,9 +272,10 @@ fn journey_script() -> &'static str {
                 'Digital smile design',
                 'Custom aligner trays',
                 'Progress checks every 6-8 weeks',
-                'Retainers included'
+                'Retainers included',
+                'FREE whitening included'
             ],
-            tip: "Most people won't notice you're wearing them."
+            tip: "Most people won't notice you're wearing them - plus you get whitening thrown in!"
         },
         whitening: {
             id: 'whitening',
@@ -282,14 +283,13 @@ fn journey_script() -> &'static str {
             subtitle: 'Hollywood-Level Brightness',
             description: 'Professional-grade whitening that goes 6-8 shades lighter than shop-bought options.',
             icon: '💎',
-            cost: { min: 349, max: 549 },
+            cost: { min: 0, max: 299 },
             duration: { min: 0, max: 0, unit: 'days' },
             stage: 4,
             stageLabel: 'Brightness',
             goals: ['brighten', 'perfect-shape', 'complete'],
             completionPoint: true,
             details: [
-                'In-office power whitening',
                 'Custom take-home trays',
                 'Maintenance gel supply'
             ],
@@ -322,7 +322,7 @@ fn journey_script() -> &'static str {
             subtitle: 'The Ultimate Transformation',
             description: 'Custom ceramic shells bonded over your teeth for the most dramatic, lasting smile transformation.',
             icon: '👑',
-            cost: { min: 695, max: 695, per: 'tooth' },
+            cost: { min: 699, max: 899, per: 'tooth' },
             duration: { min: 0, max: 1, unit: 'months' },
             stage: 5,
             stageLabel: 'Perfection',
@@ -463,8 +463,24 @@ fn journey_script() -> &'static str {
         return journey;
     }
 
+    function hasAlignersInJourney() {
+        return getJourneyTreatments().some(item =>
+            item.id === 'aligners' ||
+            (item.type === 'branch' && item.treatments?.some(t => t.id === 'aligners'))
+        );
+    }
+
+    function hasImplantsInJourney() {
+        return getJourneyTreatments().some(item =>
+            item.id === 'implants' ||
+            (item.type === 'branch' && item.treatments?.some(t => t.id === 'implants'))
+        );
+    }
+
     function calculateEstimate() {
         const journey = getJourneyTreatments();
+        const hasAligners = hasAlignersInJourney();
+        const hasImplants = hasImplantsInJourney();
         let minCost = 0;
         let maxCost = 0;
         let minMonths = 0;
@@ -483,7 +499,12 @@ fn journey_script() -> &'static str {
                 minMonths += dMin;
                 maxMonths += dMax;
             } else if (item.type !== 'destination' && item.cost !== undefined) {
-                if (typeof item.cost === 'number') {
+                // Whitening is free with aligners; Gum Health Spa is free with aligners OR implants
+                const freeWhitening = item.id === 'whitening' && hasAligners;
+                const freeGumHealth = item.id === 'gumHealth' && (hasAligners || hasImplants);
+                if (freeWhitening || freeGumHealth) {
+                    // Skip adding cost - free with treatment
+                } else if (typeof item.cost === 'number') {
                     minCost += item.cost;
                     maxCost += item.cost;
                 } else {
@@ -561,7 +582,7 @@ fn journey_script() -> &'static str {
 
         // Trigger animations
         requestAnimationFrame(() => {
-            container.querySelectorAll('.journey-node, .journey-branch, .journey-destination').forEach((el, i) => {
+            container.querySelectorAll('.journey-node, .journey-branch, .journey-destination, .preview-cta').forEach((el, i) => {
                 setTimeout(() => el.classList.add('visible'), i * 100);
             });
         });
@@ -577,6 +598,14 @@ fn journey_script() -> &'static str {
         const isExpanded = state.expandedNode === treatment.id;
         if (isExpanded) node.classList.add('expanded');
 
+        // Check if treatment is free due to aligners or implants
+        const hasAligners = hasAlignersInJourney();
+        const hasImplants = hasImplantsInJourney();
+        const freeWhitening = treatment.id === 'whitening' && hasAligners;
+        const freeGumHealth = treatment.id === 'gumHealth' && (hasAligners || hasImplants);
+        const isFree = freeWhitening || freeGumHealth;
+        const freeReason = freeWhitening ? 'aligners' : (freeGumHealth && hasAligners ? 'aligners' : 'implants');
+
         node.innerHTML = `
             <div class="node-stage">
                 <span class="stage-num">${treatment.stage}</span>
@@ -590,7 +619,7 @@ fn journey_script() -> &'static str {
                         <p class="node-subtitle">${treatment.subtitle}</p>
                     </div>
                     <div class="node-cost">
-                        ${formatCost(treatment.cost)}
+                        ${isFree ? `<span class="original-price">${formatCost(treatment.cost)}</span><span class="free">FREE</span><span class="free-reason">with ${freeReason}</span>` : formatCost(treatment.cost)}
                     </div>
                     <div class="node-expand-icon">${isExpanded ? '−' : '+'}</div>
                 </div>
@@ -674,6 +703,24 @@ fn journey_script() -> &'static str {
             <p>Confidence that lasts a lifetime</p>
         `;
         container.appendChild(dest);
+
+        // Add preview CTA
+        const previewCta = document.createElement('div');
+        previewCta.className = 'preview-cta';
+        previewCta.innerHTML = `
+            <span>See Your Future Smile</span>
+            <div class="bounce-arrow">↓</div>
+        `;
+        previewCta.addEventListener('click', () => {
+            const target = document.querySelector('.preview-section');
+            const offset = 75;
+            const targetPosition = target.getBoundingClientRect().top + window.scrollY - offset;
+            window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+            });
+        });
+        container.appendChild(previewCta);
     }
 
     function formatCost(cost) {
@@ -1011,6 +1058,12 @@ fn css(site: &mut Site<UCDPages>) {
         @keyframes toast-in {
             from { opacity: 0; transform: translateX(-50%) translateY(20px); }
             to { opacity: 1; transform: translateX(-50%) translateY(0); }
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-10px); }
+            60% { transform: translateY(-5px); }
         }
 
         main.smile-journey {
@@ -1356,9 +1409,25 @@ fn css(site: &mut Site<UCDPages>) {
                         font-size: 16px;
                         font-weight: 600;
                         color: var(--turquoise-15);
+                        text-align: right;
+
+                        .original-price {
+                            display: block;
+                            font-size: 13px;
+                            font-weight: 400;
+                            color: var(--grey-50);
+                            text-decoration: line-through;
+                        }
 
                         .free {
                             color: var(--turquoise-30);
+                        }
+
+                        .free-reason {
+                            display: block;
+                            font-size: 11px;
+                            font-weight: 500;
+                            color: var(--grey-50);
                         }
 
                         .per {
@@ -1696,6 +1765,45 @@ fn css(site: &mut Site<UCDPages>) {
 
                         h3 {
                             font-size: 24px;
+                        }
+                    }
+                }
+
+                /* Preview CTA */
+                .preview-cta {
+                    margin-top: 32px;
+                    text-align: center;
+                    cursor: pointer;
+                    opacity: 0;
+                    transform: translateY(20px);
+                    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+                    transition-delay: 0.3s;
+
+                    &.visible {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+
+                    span {
+                        display: block;
+                        font-size: 16px;
+                        font-weight: 600;
+                        color: var(--turquoise-30);
+                        margin-bottom: 8px;
+                    }
+
+                    .bounce-arrow {
+                        font-size: 24px;
+                        color: var(--turquoise-30);
+                        animation: bounce 1.5s ease-in-out infinite;
+                    }
+
+                    &:hover {
+                        span {
+                            color: var(--turquoise-15);
+                        }
+                        .bounce-arrow {
+                            color: var(--turquoise-15);
                         }
                     }
                 }
