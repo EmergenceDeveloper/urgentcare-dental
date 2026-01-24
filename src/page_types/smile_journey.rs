@@ -29,32 +29,32 @@ pub fn construct_smile_journey(site: &mut Site<UCDPages>, page: &mut Page<UCDPag
 
                         <div class="goal-cards" id="goal-cards">
                             <button class="goal-card" data-goal="fill-gaps">
-                                <div class="goal-icon">🦷</div>
+                                <div class="goal-icon"><i class="fa-solid fa-tooth"></i></div>
                                 <h3>Fill Gaps</h3>
                                 <p>Replace missing teeth</p>
                             </button>
                             <button class="goal-card" data-goal="straighten">
-                                <div class="goal-icon">😁</div>
+                                <div class="goal-icon"><i class="fa-solid fa-teeth-open"></i></div>
                                 <h3>Straighten</h3>
                                 <p>Align crooked teeth</p>
                             </button>
                             <button class="goal-card" data-goal="brighten">
-                                <div class="goal-icon">✨</div>
-                                <h3>Brighten</h3>
-                                <p>Whiter, brighter smile</p>
+                                <div class="goal-icon"><i class="fa-solid fa-sun"></i></div>
+                                <h3>Whiten</h3>
+                                <p>A brighter, whiter smile</p>
                             </button>
                             <button class="goal-card" data-goal="perfect-shape">
-                                <div class="goal-icon">💎</div>
+                                <div class="goal-icon"><i class="fa-solid fa-gem"></i></div>
                                 <h3>Perfect Shape</h3>
                                 <p>Fix chips and uneven teeth</p>
                             </button>
                             <button class="goal-card" data-goal="complete">
-                                <div class="goal-icon">👑</div>
+                                <div class="goal-icon"><i class="fa-solid fa-crown"></i></div>
                                 <h3>Complete Makeover</h3>
                                 <p>Full smile transformation</p>
                             </button>
                             <button class="goal-card" data-goal="exploring">
-                                <div class="goal-icon">🔍</div>
+                                <div class="goal-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
                                 <h3>Just Exploring</h3>
                                 <p>See what's possible</p>
                             </button>
@@ -73,7 +73,7 @@ pub fn construct_smile_journey(site: &mut Site<UCDPages>, page: &mut Page<UCDPag
                             <div class="journey-map" id="journey-map">
                                 <!-- Journey nodes will be rendered here by JS -->
                                 <div class="empty-state" id="empty-state">
-                                    <div class="empty-icon">🗺️</div>
+                                    <div class="empty-icon"><i class="fa-solid fa-route"></i></div>
                                     <p>Your journey map will appear here</p>
                                     <p class="hint">Select one or more goals above to get started</p>
                                 </div>
@@ -102,7 +102,7 @@ pub fn construct_smile_journey(site: &mut Site<UCDPages>, page: &mut Page<UCDPag
                                 </div>
                                 <div class="estimator-actions" id="estimator-actions">
                                     <button class="btn-secondary" id="btn-save">
-                                        <span class="save-icon">💾</span>
+                                        <span class="save-icon"><i class="fa-solid fa-bookmark"></i></span>
                                         Save My Journey
                                     </button>
                                     <a href="{BOOKING_LINK}" class="btn-primary">Book Free Consultation</a>
@@ -130,7 +130,7 @@ pub fn construct_smile_journey(site: &mut Site<UCDPages>, page: &mut Page<UCDPag
 
                                     <div class="upload-area" id="upload-area">
                                         <label for="selfie">
-                                            <span class="upload-icon">📸</span>
+                                            <span class="upload-icon"><i class="fa-solid fa-camera"></i></span>
                                             <span class="upload-text">Choose a photo or take a selfie</span>
                                             <span class="upload-hint">For best results, smile with teeth showing</span>
                                         </label>
@@ -165,7 +165,7 @@ pub fn construct_smile_journey(site: &mut Site<UCDPages>, page: &mut Page<UCDPag
                                 <div class="cta-buttons">
                                     <a href="{BOOKING_LINK}" class="btn-primary">Book Free Consultation</a>
                                     <button class="btn-secondary" id="btn-share">
-                                        <span>🔗</span> Share My Journey
+                                        <span><i class="fa-solid fa-link"></i></span> Share My Journey
                                     </button>
                                 </div>
                             </div>
@@ -175,6 +175,7 @@ pub fn construct_smile_journey(site: &mut Site<UCDPages>, page: &mut Page<UCDPag
 
             </main>
             {footer}
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
             <script src="https://unpkg.com/htmx.org@1.9.10"></script>
             <script>
             {script}
@@ -200,7 +201,7 @@ fn journey_script() -> &'static str {
             title: 'Free Consultation',
             subtitle: '3D Scan + Treatment Plan',
             description: 'We examine your teeth, take digital scans, and create your personalized roadmap.',
-            icon: '🦷',
+            icon: '<i class="fa-solid fa-clipboard-check"></i>',
             cost: 0,
             duration: { min: 0, max: 0, unit: 'days' },
             stage: 1,
@@ -220,7 +221,7 @@ fn journey_script() -> &'static str {
             title: 'Gum Health Spa',
             subtitle: 'Deep Clean & Therapy',
             description: 'Professional cleaning removes plaque buildup and treats any gum issues - the foundation for lasting results.',
-            icon: '✨',
+            icon: '<i class="fa-solid fa-droplet"></i>',
             cost: { min: 49.99, max: 199 },
             duration: { min: 0, max: 0, unit: 'days' },
             stage: 2,
@@ -240,7 +241,7 @@ fn journey_script() -> &'static str {
             title: 'Dental Implants',
             subtitle: 'Permanent Tooth Replacement',
             description: 'Titanium roots fused to your jawbone, topped with porcelain crowns indistinguishable from natural teeth.',
-            icon: '🔩',
+            icon: '<i class="fa-solid fa-tooth"></i>',
             cost: { min: 1999, max: 1999, per: 'implant' },
             duration: { min: 3, max: 6, unit: 'months' },
             stage: 3,
@@ -260,7 +261,7 @@ fn journey_script() -> &'static str {
             title: 'Clear Aligners',
             subtitle: 'Invisible Straightening',
             description: 'Custom clear trays gradually shift your teeth over 6-18 months. Removable for eating and photos.',
-            icon: '😁',
+            icon: '<i class="fa-solid fa-teeth-open"></i>',
             cost: { min: 1499, max: 3499 },
             duration: { min: 6, max: 18, unit: 'months' },
             stage: 3,
@@ -282,7 +283,7 @@ fn journey_script() -> &'static str {
             title: 'Professional Whitening',
             subtitle: 'Hollywood-Level Brightness',
             description: 'Professional-grade whitening that goes 6-8 shades lighter than shop-bought options.',
-            icon: '💎',
+            icon: '<i class="fa-solid fa-sun"></i>',
             cost: { min: 0, max: 299 },
             duration: { min: 0, max: 0, unit: 'days' },
             stage: 4,
@@ -300,7 +301,7 @@ fn journey_script() -> &'static str {
             title: 'Composite Bonding',
             subtitle: 'Reshape & Refine',
             description: 'Tooth-colored resin sculpted directly onto your teeth to fix chips, gaps, and shape issues.',
-            icon: '🎨',
+            icon: '<i class="fa-solid fa-paintbrush"></i>',
             cost: { min: 299, max: 299, per: 'tooth' },
             duration: { min: 0, max: 0, unit: 'days' },
             stage: 5,
@@ -321,7 +322,7 @@ fn journey_script() -> &'static str {
             title: 'Porcelain Veneers',
             subtitle: 'The Ultimate Transformation',
             description: 'Custom ceramic shells bonded over your teeth for the most dramatic, lasting smile transformation.',
-            icon: '👑',
+            icon: '<i class="fa-solid fa-crown"></i>',
             cost: { min: 699, max: 899, per: 'tooth' },
             duration: { min: 0, max: 1, unit: 'months' },
             stage: 5,
@@ -340,12 +341,12 @@ fn journey_script() -> &'static str {
     };
 
     const GOALS = {
-        'fill-gaps': { label: 'Fill Gaps', icon: '🦷' },
-        'straighten': { label: 'Straighten', icon: '😁' },
-        'brighten': { label: 'Brighten', icon: '✨' },
-        'perfect-shape': { label: 'Perfect Shape', icon: '💎' },
-        'complete': { label: 'Complete Makeover', icon: '👑' },
-        'exploring': { label: 'Just Exploring', icon: '🔍' }
+        'fill-gaps': { label: 'Fill Gaps', icon: '<i class="fa-solid fa-tooth"></i>' },
+        'straighten': { label: 'Straighten', icon: '<i class="fa-solid fa-teeth-open"></i>' },
+        'brighten': { label: 'Whiten', icon: '<i class="fa-solid fa-sun"></i>' },
+        'perfect-shape': { label: 'Perfect Shape', icon: '<i class="fa-solid fa-gem"></i>' },
+        'complete': { label: 'Complete Makeover', icon: '<i class="fa-solid fa-crown"></i>' },
+        'exploring': { label: 'Just Exploring', icon: '<i class="fa-solid fa-magnifying-glass"></i>' }
     };
 
     // ═══════════════════════════════════════════════════════════
@@ -543,7 +544,7 @@ fn journey_script() -> &'static str {
 
         if (journey.length === 0) {
             emptyState.style.display = 'block';
-            container.querySelectorAll('.journey-node, .journey-branch, .journey-connector, .journey-destination').forEach(el => el.remove());
+            container.querySelectorAll('.journey-node, .journey-branch, .journey-connector, .journey-destination, .preview-cta').forEach(el => el.remove());
             subtitle.textContent = 'Select your goals above to build your journey';
             return;
         }
@@ -557,7 +558,7 @@ fn journey_script() -> &'static str {
         }
 
         // Clear existing nodes
-        container.querySelectorAll('.journey-node, .journey-branch, .journey-connector, .journey-destination').forEach(el => el.remove());
+        container.querySelectorAll('.journey-node, .journey-branch, .journey-connector, .journey-destination, .preview-cta').forEach(el => el.remove());
 
         // Render journey
         journey.forEach((item, index) => {
@@ -694,11 +695,11 @@ fn journey_script() -> &'static str {
         dest.className = 'journey-destination';
         dest.innerHTML = `
             <div class="destination-sparkles">
-                <span class="sparkle s1">✨</span>
-                <span class="sparkle s2">✨</span>
-                <span class="sparkle s3">✨</span>
+                <span class="sparkle s1"><i class="fa-solid fa-star"></i></span>
+                <span class="sparkle s2"><i class="fa-solid fa-star"></i></span>
+                <span class="sparkle s3"><i class="fa-solid fa-star"></i></span>
             </div>
-            <div class="destination-icon">🌟</div>
+            <div class="destination-icon"><i class="fa-solid fa-star"></i></div>
             <h3>Your Dream Smile</h3>
             <p>Confidence that lasts a lifetime</p>
         `;
@@ -709,7 +710,7 @@ fn journey_script() -> &'static str {
         previewCta.className = 'preview-cta';
         previewCta.innerHTML = `
             <span>See Your Future Smile</span>
-            <div class="bounce-arrow">↓</div>
+            <div class="bounce-arrow"><i class="fa-solid fa-chevron-down"></i></div>
         `;
         previewCta.addEventListener('click', () => {
             const target = document.querySelector('.preview-section');
@@ -788,10 +789,10 @@ fn journey_script() -> &'static str {
     function updateSaveButton() {
         const btn = document.getElementById('btn-save');
         if (state.saved) {
-            btn.innerHTML = '<span class="save-icon">✓</span> Journey Saved';
+            btn.innerHTML = '<span class="save-icon"><i class="fa-solid fa-check"></i></span> Journey Saved';
             btn.classList.add('saved');
         } else {
-            btn.innerHTML = '<span class="save-icon">💾</span> Save My Journey';
+            btn.innerHTML = '<span class="save-icon"><i class="fa-solid fa-bookmark"></i></span> Save My Journey';
             btn.classList.remove('saved');
         }
     }
@@ -872,7 +873,7 @@ fn journey_script() -> &'static str {
         navigator.clipboard.writeText(url).then(() => {
             const btn = document.getElementById('btn-share');
             const original = btn.innerHTML;
-            btn.innerHTML = '<span>✓</span> Link Copied!';
+            btn.innerHTML = '<span><i class="fa-solid fa-check"></i></span> Link Copied!';
             setTimeout(() => btn.innerHTML = original, 2000);
         });
     }
@@ -938,7 +939,7 @@ fn journey_script() -> &'static str {
                         img.style.cssText = 'max-width: 100%; max-height: 300px; border-radius: 8px; margin-top: 1rem; pointer-events: none;';
                         uploadArea.appendChild(img);
 
-                        uploadArea.querySelector('.upload-icon').textContent = '✓';
+                        uploadArea.querySelector('.upload-icon').innerHTML = '<i class="fa-solid fa-check"></i>';
                         uploadArea.querySelector('.upload-icon').style.color = '#0a6b6d';
                         uploadArea.querySelector('.upload-text').textContent = 'Ready! Click below to preview your smile.';
                         uploadArea.querySelector('.upload-hint').style.display = 'none';
@@ -1002,7 +1003,7 @@ fn journey_script() -> &'static str {
     function showHint(message) {
         const hint = document.createElement('div');
         hint.className = 'top-hint';
-        hint.innerHTML = `<span>💡</span> ${message}`;
+        hint.innerHTML = `<span><i class="fa-solid fa-lightbulb"></i></span> ${message}`;
         document.querySelector('main.smile-journey').appendChild(hint);
 
         requestAnimationFrame(() => hint.classList.add('visible'));
@@ -1193,7 +1194,9 @@ fn css(site: &mut Site<UCDPages>) {
                         background: var(--turquoise-98);
 
                         &::after {
-                            content: '✓';
+                            content: '\f00c';
+                            font-family: 'Font Awesome 6 Free';
+                            font-weight: 900;
                             position: absolute;
                             top: 12px;
                             right: 12px;
@@ -1212,8 +1215,9 @@ fn css(site: &mut Site<UCDPages>) {
                     }
 
                     .goal-icon {
-                        font-size: 40px;
+                        font-size: 36px;
                         margin-bottom: 12px;
+                        color: var(--turquoise-30);
                     }
 
                     h3 {
@@ -1290,8 +1294,9 @@ fn css(site: &mut Site<UCDPages>) {
                     width: 100%;
 
                     .empty-icon {
-                        font-size: 64px;
+                        font-size: 56px;
                         margin-bottom: 16px;
+                        color: var(--turquoise-50);
                     }
 
                     p {
@@ -1388,7 +1393,8 @@ fn css(site: &mut Site<UCDPages>) {
                     }
 
                     .node-icon {
-                        font-size: 36px;
+                        font-size: 32px;
+                        color: var(--turquoise-30);
                     }
 
                     .node-info {
@@ -1652,8 +1658,9 @@ fn css(site: &mut Site<UCDPages>) {
                     }
 
                     .branch-icon {
-                        font-size: 40px;
+                        font-size: 36px;
                         margin-bottom: 12px;
+                        color: var(--turquoise-30);
                     }
 
                     .branch-card h3 {
@@ -2081,7 +2088,8 @@ fn css(site: &mut Site<UCDPages>) {
                         }
 
                         .upload-icon {
-                            font-size: 48px;
+                            font-size: 44px;
+                            color: var(--turquoise-30);
                         }
 
                         .upload-text {
