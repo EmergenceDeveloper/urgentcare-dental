@@ -1,7 +1,7 @@
 +++
 title = "Lost a Filling? Here's What Actually Happens Next (And What It Costs)"
 description = "Lost a filling and not sure what to do? A replacement costs £100-£300 at a private dentist, and you have more time than you think. Here's the full picture."
-date = 2025-10-25
+date = 2026-02-11
 image = "/images/blog/lost-filling-emergency-fix"
 tags = ["Emergency Dental", "Dental Costs", "Fillings"]
 +++
