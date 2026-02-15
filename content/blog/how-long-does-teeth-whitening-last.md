@@ -2,8 +2,10 @@
 title = "How Long Does Teeth Whitening Last? Results Timeline and Maintenance"
 description = "Professional teeth whitening lasts 1-3 years. Touch-ups with take-home trays extend results indefinitely. Here's what affects longevity and how to maintain the brightness."
 date = 2026-03-27
-image = "/images/blog/how-long-does-teeth-whitening-last"
+image = "/images/blog/how-long-does-teeth-whitening-last.jpg"
 tags = ["Teeth Whitening", "Cosmetic Dentistry", "Dental Costs"]
+unsplash_author = "Zach Heiberg"
+unsplash_author_url = "https://unsplash.com/@zachheiberg"
 +++
 
 The whitening is done. The teeth are bright, genuinely bright, several shades lighter than they were yesterday. The mirror is a friendlier place. The photos look different. And now, with the investment sitting fresh in mind, the question arrives: how long does this last?

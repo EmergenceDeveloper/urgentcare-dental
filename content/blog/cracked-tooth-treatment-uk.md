@@ -2,8 +2,10 @@
 title = "Cracked Tooth: Types, Symptoms, and Treatment Costs in the UK"
 description = "A cracked tooth costs £99-£650 to treat depending on severity: from a simple filling to a crown to extraction. Here's how to identify the type of crack and what it means."
 date = 2026-03-31
-image = "/images/blog/cracked-tooth-treatment-uk"
+image = "/images/blog/cracked-tooth-treatment-uk.jpg"
 tags = ["Dental Emergency", "Dental Procedures", "Dental Costs"]
+unsplash_author = "Evgeniy Kozlov"
+unsplash_author_url = "https://unsplash.com/@evgkoz"
 +++
 
 There's a moment that changes your relationship with a particular tooth. Maybe it was biting down on something hard: an olive pit, an unpopped popcorn kernel, a piece of bone in a stew. Maybe it happened during the night, hours of [grinding](/blog/teeth-grinding-solutions) finally finding the weak point. Maybe there was no moment at all: just a growing awareness that something about this tooth isn't right. A twinge when chewing that's hard to pin down. A sensitivity that comes and goes. A feeling that the tooth is shifting under load in a way it didn't before.

@@ -74,6 +74,16 @@ pub fn construct_post(site: &mut Site<UCDPages>, page: &mut Page<UCDPages>) {
         .collect::<Vec<_>>()
         .join("");
 
+    let unsplash_attribution = if !post.frontmatter.unsplash_author.is_empty() {
+        format!(
+            r##"<div class="unsplash-attribution">Photo by <a href="{url}?utm_source=urgentcare_dental_blog&utm_medium=referral" target="_blank" rel="noopener">{author}</a> on <a href="https://unsplash.com/?utm_source=urgentcare_dental_blog&utm_medium=referral" target="_blank" rel="noopener">Unsplash</a></div>"##,
+            author = post.frontmatter.unsplash_author,
+            url = post.frontmatter.unsplash_author_url,
+        )
+    } else {
+        String::new()
+    };
+
     let html = format!(
         r##"
         <!DOCTYPE html>
@@ -98,6 +108,7 @@ pub fn construct_post(site: &mut Site<UCDPages>, page: &mut Page<UCDPages>) {
                         <h1>{title}</h1>
                         <div class="main-image">
                             <img src="{image}" alt="{title}">
+                            {unsplash_attribution}
                         </div>
                         <div class="tags">
                             {tags_html}
@@ -117,6 +128,7 @@ pub fn construct_post(site: &mut Site<UCDPages>, page: &mut Page<UCDPages>) {
         title = post.frontmatter.title,
         meta_html = meta_html,
         image = post.frontmatter.image,
+        unsplash_attribution = unsplash_attribution,
         content = post.content,
     );
 
@@ -305,9 +317,24 @@ fn css(site: &mut Site<UCDPages>) {
                     }
                     
                     .main-image {
-                    
+
                         margin-bottom: 12px;
-                    
+
+                        .unsplash-attribution {
+                            font-size: 12px;
+                            color: #999;
+                            margin-top: 6px;
+
+                            a {
+                                color: #999;
+                                text-decoration: underline;
+
+                                &:hover {
+                                    color: #666;
+                                }
+                            }
+                        }
+
                     }
                     
                     .tags {

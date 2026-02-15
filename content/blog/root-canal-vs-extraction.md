@@ -2,8 +2,10 @@
 title = "Root Canal vs Extraction: Which Costs More, Hurts Less, and Lasts Longer?"
 description = "A root canal costs £600-£1,400 and saves the tooth. An extraction costs £100-£600 but creates a gap that costs £1,999+ to fill properly. Here's the full comparison."
 date = 2026-03-16
-image = "/images/blog/root-canal-vs-extraction"
+image = "/images/blog/root-canal-vs-extraction.jpg"
 tags = ["Root Canal", "Tooth Extraction", "Dental Costs"]
+unsplash_author = "Ozkan Guner"
+unsplash_author_url = "https://unsplash.com/@dentistozkanguner"
 +++
 
 The dentist has just told you the tooth is in trouble. Serious trouble. And now there's a choice: save it with a [root canal](/blog/root-canal-treatment-cost-uk), or take it out with an [extraction](/blog/tooth-extraction-cost-uk).

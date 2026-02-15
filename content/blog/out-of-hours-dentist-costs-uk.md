@@ -2,8 +2,10 @@
 title = "Out of Hours Dentist Costs in the UK: Evening, Weekend, and Bank Holiday Prices"
 description = "Out of hours emergency dental fees run £150-£400 for the appointment alone. Here's the full cost picture for evenings, weekends, and bank holidays, and how to avoid the premium."
 date = 2026-02-17
-image = "/images/blog/out-of-hours-dentist-costs-uk"
+image = "/images/blog/out-of-hours-dentist-costs-uk.jpg"
 tags = ["Emergency Dental", "Dental Costs", "Out Of Hours"]
+unsplash_author = "Jake Espedido"
+unsplash_author_url = "https://unsplash.com/@jkeeeeyy"
 +++
 
 Dental emergencies have an uncanny talent for timing. They don't arrive at 10am on a Tuesday when every practice in town is open and taking calls. They arrive at 9pm on a Friday. Or Saturday afternoon. Or Christmas Day, which has a particular cruelty to it because everything is closed, you're surrounded by food you can't eat, and the last thing you want to be doing is googling "emergency dentist near me open now."

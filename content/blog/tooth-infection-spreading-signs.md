@@ -2,8 +2,10 @@
 title = "Tooth Infection Spreading: Warning Signs, When It's Dangerous, and What to Do"
 description = "A spreading tooth infection can become a medical emergency. Facial swelling, difficulty swallowing, fever, and breathing changes need urgent treatment. Here's what the signs mean."
 date = 2026-04-03
-image = "/images/blog/tooth-infection-spreading-signs"
+image = "/images/blog/tooth-infection-spreading-signs.jpg"
 tags = ["Dental Emergency", "Dental Abscess", "Dental Procedures"]
+unsplash_author = "Angels for Humanity"
+unsplash_author_url = "https://unsplash.com/@angels4humanity"
 +++
 
 A toothache is a dental problem. A spreading tooth infection is a medical one. The distinction matters, because while a [dental abscess](/blog/dental-abscess-antibiotics-uk) confined to the tooth and its immediate surroundings is common and treatable at the dental surgery, an infection that escapes those boundaries and spreads into the surrounding tissues can become genuinely dangerous.

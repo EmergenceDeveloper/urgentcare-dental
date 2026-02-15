@@ -2,8 +2,10 @@
 title = "Do Wisdom Teeth Need Removing? When to Act and When to Leave Them Alone"
 description = "About 30% of wisdom teeth never cause problems. Here's how to tell if yours need removing, the signs that matter, and what the X-ray reveals about your specific situation."
 date = 2026-03-11
-image = "/images/blog/do-wisdom-teeth-need-removing"
+image = "/images/blog/do-wisdom-teeth-need-removing.jpg"
 tags = ["Wisdom Teeth", "Dental Procedures", "Dental Costs"]
+unsplash_author = "Ozkan Guner"
+unsplash_author_url = "https://unsplash.com/@dentistozkanguner"
 +++
 
 Someone's mentioned your wisdom teeth. Maybe the dentist pointed them out on an X-ray, or a friend just had theirs out and now you're wondering about your own. And the question that follows is deceptively simple: do mine need to come out?

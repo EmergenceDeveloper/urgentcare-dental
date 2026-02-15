@@ -2,8 +2,10 @@
 title = "All-on-6 vs All-on-4 Dental Implants: Which One and What's the Difference?"
 description = "All-on-4 costs £8,000-£16,000 per jaw, All-on-6 costs £11,000-£22,000. Here's what the extra two implants actually get you, and when they're worth it."
 date = 2026-02-21
-image = "/images/blog/all-on-6-vs-all-on-4-dental-implants"
+image = "/images/blog/all-on-6-vs-all-on-4-dental-implants.jpg"
 tags = ["Dental Implants", "Full Mouth Restoration", "Dental Costs"]
+unsplash_author = "Bogdan condr"
+unsplash_author_url = "https://unsplash.com/@bogdan_condr"
 +++
 
 Four implants to hold a full jaw of teeth. That's the idea behind All-on-4, and it's one of the most elegant solutions in modern dentistry. But then someone mentions All-on-6, and suddenly there's a question that didn't exist before: if four implants work, why would you want six? And if six is better, why doesn't everyone get six?

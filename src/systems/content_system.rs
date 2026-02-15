@@ -12,6 +12,8 @@ pub struct UCDFrontmatter {
     pub image: String,
     pub featured: bool,
     pub exclude: bool,
+    pub unsplash_author: String,
+    pub unsplash_author_url: String,
 }
 
 pub fn parse_urgentcaredental_frontmatter(
@@ -78,6 +80,8 @@ pub fn parse_urgentcaredental_frontmatter(
                 "image" | "featured_image" => frontmatter.image = value.to_owned(),
                 "featured" => frontmatter.featured = value.trim().to_lowercase() == "true",
                 "exclude" => frontmatter.exclude = value.trim().to_lowercase() == "true",
+                "unsplash_author" => frontmatter.unsplash_author = value.to_owned(),
+                "unsplash_author_url" => frontmatter.unsplash_author_url = value.to_owned(),
                 _ => {}
             }
         }

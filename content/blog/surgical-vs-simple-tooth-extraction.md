@@ -2,8 +2,10 @@
 title = "Surgical vs Simple Tooth Extraction: The Difference in Cost, Recovery, and Procedure"
 description = "Simple extractions cost £100-£300 and take 20 minutes. Surgical extractions cost £200-£600 and take 30-45 minutes. Here's what determines which one you'll need."
 date = 2026-03-14
-image = "/images/blog/surgical-vs-simple-tooth-extraction"
+image = "/images/blog/surgical-vs-simple-tooth-extraction.jpg"
 tags = ["Tooth Extraction", "Dental Procedures", "Dental Costs"]
+unsplash_author = "Navy Medicine"
+unsplash_author_url = "https://unsplash.com/@navymedicine"
 +++
 
 The dentist has said you need an extraction, and then they've used one of two words that changes the picture considerably: "simple" or "surgical." Both words describe getting a tooth out. The experience, the cost, and the recovery are different enough that understanding which category your extraction falls into shapes your expectations properly.

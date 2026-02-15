@@ -2,8 +2,10 @@
 title = "Dental Finance Options Explained: How to Spread the Cost of Dental Treatment"
 description = "Dental finance plans let you spread treatment costs from £20/month with 0% interest options available. Here's how every payment option works and what to look for."
 date = 2026-03-07
-image = "/images/blog/dental-finance-options-uk"
+image = "/images/blog/dental-finance-options-uk.jpg"
 tags = ["Dental Finance", "Dental Costs", "Affordable Dentistry"]
+unsplash_author = "Werapinthorn Jaijan"
+unsplash_author_url = "https://unsplash.com/@jjwrpth"
 +++
 
 The treatment plan makes clinical sense. The dentist has explained it clearly, the outcome sounds exactly like what you want, and then the quote arrives. The number isn't necessarily shocking, but it's the kind of number that doesn't sit in your current account waiting to be spent. It's the kind that requires planning.

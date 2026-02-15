@@ -2,8 +2,10 @@
 title = "Dental Pain and Can't Afford a Dentist? Here's What's Actually Available"
 description = "If you're in dental pain and worried about cost, private emergency appointments start from £20. Here's a full breakdown of affordable dental options across the UK."
 date = 2026-02-23
-image = "/images/blog/dental-pain-cant-afford-dentist"
+image = "/images/blog/dental-pain-cant-afford-dentist.jpg"
 tags = ["Emergency Dental", "Affordable Dentistry", "Dental Costs"]
+unsplash_author = "Michael Lee"
+unsplash_author_url = "https://unsplash.com/@guoshiwushuang"
 +++
 
 There's a particular kind of quiet desperation that comes from being in pain and feeling like you can't do anything about it. Your tooth is throbbing, or your gum is swollen, or something in your mouth has been getting steadily worse for weeks, and you know you need a dentist, but the cost feels like a wall you can't get over.

@@ -2,8 +2,10 @@
 title = "The Dental Implant Procedure: What Happens at Every Single Stage"
 description = "A dental implant takes 3-9 months from consultation to final tooth. Here's exactly what happens at each step, what it feels like, and what it costs along the way."
 date = 2026-02-24
-image = "/images/blog/dental-implant-procedure-step-by-step"
+image = "/images/blog/dental-implant-procedure-step-by-step.jpg"
 tags = ["Dental Implants", "Dental Procedures", "Dental Costs"]
+unsplash_author = "Navy Medicine"
+unsplash_author_url = "https://unsplash.com/@navymedicine"
 +++
 
 The idea of a dental implant is easy enough to grasp: a titanium screw goes into your jawbone, a tooth goes on top, and you carry on with your life. Simple concept. But between "deciding to get an implant" and "eating a steak with your new tooth," there's a sequence of events that most people know almost nothing about, and the unknown is where the anxiety lives.

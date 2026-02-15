@@ -2,8 +2,10 @@
 title = "Sedation for Tooth Extractions: What It Costs and What It Feels Like"
 description = "Sedation for tooth extractions costs £75-£399 depending on the type. IV sedation means you won't remember the procedure at all. Here's what each option involves."
 date = 2026-02-18
-image = "/images/blog/sedation-for-tooth-extraction-uk"
+image = "/images/blog/sedation-for-tooth-extraction-uk.jpg"
 tags = ["Dental Sedation", "Tooth Extraction", "Nervous Patients"]
+unsplash_author = "Navy Medicine"
+unsplash_author_url = "https://unsplash.com/@navymedicine"
 +++
 
 There's a specific type of dread that belongs to tooth extractions. It's different from other dental fears because it's so concrete. A tooth is going to be removed from your jaw. You can picture it. You can almost feel it. And that mental image, of pressure and cracking and something being pulled from bone, is vivid enough to cancel appointments, postpone decisions, and keep people awake at night running through scenarios they've constructed entirely from imagination.

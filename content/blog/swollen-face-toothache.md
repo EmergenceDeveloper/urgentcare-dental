@@ -2,8 +2,10 @@
 title = "Swollen Face from a Toothache: What's Happening and What It Costs to Fix"
 description = "A swollen face from a toothache usually means infection. Treatment costs £20-£700 depending on what's needed. Here's what causes the swelling and how it gets resolved."
 date = 2026-02-28
-image = "/images/blog/swollen-face-toothache"
+image = "/images/blog/swollen-face-toothache.jpg"
 tags = ["Emergency Dental", "Dental Abscess", "Dental Costs"]
+unsplash_author = "engin akyurt"
+unsplash_author_url = "https://unsplash.com/@enginakyurt"
 +++
 
 You can feel it before you can see it. A heaviness in your cheek, a tightness that wasn't there yesterday. Your jaw feels thick. And when you look in the mirror, one side of your face is visibly larger than the other. Puffy, warm to the touch, with a dull ache radiating from somewhere in your teeth up through your cheekbone.

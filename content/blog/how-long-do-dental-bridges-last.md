@@ -2,8 +2,10 @@
 title = "How Long Do Dental Bridges Last? Lifespan, Problems, and Replacement Costs"
 description = "Dental bridges last 10-15 years on average. Some last 20+ years. Here's what affects their lifespan, the signs they're failing, and what replacement costs."
 date = 2026-04-01
-image = "/images/blog/how-long-do-dental-bridges-last"
+image = "/images/blog/how-long-do-dental-bridges-last.jpg"
 tags = ["Dental Bridge", "Dental Costs", "Dental Procedures"]
+unsplash_author = "engin akyurt"
+unsplash_author_url = "https://unsplash.com/@enginakyurt"
 +++
 
 The bridge has been doing its job for years. Sitting quietly in the mouth, filling the gap, looking like teeth, working like teeth. And now there's something different. A slight movement. A sensitivity in one of the anchor teeth. A dark line at the gum margin. And the question: is this the beginning of the end?

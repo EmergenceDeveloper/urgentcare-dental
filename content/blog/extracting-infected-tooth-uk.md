@@ -2,8 +2,10 @@
 title = "Can a Dentist Pull an Infected Tooth? The Honest Answer"
 description = "Dentists can extract infected teeth, but timing matters. Antibiotics first, then extraction, gives the best outcome. Here's what happens, what it costs, and why the sequence matters."
 date = 2026-03-01
-image = "/images/blog/extracting-infected-tooth-uk"
+image = "/images/blog/extracting-infected-tooth-uk.jpg"
 tags = ["Tooth Extraction", "Dental Infection", "Emergency Dental"]
+unsplash_author = "lafayett zapata montero"
+unsplash_author_url = "https://unsplash.com/@lafayett"
 +++
 
 You've got an infected tooth. It's been throbbing for days, maybe the face has [swollen up](/blog/swollen-face-toothache), and you've arrived at a decision: get it out. You just want this tooth gone, this problem solved, the pain over.

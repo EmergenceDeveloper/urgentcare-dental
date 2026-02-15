@@ -2,8 +2,10 @@
 title = "Clip-On Veneers vs Real Veneers: Cost, Quality, and What You Actually Get"
 description = "Clip-on veneers cost £300-£500 and sit over your teeth like a mouthguard. Real veneers cost £299-£695 per tooth and transform your actual smile. Here's the honest comparison."
 date = 2026-03-22
-image = "/images/blog/clip-on-veneers-vs-real-veneers-uk"
+image = "/images/blog/clip-on-veneers-vs-real-veneers-uk.jpg"
 tags = ["Veneers", "Cosmetic Dentistry", "Dental Costs"]
+unsplash_author = "Arnold Obizzy"
+unsplash_author_url = "https://unsplash.com/@arnoldobizzy"
 +++
 
 The adverts make it look simple. A thin, tooth-coloured appliance that clips over your existing teeth and gives you a perfect smile, no drilling, no dentist, no four-figure bill. Snap-on veneers, clip-on veneers, press-on veneers, instant veneers: the names vary but the promise is the same. A Hollywood smile for a few hundred pounds, delivered to your door.

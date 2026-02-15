@@ -2,8 +2,10 @@
 title = "How Long Do Fillings Last? Lifespan by Type, and When They Need Replacing"
 description = "Composite fillings last 7-10 years. Amalgam fillings last 10-15 years. Here's what determines how long your filling will survive and what happens when it fails."
 date = 2026-03-24
-image = "/images/blog/how-long-do-fillings-last"
+image = "/images/blog/how-long-do-fillings-last.jpg"
 tags = ["Dental Fillings", "Dental Costs", "Dental Procedures"]
+unsplash_author = "Atikah Akhtar"
+unsplash_author_url = "https://unsplash.com/@atikahakhtar"
 +++
 
 The filling went in five years ago. Or ten. Or fifteen. And now there's something happening near it: a dark shadow at the edge, a rough spot the tongue keeps finding, a twinge of sensitivity that wasn't there before. And the question forms: is this filling done?

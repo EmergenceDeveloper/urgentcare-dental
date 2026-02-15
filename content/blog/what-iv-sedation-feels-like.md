@@ -2,8 +2,10 @@
 title = "What IV Sedation at the Dentist Actually Feels Like"
 description = "Terrified of dental work? IV sedation costs £350-£500 and makes the whole experience feel like it never happened. Here's what it's actually like, from start to finish."
 date = 2026-02-12
-image = "/images/blog/what-iv-sedation-feels-like"
+image = "/images/blog/what-iv-sedation-feels-like.jpg"
 tags = ["Dental Sedation", "Nervous Patients", "Dental Anxiety"]
+unsplash_author = "fr0ggy5"
+unsplash_author_url = "https://unsplash.com/@5fr0ggy5"
 +++
 
 Over half the adults in the UK are afraid of the dentist. Not a bit nervous. Afraid. That's more than 25 million people who get that tight feeling in their chest just thinking about a dental chair.

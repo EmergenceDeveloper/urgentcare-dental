@@ -2,8 +2,10 @@
 title = "Professional vs Home Teeth Whitening: Cost, Results, and What Actually Works"
 description = "Professional whitening costs £349-£549 and whitens 6-8 shades. Home kits cost £20-£100 and whiten 1-3 shades. Here's the honest comparison of results, safety, and value."
 date = 2026-03-26
-image = "/images/blog/professional-vs-home-teeth-whitening"
+image = "/images/blog/professional-vs-home-teeth-whitening.jpg"
 tags = ["Teeth Whitening", "Cosmetic Dentistry", "Dental Costs"]
+unsplash_author = "Ozkan Guner"
+unsplash_author_url = "https://unsplash.com/@dentistozkanguner"
 +++
 
 The question isn't really whether to whiten your teeth. You've already decided that. The question is how: the £30 kit from the chemist, or the £500 appointment at the dentist? Because the price gap is wide enough to make anyone pause. Is professional whitening genuinely six times better, or is the home kit a quiet bargain that the dental industry would rather you didn't know about?

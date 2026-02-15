@@ -2,8 +2,10 @@
 title = "Wisdom Teeth Removal Recovery: A Day-by-Day Timeline of What to Expect"
 description = "Wisdom teeth recovery takes 5-7 days for most people. Here's exactly what each day feels like, from the swelling peak at 48 hours to the corner you turn on day four."
 date = 2026-02-26
-image = "/images/blog/wisdom-teeth-removal-recovery"
+image = "/images/blog/wisdom-teeth-removal-recovery.jpg"
 tags = ["Wisdom Teeth", "Dental Recovery", "Dental Procedures"]
+unsplash_author = "Ozkan Guner"
+unsplash_author_url = "https://unsplash.com/@dentistozkanguner"
 +++
 
 The extraction itself took less than an hour. You barely felt it. If you had [IV sedation](/blog/what-iv-sedation-feels-like), you don't remember it at all. And now you're sitting at home with a mouth full of gauze, a numb face, and a very specific question: what happens next?
