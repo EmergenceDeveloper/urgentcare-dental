@@ -2,8 +2,10 @@
 title = "Full Mouth Dental Implants Cost UK: The Real Price of a Whole New Smile"
 description = "Full mouth dental implants in the UK cost £20,000-£40,000 for both jaws. Learn how just 8 implants can replace every tooth, with a complete cost breakdown by method."
 date = 2026-02-10
-image = "/images/blog/full-mouth-dental-implants-cost-uk"
+image = "/images/blog/full-mouth-dental-implants-cost-uk.jpg"
 tags = ["Dental Implants", "Dental Costs", "Full Mouth Restoration"]
+unsplash_author = "Kamal Hoseinianzade"
+unsplash_author_url = "https://unsplash.com/@teravis_sk"
 +++
 
 Right, so you've been doing the maths. Cost of one implant, times the number of teeth you need replacing, and you've landed on a figure that made your heart sink. Somewhere around £60,000, £80,000, maybe more. That's the number bouncing around your head right now, isn't it?

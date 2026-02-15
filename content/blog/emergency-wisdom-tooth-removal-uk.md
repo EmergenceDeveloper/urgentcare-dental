@@ -2,8 +2,10 @@
 title = "Emergency Wisdom Tooth Removal: What Actually Happens When It All Kicks Off"
 description = "Wisdom tooth playing up badly? Emergency removal costs £549 per tooth at a private dentist. Here's what the process looks like, start to finish, and why it's less scary than you think."
 date = 2026-02-14
-image = "/images/blog/emergency-wisdom-tooth-removal-uk"
+image = "/images/blog/emergency-wisdom-tooth-removal-uk.jpg"
 tags = ["Emergency Dental", "Wisdom Teeth", "Dental Costs"]
+unsplash_author = "Jay Openiano"
+unsplash_author_url = "https://unsplash.com/@jayopeniano"
 +++
 
 It's 2am and the right side of your face has its own heartbeat. A deep, thudding ache that radiates from somewhere behind your back teeth up through your temple and into your ear. Ibuprofen took the edge off for about forty minutes, and now it's back with reinforcements.

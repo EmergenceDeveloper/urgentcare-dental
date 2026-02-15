@@ -2,8 +2,10 @@
 title = "Mini Dental Implants UK: Costs, Pros, and How They Compare to Standard Implants"
 description = "Mini dental implants cost £500-£1,200 in the UK, roughly half the price of standard implants. Here's when they make sense, when they don't, and who they're for."
 date = 2026-02-25
-image = "/images/blog/mini-dental-implants-uk"
+image = "/images/blog/mini-dental-implants-uk.jpg"
 tags = ["Dental Implants", "Dental Costs", "Mini Implants"]
+unsplash_author = "Quang Tri NGUYEN"
+unsplash_author_url = "https://unsplash.com/@quangtri"
 +++
 
 Standard dental implants cost £1,500-£3,500 per tooth. Mini dental implants cost £500-£1,200. Half the price, sometimes less. Which immediately makes you wonder: why doesn't everyone just get the cheaper one?

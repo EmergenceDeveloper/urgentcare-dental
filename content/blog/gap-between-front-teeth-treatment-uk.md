@@ -2,8 +2,10 @@
 title = "Gap Between Front Teeth: Treatment Options, Costs, and What Works Best"
 description = "Closing a gap between front teeth costs £299-£2,999 depending on the method: composite bonding, veneers, or aligners. Here's how each option works and what they achieve."
 date = 2026-04-09
-image = "/images/blog/gap-between-front-teeth-treatment-uk"
+image = "/images/blog/gap-between-front-teeth-treatment-uk.jpg"
 tags = ["Cosmetic Dentistry", "Dental Costs", "Dental Procedures"]
+unsplash_author = "Ozkan Guner"
+unsplash_author_url = "https://unsplash.com/@dentistozkanguner"
 +++
 
 The gap between the two front teeth has a proper name: diastema. And it has a complicated relationship with the people who have it. Some love it. Madonna, Georgia May Jagger, Eddie Murphy: the gap became part of the look, part of the identity. For others, it's the thing they notice in every photograph, the reason they smile with their mouth closed, the feature they've been thinking about changing for years.

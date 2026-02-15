@@ -2,8 +2,10 @@
 title = "Dental Implant Payment Plans UK: How to Spread the Cost in [YEAR]"
 description = "Dental implant finance plans let you spread costs from £29/month with 0% interest options. Here's how UK payment plans work and what they actually cost over time."
 date = 2026-02-19
-image = "/images/blog/dental-implant-payment-plans-uk"
+image = "/images/blog/dental-implant-payment-plans-uk.jpg"
 tags = ["Dental Implants", "Dental Finance", "Dental Costs"]
+unsplash_author = "rupixen"
+unsplash_author_url = "https://unsplash.com/@rupixen"
 +++
 
 There's a moment that happens in nearly every dental implant consultation. The dentist explains the treatment, the patient nods along, genuinely excited about the solution, and then the price appears. £1,999 for a single implant. £8,000-£16,000 for a full arch. And the excitement drains from their face like someone pulled a plug.

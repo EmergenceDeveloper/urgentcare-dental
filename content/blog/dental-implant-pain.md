@@ -2,8 +2,10 @@
 title = "Dental Implant Pain: What to Expect During and After the Procedure"
 description = "Dental implant surgery is painless during the procedure and produces moderate soreness for 3-5 days after. Here's the day-by-day pain timeline and what the experience is like."
 date = 2026-03-29
-image = "/images/blog/dental-implant-pain"
+image = "/images/blog/dental-implant-pain.jpg"
 tags = ["Dental Implants", "Dental Procedures", "Dental Recovery"]
+unsplash_author = "note thanun"
+unsplash_author_url = "https://unsplash.com/@notethanun"
 +++
 
 The concept is vivid enough to make anyone wince: a titanium post drilled into the jawbone. Of all the dental procedures that exist, implant surgery sounds like the one that should hurt the most. Metal, into bone, with a drill. The imagination fills in the rest with construction-site imagery.

@@ -2,8 +2,10 @@
 title = "Dental Implant Aftercare: What the First Year Really Looks Like"
 description = "Dental implant aftercare is simpler than most people expect. Here's what the healing process involves, month by month, and what your implant needs long-term."
 date = 2026-03-03
-image = "/images/blog/dental-implant-aftercare"
+image = "/images/blog/dental-implant-aftercare.jpg"
 tags = ["Dental Implants", "Dental Recovery", "Dental Procedures"]
+unsplash_author = "Martin Sanchez"
+unsplash_author_url = "https://unsplash.com/@martinsanchez"
 +++
 
 The implant is in. The surgery went well. The dentist has explained the aftercare sheet, and you've nodded along, absorbing about half of it because your face is numb and your brain is processing the fact that there's now a piece of titanium in your jawbone.

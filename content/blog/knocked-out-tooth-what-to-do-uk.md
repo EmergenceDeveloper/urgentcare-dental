@@ -2,8 +2,10 @@
 title = "Knocked Out Tooth: The 30-Minute Window That Changes Everything"
 description = "A knocked-out adult tooth can be saved if it's reimplanted within 30 minutes, with over 90% success. Here's what that golden window looks like, and what it costs."
 date = 2026-02-16
-image = "/images/blog/knocked-out-tooth-what-to-do-uk"
+image = "/images/blog/knocked-out-tooth-what-to-do-uk.jpg"
 tags = ["Emergency Dental", "Dental Trauma", "Dental Costs"]
+unsplash_author = "Dan Burton"
+unsplash_author_url = "https://unsplash.com/@dan__burton"
 +++
 
 A ball to the face during five-a-side. An elbow at a gig. A toddler's head swinging back at exactly the wrong angle. A stumble on wet pavement. One moment you have all your teeth, and the next you're looking at one of them in your hand, roots and all, and your mouth is filling with blood, and the world has gone very quiet and very loud at the same time.

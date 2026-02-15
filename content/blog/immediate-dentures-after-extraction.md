@@ -2,8 +2,10 @@
 title = "Immediate Dentures After Extraction: Same-Day Teeth, Costs, and What to Expect"
 description = "Immediate dentures are fitted the same day teeth are extracted, so you're never without teeth. They cost £500-£2,000 and need adjusting as gums heal. Here's the full picture."
 date = 2026-03-30
-image = "/images/blog/immediate-dentures-after-extraction"
+image = "/images/blog/immediate-dentures-after-extraction.jpg"
 tags = ["Dentures", "Tooth Extraction", "Dental Costs"]
+unsplash_author = "Jose Vazquez"
+unsplash_author_url = "https://unsplash.com/@jess33mx"
 +++
 
 The biggest fear about getting teeth extracted isn't the procedure itself. It's the gap. The idea of walking around without teeth, of eating without teeth, of smiling without teeth, of existing in the world with a visibly incomplete mouth. For people needing [multiple extractions](/blog/multiple-tooth-extractions), this fear can be paralysing enough to delay treatment for years.

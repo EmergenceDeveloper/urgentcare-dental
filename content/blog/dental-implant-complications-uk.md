@@ -2,8 +2,10 @@
 title = "Dental Implant Complications: What Can Go Wrong, How Common It Is, and What Fixes It"
 description = "Dental implant complications include infection (2-3%), peri-implantitis (10-20%), and failure (3-5%). Most are treatable. Here's what to watch for and what each issue costs to resolve."
 date = 2026-04-04
-image = "/images/blog/dental-implant-complications-uk"
+image = "/images/blog/dental-implant-complications-uk.jpg"
 tags = ["Dental Implants", "Dental Procedures", "Dental Costs"]
+unsplash_author = "Erik Mclean"
+unsplash_author_url = "https://unsplash.com/@introspectivedsgn"
 +++
 
 [Dental implants](/blog/dental-implant-costs-uk) have a success rate of 95-97%. That's an excellent number, and it's the number that matters most. But that 3-5% represents real patients with real complications, and understanding what can go wrong, how to recognise it, and what the solutions look like, turns the implant journey from blind trust into informed ownership.

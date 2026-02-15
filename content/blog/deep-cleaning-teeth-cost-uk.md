@@ -2,8 +2,10 @@
 title = "Deep Cleaning Teeth Cost UK: Scale and Polish vs Root Planing Prices"
 description = "A standard scale and polish costs £50-£120. Deep cleaning (root planing) for gum disease costs £200-£400 per quadrant. Here's what each involves and when you need which."
 date = 2026-03-28
-image = "/images/blog/deep-cleaning-teeth-cost-uk"
+image = "/images/blog/deep-cleaning-teeth-cost-uk.jpg"
 tags = ["Gum Disease", "Dental Costs", "Dental Procedures"]
+unsplash_author = "Blogging Guide"
+unsplash_author_url = "https://unsplash.com/@bloggingguide"
 +++
 
 There's a routine scale and polish, and then there's a deep cleaning. They share a name in casual conversation ("I'm going for a cleaning"), but they're genuinely different procedures that address different problems at different depths. Understanding which one you actually need determines what the appointment looks like, how long it takes, and what it costs.

@@ -2,8 +2,10 @@
 title = "Emergency Dentist London: What You'll Actually Pay in [YEAR]"
 description = "Emergency dental appointments in London cost £80-£300+ for the consultation alone. Here's a full breakdown by area, treatment, and time of day."
 date = 2026-02-22
-image = "/images/blog/emergency-dentist-london-costs"
+image = "/images/blog/emergency-dentist-london-costs.jpg"
 tags = ["Emergency Dental", "London Dentist", "Dental Costs"]
+unsplash_author = "Charlie Firth"
+unsplash_author_url = "https://unsplash.com/@charliefirth"
 +++
 
 Something about London makes dental emergencies feel extra cruel. You're already dealing with the pain, the panic, the tongue probing the damage. And then you start searching "emergency dentist London" and the prices come up, and there's a second wave of distress that has nothing to do with your teeth.

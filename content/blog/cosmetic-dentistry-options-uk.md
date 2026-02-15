@@ -2,8 +2,10 @@
 title = "Cosmetic Dentistry in [YEAR]: What's Actually Possible (And What It Costs)"
 description = "From £299 composite bonding to full smile makeovers, here's what modern cosmetic dentistry can do in [YEAR]. Preview your new smile before committing to a thing."
 date = 2026-02-13
-image = "/images/blog/cosmetic-dentistry-options-uk"
+image = "/images/blog/cosmetic-dentistry-options-uk.jpg"
 tags = ["Cosmetic Dentistry", "Smile Makeover", "Composite Bonding"]
+unsplash_author = "Ninthgrid"
+unsplash_author_url = "https://unsplash.com/@ninthgrid_"
 +++
 
 You know that thing you do with your mouth when someone takes a photo? That tight-lipped almost-smile you've perfected over the years, the one that looks pleasant enough without actually showing your teeth?

@@ -2,8 +2,10 @@
 title = "Dry Socket After Tooth Extraction: What It Is, How It Feels, and What Fixes It"
 description = "Dry socket occurs in 2-5% of extractions and causes intense pain on days 3-5. Treatment provides almost instant relief. Here's everything about it, including what it costs."
 date = 2026-03-12
-image = "/images/blog/dry-socket-after-tooth-extraction"
+image = "/images/blog/dry-socket-after-tooth-extraction.jpg"
 tags = ["Tooth Extraction", "Dental Recovery", "Dental Complications"]
+unsplash_author = "Rohit Dey"
+unsplash_author_url = "https://unsplash.com/@rohit16dey"
 +++
 
 The extraction went fine. Day one was manageable. Day two, the swelling peaked and the ibuprofen earned its keep. Day three, things should be getting better.

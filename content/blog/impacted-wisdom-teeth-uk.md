@@ -2,8 +2,10 @@
 title = "Impacted Wisdom Teeth: What It Means, What It Costs, and When They Need to Come Out"
 description = "Impacted wisdom teeth affect around 70% of adults and removal costs £200-£600 per tooth. Here's what impaction actually means, the four types, and what happens next."
 date = 2026-03-08
-image = "/images/blog/impacted-wisdom-teeth-uk"
+image = "/images/blog/impacted-wisdom-teeth-uk.jpg"
 tags = ["Wisdom Teeth", "Dental Procedures", "Dental Costs"]
+unsplash_author = "Preillumination SeTh"
+unsplash_author_url = "https://unsplash.com/@7seth"
 +++
 
 The dentist has just looked at your X-ray and used the word "impacted." And your brain, which was hoping for something simple and straightforward, is now doing that thing where it fills in the gaps with worst-case scenarios. Impacted sounds serious. It sounds like something embedded, stuck, deeply wrong.

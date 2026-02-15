@@ -2,8 +2,10 @@
 title = "Failed Root Canal: Retreatment Costs, Signs, and What Happens Next"
 description = "Root canal failure occurs in 5-15% of cases. Retreatment costs £700-£1,800 and has an 80% success rate. Here's how to recognise failure and what the options are."
 date = 2026-03-18
-image = "/images/blog/failed-root-canal-retreatment-uk"
+image = "/images/blog/failed-root-canal-retreatment-uk.jpg"
 tags = ["Root Canal", "Dental Costs", "Dental Procedures"]
+unsplash_author = "Harpreet Singh"
+unsplash_author_url = "https://unsplash.com/@harpreetkaka"
 +++
 
 The root canal was done months ago. Maybe years ago. The tooth was fixed, the pain stopped, the crown went on, and the whole episode faded into one of those dental memories you file away and prefer not to revisit.

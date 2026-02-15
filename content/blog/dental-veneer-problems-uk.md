@@ -2,8 +2,10 @@
 title = "Dental Veneer Problems: What Can Go Wrong, What's Normal, and What to Do"
 description = "Veneer problems include chipping, debonding, sensitivity, and colour mismatch. Most are fixable. Here's what actually goes wrong with veneers and what each issue costs to resolve."
 date = 2026-03-21
-image = "/images/blog/dental-veneer-problems-uk"
+image = "/images/blog/dental-veneer-problems-uk.jpg"
 tags = ["Veneers", "Cosmetic Dentistry", "Dental Costs"]
+unsplash_author = "Cyril Kevin"
+unsplash_author_url = "https://unsplash.com/@cack195"
 +++
 
 The veneers went on and the transformation was everything you hoped for. Bright, even, natural-looking teeth that made the mirror a friendlier place. Weeks passed, maybe months, maybe years. And now something has changed. A chip at the edge. A veneer that feels slightly loose. Sensitivity to cold that wasn't there before. A dark line appearing at the gum margin.

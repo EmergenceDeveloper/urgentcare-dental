@@ -2,8 +2,10 @@
 title = "Cheapest Dental Implants in the UK: What You'll Actually Pay in [YEAR]"
 description = "Dental implants in the UK start from £1,500 per tooth, but the average is £2,200-£2,500. Here's a full price breakdown and what separates a good deal from a false economy."
 date = 2026-02-15
-image = "/images/blog/cheapest-dental-implants-uk"
+image = "/images/blog/cheapest-dental-implants-uk.jpg"
 tags = ["Dental Implants", "Dental Costs", "Affordable Dentistry"]
+unsplash_author = "Ozkan Guner"
+unsplash_author_url = "https://unsplash.com/@dentistozkanguner"
 +++
 
 You've been quoted a number for a dental implant, and you've done what everyone does next: opened Google and typed some version of "cheapest dental implants UK." Because that number felt high. Maybe uncomfortably high. And now you're wondering whether that's just what implants cost, or whether you're being charged over the odds.

@@ -2,8 +2,10 @@
 title = "Eating After Tooth Extraction: What You Can Eat and When"
 description = "After a tooth extraction, soft foods are needed for 3-5 days. Here's a day-by-day guide to what you can eat, what to avoid, and when normal meals come back."
 date = 2026-03-13
-image = "/images/blog/eating-after-tooth-extraction"
+image = "/images/blog/eating-after-tooth-extraction.jpg"
 tags = ["Tooth Extraction", "Dental Recovery", "Dental Procedures"]
+unsplash_author = "K8"
+unsplash_author_url = "https://unsplash.com/@_k8_"
 +++
 
 The extraction is done. Your mouth is numb, there's gauze where a tooth used to be, and your stomach is growling because you haven't eaten since breakfast. And now you're standing in the kitchen wondering what on earth you're allowed to eat.

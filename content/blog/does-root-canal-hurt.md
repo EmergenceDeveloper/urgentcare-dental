@@ -2,8 +2,10 @@
 title = "Does a Root Canal Hurt? What It Actually Feels Like in [YEAR]"
 description = "Modern root canals are painless during the procedure and mildly sore for 2-3 days after. The infection hurts. The treatment is the relief. Here's what to expect."
 date = 2026-03-17
-image = "/images/blog/does-root-canal-hurt"
+image = "/images/blog/does-root-canal-hurt.jpg"
 tags = ["Root Canal", "Dental Procedures", "Dental Anxiety"]
+unsplash_author = "Shedrack Salami"
+unsplash_author_url = "https://unsplash.com/@xtrovarts"
 +++
 
 The fear is specific. Not a vague unease about dentistry in general, but a sharp, focused dread of those two particular words: root canal. Something about the phrase itself sounds like it should hurt. The word "canal" implies depth. The word "root" implies the very core of something. Put them together and the imagination fills in the rest with images of drilling into the innermost part of a tooth, which, to be fair, is exactly what happens.

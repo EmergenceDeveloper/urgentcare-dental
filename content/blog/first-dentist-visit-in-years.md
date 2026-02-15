@@ -2,8 +2,10 @@
 title = "Going to the Dentist After Years: What to Expect, What It Costs, and Why It's Easier Than You Think"
 description = "Haven't been to the dentist in years? The first appointment is an assessment, not a lecture. Here's exactly what happens, what it typically costs, and how practices make it comfortable."
 date = 2026-04-07
-image = "/images/blog/first-dentist-visit-in-years"
+image = "/images/blog/first-dentist-visit-in-years.jpg"
 tags = ["Dental Anxiety", "Dental Costs", "Dental Procedures"]
+unsplash_author = "Navy Medicine"
+unsplash_author_url = "https://unsplash.com/@navymedicine"
 +++
 
 Five years. Maybe ten. Maybe longer. The last dental appointment is a distant memory, filed somewhere between "things I should have done" and "things I'd rather not think about." And now, whether it's a toothache that's finally forced the issue, a cosmetic concern that's been growing, or just the quiet knowledge that this has gone on long enough, the moment has arrived to make an appointment.

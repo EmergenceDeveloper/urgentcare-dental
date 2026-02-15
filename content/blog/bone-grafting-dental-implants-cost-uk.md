@@ -2,8 +2,10 @@
 title = "Bone Grafting for Dental Implants: What It Costs and Why You Might Need It"
 description = "Dental bone grafts cost £400-£2,500 in the UK and about 30% of implant patients need one. Here's what the procedure involves, why it's needed, and the full cost picture."
 date = 2026-02-20
-image = "/images/blog/bone-grafting-dental-implants-cost-uk"
+image = "/images/blog/bone-grafting-dental-implants-cost-uk.jpg"
 tags = ["Dental Implants", "Bone Grafting", "Dental Costs"]
+unsplash_author = "Navy Medicine"
+unsplash_author_url = "https://unsplash.com/@navymedicine"
 +++
 
 You've decided on a dental implant. You've looked at the costs, you've maybe even started thinking about [payment plans](/blog/dental-implant-payment-plans-uk), and then the dentist says something you weren't expecting. Something about your jawbone not being quite thick enough. Something about needing a bone graft first.

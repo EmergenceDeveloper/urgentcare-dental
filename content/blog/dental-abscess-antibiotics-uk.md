@@ -2,8 +2,10 @@
 title = "Dental Abscess Antibiotics: What Gets Prescribed, What It Costs, and What Happens Next"
 description = "Dental abscess antibiotics cost £9.90 on prescription in the UK. Amoxicillin is first-line treatment, but the antibiotics alone won't fix it. Here's the full picture."
 date = 2026-02-27
-image = "/images/blog/dental-abscess-antibiotics-uk"
+image = "/images/blog/dental-abscess-antibiotics-uk.jpg"
 tags = ["Dental Abscess", "Emergency Dental", "Dental Costs"]
+unsplash_author = "Towfiqu barbhuiya"
+unsplash_author_url = "https://unsplash.com/@towfiqu999999"
 +++
 
 Your face is swollen. There's a throbbing, pulsing pain in your jaw that paracetamol barely touches. Something in your mouth tastes foul, a metallic, bitter taste that arrives when the swelling gets particularly intense. And you've just arrived at the conclusion that's been building for the past 24 hours: this is an abscess, and you need antibiotics.
