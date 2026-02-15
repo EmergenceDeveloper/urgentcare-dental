@@ -2,8 +2,10 @@
 title = "Dental Bone Loss: Causes, Consequences, and Treatment Options in the UK"
 description = "Jawbone loss occurs after tooth extraction and from gum disease. Treatment ranges from bone grafting (£400-£1,200) to implants that preserve remaining bone. Here's the full guide."
 date = 2026-04-02
-image = "/images/blog/dental-bone-loss-treatment-uk"
+image = "/images/blog/dental-bone-loss-treatment-uk.jpg"
 tags = ["Dental Implants", "Gum Disease", "Dental Procedures"]
+unsplash_author = "Steve Johnson"
+unsplash_author_url = "https://unsplash.com/@steve_j"
 +++
 
 The jawbone isn't static. It's living tissue that responds to forces: the daily pressure of biting and chewing sends signals through the tooth roots into the bone, and those signals tell the bone to maintain itself, to stay dense and strong. Remove the tooth, remove the signal, and the bone begins to recede.

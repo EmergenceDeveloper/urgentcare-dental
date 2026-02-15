@@ -2,8 +2,10 @@
 title = "Crown vs Filling: When You Need Each and What They Cost in the UK"
 description = "A filling costs £99-£250 and repairs small to medium cavities. A crown costs £650 and covers the whole tooth. The deciding factor is how much tooth structure remains."
 date = 2026-04-12
-image = "/images/blog/dental-crown-vs-filling"
+image = "/images/blog/dental-crown-vs-filling.jpg"
 tags = ["Dental Crowns", "Dental Fillings", "Dental Costs"]
+unsplash_author = "Werapinthorn Jaijan"
+unsplash_author_url = "https://unsplash.com/@jjwrpth"
 +++
 
 There's a moment in the dental appointment that feels decisive. The dentist examines the tooth, studies the X-ray, and delivers one of two verdicts: "This needs a filling" or "This needs a crown." Two different treatments, two very different price points (£99-£250 versus £650), and for the patient sitting there, the reasoning behind the choice can feel opaque.

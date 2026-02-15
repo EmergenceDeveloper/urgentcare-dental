@@ -2,8 +2,10 @@
 title = "Zygomatic Implants: The Solution When You've Been Told You Don't Have Enough Bone"
 description = "Zygomatic implants cost £10,000-£25,000 per arch in the UK and anchor into the cheekbone instead of the jaw. Here's how they work and who they're for."
 date = 2026-03-04
-image = "/images/blog/zygomatic-implants-cost-uk"
+image = "/images/blog/zygomatic-implants-cost-uk.jpg"
 tags = ["Dental Implants", "Advanced Dentistry", "Dental Costs"]
+unsplash_author = "National Cancer Institute"
+unsplash_author_url = "https://unsplash.com/@nci"
 +++
 
 You've been through the consultation. The CT scan has been reviewed. And the dentist has said something that felt like a door closing: "There's not enough bone for implants."

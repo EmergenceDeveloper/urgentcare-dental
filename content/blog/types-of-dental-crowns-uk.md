@@ -2,8 +2,10 @@
 title = "Types of Dental Crowns UK: Materials, Costs, and Which Lasts Longest"
 description = "Dental crowns come in porcelain, zirconia, metal, and PFM. Each has strengths: zirconia lasts longest, porcelain looks best, metal is strongest. Here's the full comparison."
 date = 2026-03-23
-image = "/images/blog/types-of-dental-crowns-uk"
+image = "/images/blog/types-of-dental-crowns-uk.jpg"
 tags = ["Dental Crowns", "Dental Costs", "Dental Procedures"]
+unsplash_author = "Mufid Majnun"
+unsplash_author_url = "https://unsplash.com/@mufidpwt"
 +++
 
 The dentist has said you need a crown, and now a second question follows: what kind? Because crowns come in different materials, each with distinct strengths, and the choice affects how the crown looks, how long it lasts, and what it costs.

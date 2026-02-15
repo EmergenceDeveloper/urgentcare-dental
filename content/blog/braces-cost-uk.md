@@ -2,8 +2,10 @@
 title = "Braces Cost UK: What Every Type Costs in 2026 and What Affects the Price"
 description = "Metal braces cost £1,500-£3,000, ceramic £2,000-£5,500, lingual £2,000-£10,000, and clear aligners £1,500-£5,500. Here's what determines which type you need and what drives the price."
 date = 2026-04-10
-image = "/images/blog/braces-cost-uk"
+image = "/images/blog/braces-cost-uk.jpg"
 tags = ["Orthodontics", "Dental Costs", "Cosmetic Dentistry"]
+unsplash_author = "Candid"
+unsplash_author_url = "https://unsplash.com/@candid"
 +++
 
 The word "braces" does a remarkable amount of heavy lifting. It covers four completely different treatment systems, at four completely different price points, with four totally different experiences of what it's like to live with them. The price range runs from about £1,500 to £10,000, which is wildly wide, and the reason it's so wide is almost beautiful in its simplicity: the architecture of the problem determines the architecture of the solution.

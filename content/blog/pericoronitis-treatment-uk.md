@@ -2,8 +2,10 @@
 title = "Pericoronitis: The Wisdom Tooth Gum Infection That Keeps Coming Back"
 description = "Pericoronitis is an infection of the gum around a partially erupted wisdom tooth. Treatment costs £20-£695. Here's what causes it, why it recurs, and how to break the cycle."
 date = 2026-03-10
-image = "/images/blog/pericoronitis-treatment-uk"
+image = "/images/blog/pericoronitis-treatment-uk.jpg"
 tags = ["Wisdom Teeth", "Dental Infection", "Emergency Dental"]
+unsplash_author = "Atikah Akhtar"
+unsplash_author_url = "https://unsplash.com/@atikahakhtar"
 +++
 
 There's a flap of gum at the back of your mouth that's making your life miserable. It's swollen, tender, and every time you chew, your upper tooth bites down on it. The area behind your last molar is red and angry, there's a taste in your mouth that's somewhere between metallic and rotten, and opening your jaw wide enough to eat a sandwich feels like a stretch too far.

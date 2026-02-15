@@ -2,8 +2,10 @@
 title = "NHS vs Private Dentist Costs in [YEAR]: The Full Price Comparison"
 description = "NHS dental treatment costs £27-£327 per band. Private costs more but with a catch: NHS dentists are almost impossible to find. Here's the real comparison."
 date = 2026-03-06
-image = "/images/blog/nhs-vs-private-dentist-costs"
+image = "/images/blog/nhs-vs-private-dentist-costs.jpg"
 tags = ["Dental Costs", "Private Dentist", "NHS Dentistry"]
+unsplash_author = "Benyamin Bohlouli"
+unsplash_author_url = "https://unsplash.com/@benyamin_bohlouli"
 +++
 
 The NHS dental price list looks, on paper, like an extraordinary deal. £27.40 for a check-up. £75.30 for fillings, root canals, or extractions. £326.70 for crowns, bridges, or dentures. Three simple bands covering virtually everything in dentistry, at prices that make private dental fees look outrageous by comparison.

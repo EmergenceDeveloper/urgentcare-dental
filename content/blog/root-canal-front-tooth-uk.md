@@ -2,8 +2,10 @@
 title = "Root Canal on a Front Tooth: Cost, Procedure, and Why It's the Quick One"
 description = "A front tooth root canal costs £600-£800, takes about an hour, and has a 95%+ success rate. It's the simplest root canal there is. Here's what to expect."
 date = 2026-03-20
-image = "/images/blog/root-canal-front-tooth-uk"
+image = "/images/blog/root-canal-front-tooth-uk.jpg"
 tags = ["Root Canal", "Dental Costs", "Dental Procedures"]
+unsplash_author = "Quang Tri NGUYEN"
+unsplash_author_url = "https://unsplash.com/@quangtri"
 +++
 
 Root canals have a reputation for being long, complicated, gruelling affairs. And for [molars](/blog/root-canal-treatment-cost-uk), that reputation has some basis: multiple canals, complex anatomy, two-hour procedures, and costs that climb above £1,000.

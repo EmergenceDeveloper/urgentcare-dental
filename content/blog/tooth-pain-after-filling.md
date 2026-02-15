@@ -2,8 +2,10 @@
 title = "Tooth Pain After a Filling: What's Normal, What's Not, and When to Worry"
 description = "Some sensitivity after a filling is normal and lasts 1-2 weeks. Persistent or worsening pain beyond 2-4 weeks may indicate a problem. Here's what each type of pain means."
 date = 2026-04-08
-image = "/images/blog/tooth-pain-after-filling"
+image = "/images/blog/tooth-pain-after-filling.jpg"
 tags = ["Dental Fillings", "Dental Procedures", "Dental Recovery"]
+unsplash_author = "National Cancer Institute"
+unsplash_author_url = "https://unsplash.com/@nci"
 +++
 
 The filling is done. The anaesthetic wore off two hours ago. And now the tooth that was fine (apart from the cavity) before the appointment is producing sensations it wasn't producing before. A zing when you drink cold water. A twinge when you bite down. A low-grade ache that sits in the background of your awareness. And the thought that arrives with these sensations: did something go wrong?

@@ -2,8 +2,10 @@
 title = "Why Toothache Gets Worse at Night (And What's Actually Happening)"
 description = "Toothache intensifies at night because of blood pressure changes, lost distractions, and gravity. Here's the biology behind it and what different types of night pain indicate."
 date = 2026-03-19
-image = "/images/blog/toothache-at-night"
+image = "/images/blog/toothache-at-night.jpg"
 tags = ["Toothache", "Dental Emergency", "Dental Procedures"]
+unsplash_author = "Bermix Studio"
+unsplash_author_url = "https://unsplash.com/@bermixstudio"
 +++
 
 It's 2am. The tooth that was mildly annoying during the day has turned into something else entirely. A deep, throbbing pulse that syncs with your heartbeat, radiating from the jaw into the ear and temple. Paracetamol barely touches it. Ibuprofen helps for an hour, then the throbbing creeps back. Sleep is impossible.

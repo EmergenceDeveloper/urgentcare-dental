@@ -2,8 +2,10 @@
 title = "Same Day Emergency Dental Appointments: What's Available and What It Costs"
 description = "Same day emergency dental appointments cost £20-£200 depending on the practice. Here's how to find one, what happens when you're seen, and the full cost breakdown."
 date = 2026-03-05
-image = "/images/blog/same-day-emergency-dental-appointments"
+image = "/images/blog/same-day-emergency-dental-appointments.jpg"
 tags = ["Emergency Dental", "Same Day Dentist", "Dental Costs"]
+unsplash_author = "Vitaly Gariev"
+unsplash_author_url = "https://unsplash.com/@silverkblack"
 +++
 
 The pain started this morning and it's getting worse. Or something broke at lunch and now there's a sharp edge shredding the inside of your cheek. Or the swelling you noticed yesterday has spread, and your face looks different in the mirror.

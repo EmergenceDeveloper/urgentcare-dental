@@ -2,8 +2,10 @@
 title = "Dental Implants and Smoking: Success Rates, Risks, and What Clinics Actually Require"
 description = "Smokers can get dental implants, but the failure rate is roughly double that of non-smokers. Most clinics don't refuse outright but require a quit period. Here's the full picture."
 date = 2026-04-13
-image = "/images/blog/dental-implants-smokers-uk"
+image = "/images/blog/dental-implants-smokers-uk.jpg"
 tags = ["Dental Implants", "Dental Procedures", "Dental Costs"]
+unsplash_author = "Kevin Seibel"
+unsplash_author_url = "https://unsplash.com/@kvnsbl"
 +++
 
 The question comes up constantly in implant consultations, and it's always asked the same way, with the same slightly braced expression: "I smoke. Can I still have an implant?"

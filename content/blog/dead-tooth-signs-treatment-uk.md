@@ -2,8 +2,10 @@
 title = "Dead Tooth: What It Looks Like, What Caused It, and What Treatment Costs"
 description = "A dead tooth has lost its blood supply and will darken over time. Treatment is root canal (£600-£1,400) or extraction. Here's how to tell, what happens, and what it costs."
 date = 2026-04-11
-image = "/images/blog/dead-tooth-signs-treatment-uk"
+image = "/images/blog/dead-tooth-signs-treatment-uk.jpg"
 tags = ["Root Canal", "Dental Emergency", "Dental Costs"]
+unsplash_author = "National Cancer Institute"
+unsplash_author_url = "https://unsplash.com/@nci"
 +++
 
 A tooth is alive. It has a blood supply, nerve fibres, connective tissue: a living core called the pulp, housed inside the hard mineral shell. The blood supply enters through tiny openings at the tip of each root and feeds the tooth from the inside. The nerve is what lets you feel temperature and pressure. The whole system is remarkably self-contained: a miniature organ, sitting in bone, doing its work for decades without asking for much.

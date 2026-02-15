@@ -2,8 +2,10 @@
 title = "Multiple Tooth Extractions: Can You Get Several Teeth Pulled at Once?"
 description = "Multiple teeth can be extracted in one appointment, often saving time and money. Here's what's possible, what it costs, and why sedation makes it easier."
 date = 2026-03-15
-image = "/images/blog/multiple-tooth-extractions"
+image = "/images/blog/multiple-tooth-extractions.jpg"
 tags = ["Tooth Extraction", "Dental Procedures", "Dental Sedation"]
+unsplash_author = "Navy Medicine"
+unsplash_author_url = "https://unsplash.com/@navymedicine"
 +++
 
 You need more than one tooth out. Maybe three, maybe five, maybe more. And the question forming in your mind is whether this means three, five, or more separate appointments, each with its own round of anxiety, each with its own recovery period, each with its own cleared diary and stocked-up soft food supplies.

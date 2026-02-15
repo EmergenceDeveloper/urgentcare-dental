@@ -2,8 +2,10 @@
 title = "How Long Does a Root Canal Take? The Real Answer by Tooth Type"
 description = "A front tooth root canal takes 30-60 minutes. A molar takes 60-90 minutes. Some complex cases need two visits. Here's what happens during the procedure and why the time varies."
 date = 2026-04-14
-image = "/images/blog/how-long-does-root-canal-take"
+image = "/images/blog/how-long-does-root-canal-take.jpg"
 tags = ["Root Canal", "Dental Procedures", "Dental Costs"]
+unsplash_author = "Roby Allario"
+unsplash_author_url = "https://unsplash.com/@docagile"
 +++
 
 Here's something that surprises most people: a root canal, this procedure that's become a cultural shorthand for unbearable experiences, takes about as long as watching an episode of television. Sometimes less. The reputation is wildly disproportionate to the reality, and one of the biggest sources of anxiety is simply not knowing how long you'll be in the chair.

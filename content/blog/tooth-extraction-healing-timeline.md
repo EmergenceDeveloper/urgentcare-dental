@@ -2,8 +2,10 @@
 title = "Tooth Extraction Healing: What Recovery Actually Looks Like"
 description = "Tooth extraction recovery takes 1-2 weeks for gum healing and 6-8 weeks for bone. Here's the full timeline, day by day, so you know exactly what's normal."
 date = 2026-03-02
-image = "/images/blog/tooth-extraction-healing-timeline"
+image = "/images/blog/tooth-extraction-healing-timeline.jpg"
 tags = ["Tooth Extraction", "Dental Recovery", "Dental Procedures"]
+unsplash_author = "Vitaly Gariev"
+unsplash_author_url = "https://unsplash.com/@silverkblack"
 +++
 
 The tooth is out. The dentist has put the gauze in, given you the aftercare sheet, and sent you on your way. And now you're sitting with a numb face, a mouth that tastes of blood, and a question that's going to dominate the next week of your life: is this normal?

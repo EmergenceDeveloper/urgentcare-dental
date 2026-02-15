@@ -2,8 +2,10 @@
 title = "Receding Gums Treatment Cost UK: From Deep Cleaning to Gum Grafts"
 description = "Receding gums treatment costs £60-£400 for deep cleaning and £400-£1,200 per area for gum grafts. Here's what causes recession, when treatment is needed, and what each option costs."
 date = 2026-03-25
-image = "/images/blog/receding-gums-treatment-cost-uk"
+image = "/images/blog/receding-gums-treatment-cost-uk.jpg"
 tags = ["Gum Disease", "Dental Costs", "Dental Procedures"]
+unsplash_author = "Nik"
+unsplash_author_url = "https://unsplash.com/@helloimnik"
 +++
 
 You've noticed something in the mirror. The teeth look longer than they used to. There's more tooth visible above the gum line than there was a year ago, two years ago, whenever you last looked closely. Or maybe you've noticed sensitivity: a sharp zing when cold water hits a specific spot, right at the gum line where the tooth meets the pink.
