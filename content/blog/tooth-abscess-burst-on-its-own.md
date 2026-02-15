@@ -2,8 +2,10 @@
 title = "Tooth Abscess Burst on Its Own: What Happens Next and Why You Still Need Treatment"
 description = "When a dental abscess bursts, the pain drops dramatically but the infection remains. The tooth still needs root canal or extraction. Here's what's happened and what comes next."
 date = 2026-04-05
-image = "/images/blog/tooth-abscess-burst-on-its-own"
+image = "/images/blog/tooth-abscess-burst-on-its-own.jpg"
 tags = ["Dental Abscess", "Dental Emergency", "Dental Procedures"]
+unsplash_author = "engin akyurt"
+unsplash_author_url = "https://unsplash.com/@enginakyurt"
 +++
 
 The pain was building for days. A deep, relentless throb centred on one tooth, [worse at night](/blog/toothache-at-night), barely touched by painkillers, accompanied by a swelling on the gum that grew from a small bump to something you could feel with your tongue, hot and tight and pressurised.
