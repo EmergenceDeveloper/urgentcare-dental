@@ -54,8 +54,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     
     site.declare_placement(
         PlacementPosition::HeadTop,
-        r##"<link href="/images/branding/UrgentCare-Dental-Logo.svg" rel="icon" media="(prefers-color-scheme: light)">
-<link href="/images/branding/UrgentCare-Dental-Logo-White.svg" rel="icon" media="(prefers-color-scheme: dark)">"##
+        r#"<link href="/images/branding/UrgentCare-Dental-Logo.svg" rel="icon">"#
     );
     
     /*site.declare_placement(
