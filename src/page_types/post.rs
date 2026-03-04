@@ -844,7 +844,7 @@ fn css(site: &mut Site<UCDPages>) {
                         color: #029297;
                         border: 1.5px solid #fff;
 
-                        svg { margin-right: 6px; }
+                        svg { margin-right: 6px; display: block; }
                     }
                 }
             }
