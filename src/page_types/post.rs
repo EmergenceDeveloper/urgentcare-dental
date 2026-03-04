@@ -156,13 +156,34 @@ pub fn construct_post(site: &mut Site<UCDPages>, page: &mut Page<UCDPages>) {
         meta_html = meta_html,
         image = post.frontmatter.image,
         unsplash_attribution = unsplash_attribution,
-        content = post.content,
+        content = inject_mid_cta(&post.content),
         booking_link = BOOKING_LINK,
         phone_link = PHONE_NUMBER_LINK,
         phone = PHONE_NUMBER,
     );
 
     page.foundation.content = Some(html);
+}
+
+fn inject_mid_cta(content: &str) -> String {
+    let mid_cta = format!(
+        r##"<div class="inline-cta"><span>Worried about a dental problem?</span> <a href="{}">Call us on {}</a> for same-day help.</div>"##,
+        PHONE_NUMBER_LINK, PHONE_NUMBER
+    );
+
+    // Find a </p> near the midpoint to insert after
+    let midpoint = content.len() / 2;
+    let search_region = &content[midpoint..];
+
+    if let Some(offset) = search_region.find("</p>") {
+        let insert_at = midpoint + offset + 4; // after </p>
+        let mut result = content[..insert_at].to_owned();
+        result.push_str(&mid_cta);
+        result.push_str(&content[insert_at..]);
+        result
+    } else {
+        content.to_owned()
+    }
 }
 
 fn css(site: &mut Site<UCDPages>) {
@@ -490,7 +511,28 @@ fn css(site: &mut Site<UCDPages>) {
                         font-size: 18px;
                         line-height: 1.625;
                         color: rgb(35, 35, 35);
-                        letter-spacing: -0.18px
+                        letter-spacing: -0.18px;
+
+                        .inline-cta {
+                            background: var(--turquoise-98, #f0fafa);
+                            border-left: 4px solid #029297;
+                            padding: 18px 24px;
+                            margin: 32px 0;
+                            border-radius: 0 8px 8px 0;
+                            font-size: 17px;
+                            line-height: 1.5;
+
+                            a {
+                                color: #029297;
+                                font-weight: 600;
+                                text-decoration: none;
+                                white-space: nowrap;
+
+                                &:hover {
+                                    text-decoration: underline;
+                                }
+                            }
+                        }
                         
                         p {
                         
