@@ -118,20 +118,20 @@ pub fn construct_post(site: &mut Site<UCDPages>, page: &mut Page<UCDPages>) {
                         </div>
                         <div class="post-cta">
                             <h2>Need Emergency Dental Care?</h2>
-                            <p>Same-day appointments from just £20. Book online or call us now.</p>
+                            <p>Same-day appointments from just £20. Open 24 hours, 7 days a week.</p>
                             <div class="buttons">
-                                <a href="{booking_link}" class="primary">Book Online</a>
-                                <a href="{phone_link}" class="secondary">Call {phone}</a>
+                                <a href="{phone_link}" class="primary"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg> Call {phone}</a>
+                                <a href="{booking_link}" class="secondary">Book Online</a>
                             </div>
                         </div>
                     </article>
                 </div>
             </main>
             <div class="sticky-bar" id="sticky-bar">
-                <span>Got a dental concern? We're here to help.</span>
+                <span>Got a dental concern? We're here 24/7.</span>
                 <div class="sticky-buttons">
-                    <a href="{booking_link}">Book Appointment</a>
-                    <a href="{phone_link}" class="call">Call Us</a>
+                    <a href="{phone_link}" class="call"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg> Call Now</a>
+                    <a href="{booking_link}">Book Online</a>
                 </div>
             </div>
             <script>
@@ -442,7 +442,7 @@ fn css(site: &mut Site<UCDPages>) {
                             flex-wrap: wrap;
 
                             a {
-                                padding: 14px 32px;
+                                padding: 16px 36px;
                                 border-radius: 8px;
                                 font-size: 17px;
                                 font-weight: 600;
@@ -455,15 +455,20 @@ fn css(site: &mut Site<UCDPages>) {
                                     text-decoration: none;
                                 }
 
+                                svg { margin-right: 8px; vertical-align: -2px; }
+
                                 &.primary {
                                     background: #fff;
                                     color: #029297;
+                                    font-size: 19px;
+                                    padding: 18px 40px;
                                 }
 
                                 &.secondary {
                                     background: transparent;
                                     color: #fff;
-                                    border: 2px solid rgba(255, 255, 255, 0.8);
+                                    border: 2px solid rgba(255, 255, 255, 0.6);
+                                    font-size: 15px;
                                 }
                             }
                         }
@@ -779,17 +784,22 @@ fn css(site: &mut Site<UCDPages>) {
                 a {
                     padding: 8px 20px;
                     border-radius: 6px;
-                    font-size: 14px;
+                    font-size: 13px;
                     font-weight: 600;
                     text-decoration: none;
-                    background: #fff;
-                    color: #029297;
+                    background: transparent;
+                    color: #fff;
+                    border: 1.5px solid rgba(255, 255, 255, 0.5);
                     white-space: nowrap;
 
                     &.call {
-                        background: transparent;
-                        color: #fff;
-                        border: 1.5px solid rgba(255, 255, 255, 0.7);
+                        background: #fff;
+                        color: #029297;
+                        border: none;
+                        font-size: 14px;
+                        padding: 9px 22px;
+
+                        svg { margin-right: 6px; vertical-align: -2px; }
                     }
                 }
             }
