@@ -116,6 +116,14 @@ pub fn construct_post(site: &mut Site<UCDPages>, page: &mut Page<UCDPages>) {
                         <div class="content">
                             {content}
                         </div>
+                        <div class="post-cta">
+                            <h2>Need Emergency Dental Care?</h2>
+                            <p>Same-day appointments from just £20. Book online or call us now.</p>
+                            <div class="buttons">
+                                <a href="{booking_link}" class="primary">Book Online</a>
+                                <a href="{phone_link}" class="secondary">Call {phone}</a>
+                            </div>
+                        </div>
                     </article>
                 </div>
             </main>
@@ -130,6 +138,9 @@ pub fn construct_post(site: &mut Site<UCDPages>, page: &mut Page<UCDPages>) {
         image = post.frontmatter.image,
         unsplash_attribution = unsplash_attribution,
         content = post.content,
+        booking_link = BOOKING_LINK,
+        phone_link = PHONE_NUMBER_LINK,
+        phone = PHONE_NUMBER,
     );
 
     page.foundation.content = Some(html);
@@ -385,6 +396,72 @@ fn css(site: &mut Site<UCDPages>) {
                         }
                     }
                     
+                    .post-cta {
+                        margin-top: 60px;
+                        background: linear-gradient(135deg, #029297, #017275);
+                        border-radius: 12px;
+                        padding: 48px 40px;
+                        text-align: center;
+
+                        h2 {
+                            color: #fff;
+                            font-size: 32px;
+                            font-weight: 600;
+                            margin: 0 0 12px;
+                        }
+
+                        p {
+                            color: rgba(255, 255, 255, 0.9);
+                            font-size: 18px;
+                            margin: 0 0 28px;
+                        }
+
+                        .buttons {
+                            display: flex;
+                            gap: 16px;
+                            justify-content: center;
+                            flex-wrap: wrap;
+
+                            a {
+                                padding: 14px 32px;
+                                border-radius: 8px;
+                                font-size: 17px;
+                                font-weight: 600;
+                                text-decoration: none;
+                                transition: transform 0.15s ease, box-shadow 0.15s ease;
+
+                                &:hover {
+                                    transform: translateY(-2px);
+                                    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+                                    text-decoration: none;
+                                }
+
+                                &.primary {
+                                    background: #fff;
+                                    color: #029297;
+                                }
+
+                                &.secondary {
+                                    background: transparent;
+                                    color: #fff;
+                                    border: 2px solid rgba(255, 255, 255, 0.8);
+                                }
+                            }
+                        }
+
+                        @media (max-width: 768px) {
+                            padding: 36px 24px;
+
+                            h2 { font-size: 24px; }
+
+                            .buttons {
+                                flex-direction: column;
+
+                                a { width: 100%; box-sizing: border-box; }
+                            }
+                        }
+                    }
+
                     .content {
                         font-size: 18px;
                         line-height: 1.625;
