@@ -822,26 +822,29 @@ fn css(site: &mut Site<UCDPages>) {
             .sticky-buttons {
                 display: flex;
                 gap: 10px;
+                align-items: center;
 
                 a {
-                    padding: 8px 20px;
+                    padding: 9px 20px;
                     border-radius: 6px;
-                    font-size: 13px;
+                    font-size: 14px;
                     font-weight: 600;
+                    line-height: 1;
                     text-decoration: none;
                     background: transparent;
                     color: #fff;
                     border: 1.5px solid rgba(255, 255, 255, 0.5);
                     white-space: nowrap;
+                    box-sizing: border-box;
+                    display: inline-flex;
+                    align-items: center;
 
                     &.call {
                         background: #fff;
                         color: #029297;
-                        border: none;
-                        font-size: 14px;
-                        padding: 9px 22px;
+                        border: 1.5px solid #fff;
 
-                        svg { margin-right: 6px; vertical-align: -2px; }
+                        svg { margin-right: 6px; }
                     }
                 }
             }
