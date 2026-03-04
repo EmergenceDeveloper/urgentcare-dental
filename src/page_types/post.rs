@@ -111,6 +111,16 @@ pub fn declare_post_sections(site: &mut Site<UCDPages>) {
                 booking_link = BOOKING_LINK,
             ),
         );
+
+        site.declare_section(
+            &format!("mid_cta_{key}"),
+            &format!(
+                r##"<div class="inline-cta"><span>{mid_text}</span> <a href="{phone_link}">Call us on {phone}</a> for a free consultation.</div>"##,
+                mid_text = cta.mid_cta_text,
+                phone_link = PHONE_NUMBER_LINK,
+                phone = PHONE_NUMBER,
+            ),
+        );
     }
 }
 
@@ -197,9 +207,10 @@ pub fn construct_post(site: &mut Site<UCDPages>, page: &mut Page<UCDPages>) {
         String::new()
     };
 
-    let (variant_key, variant_cta) = match_cta_variant(&post.frontmatter.tags);
+    let (variant_key, _) = match_cta_variant(&post.frontmatter.tags);
     let post_cta = site.sections[&format!("post_cta_{variant_key}")].clone();
     let sticky_bar = site.sections[&format!("sticky_bar_{variant_key}")].clone();
+    let mid_cta = site.sections[&format!("mid_cta_{variant_key}")].clone();
 
     let html = format!(
         r##"
@@ -248,7 +259,7 @@ pub fn construct_post(site: &mut Site<UCDPages>, page: &mut Page<UCDPages>) {
         meta_html = meta_html,
         image = post.frontmatter.image,
         unsplash_attribution = unsplash_attribution,
-        content = inject_mid_cta(&post.content, variant_cta),
+        content = inject_mid_cta(&post.content, &mid_cta),
         post_cta = post_cta,
         sticky_bar = sticky_bar,
     );
@@ -256,11 +267,7 @@ pub fn construct_post(site: &mut Site<UCDPages>, page: &mut Page<UCDPages>) {
     page.foundation.content = Some(html);
 }
 
-fn inject_mid_cta(content: &str, cta: &CtaContent) -> String {
-    let mid_cta = format!(
-        r##"<div class="inline-cta"><span>{}</span> <a href="{}">Call us on {}</a> for a free consultation.</div>"##,
-        cta.mid_cta_text, PHONE_NUMBER_LINK, PHONE_NUMBER
-    );
+fn inject_mid_cta(content: &str, mid_cta: &str) -> String {
 
     // Find a </p> near the midpoint to insert after
     let midpoint = content.len() / 2;
