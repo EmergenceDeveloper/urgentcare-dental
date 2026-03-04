@@ -252,6 +252,8 @@ fn main() {
     add_sitewide_schema(&mut site);
     
     add_common_sections(&mut site);
+
+    declare_post_sections(&mut site);
     
     
     site.commence();

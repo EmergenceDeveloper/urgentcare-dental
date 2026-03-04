@@ -1,6 +1,119 @@
 // In src/page_types/post.rs
 use crate::prelude::*;
 
+struct CtaContent {
+    headline: &'static str,
+    subtext: &'static str,
+    sticky_text: &'static str,
+    mid_cta_text: &'static str,
+}
+
+const DENTAL_CTA: CtaContent = CtaContent {
+    headline: "Need Emergency Dental Care?",
+    subtext: "Same-day appointments from just £20. Open 24 hours, 7 days a week.",
+    sticky_text: "Got a dental concern? We're here 24/7.",
+    mid_cta_text: "Worried about a dental problem?",
+};
+
+const HAIR_CTA: CtaContent = CtaContent {
+    headline: "Considering a Hair Transplant?",
+    subtext: "Natural results from just £2,500. Book a free consultation or call us now.",
+    sticky_text: "Considering hair restoration? We're here to help.",
+    mid_cta_text: "Thinking about a hair transplant?",
+};
+
+const COSMETIC_CTA: CtaContent = CtaContent {
+    headline: "Ready for Your Dream Smile?",
+    subtext: "Composite bonding from £299, veneers from £695. Book a consultation or call us now.",
+    sticky_text: "Want to transform your smile? We're here to help.",
+    mid_cta_text: "Thinking about a smile makeover?",
+};
+
+const ALIGNERS_CTA: CtaContent = CtaContent {
+    headline: "Want Straighter Teeth?",
+    subtext: "Clear aligners from £2,999 with a free consultation. Book online or call us now.",
+    sticky_text: "Thinking about straighter teeth? We're here to help.",
+    mid_cta_text: "Thinking about teeth straightening?",
+};
+
+const PHONE_SVG_16: &str = r#"<svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>"#;
+
+const PHONE_SVG_14: &str = r#"<svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>"#;
+
+fn match_cta_variant(tags: &[String]) -> (&'static str, &'static CtaContent) {
+    for tag in tags {
+        match tag.as_str() {
+            "Hair Transplants" => return ("hair", &HAIR_CTA),
+            "Clear Aligners" | "Orthodontics" | "Invisalign" | "Braces" => return ("aligners", &ALIGNERS_CTA),
+            "Cosmetic Dentistry" | "Cosmetic Treatments" | "Veneers"
+            | "Composite Bonding" | "Teeth Whitening" | "Smile Makeover"
+            | "Gummy Smile" | "Dental Bonding" | "Smile Journey" => return ("cosmetic", &COSMETIC_CTA),
+            _ => {}
+        }
+    }
+    ("dental", &DENTAL_CTA)
+}
+
+pub fn declare_post_sections(site: &mut Site<UCDPages>) {
+    let variants: &[(&str, &CtaContent)] = &[
+        ("dental", &DENTAL_CTA),
+        ("hair", &HAIR_CTA),
+        ("cosmetic", &COSMETIC_CTA),
+        ("aligners", &ALIGNERS_CTA),
+    ];
+
+    for (key, cta) in variants {
+        site.declare_section(
+            &format!("post_cta_{key}"),
+            &format!(
+                r##"<div class="post-cta">
+                    <h2>{headline}</h2>
+                    <p>{subtext}</p>
+                    <div class="buttons">
+                        <a href="{phone_link}" class="primary">{phone_svg} Call {phone}</a>
+                        <a href="{booking_link}" class="secondary">Book Online</a>
+                    </div>
+                </div>"##,
+                headline = cta.headline,
+                subtext = cta.subtext,
+                phone_link = PHONE_NUMBER_LINK,
+                phone = PHONE_NUMBER,
+                phone_svg = PHONE_SVG_16,
+                booking_link = BOOKING_LINK,
+            ),
+        );
+
+        site.declare_section(
+            &format!("sticky_bar_{key}"),
+            &format!(
+                r##"<div class="sticky-bar" id="sticky-bar">
+                    <span>{sticky_text}</span>
+                    <div class="sticky-buttons">
+                        <a href="{phone_link}" class="call">{phone_svg} Call Now</a>
+                        <a href="{booking_link}">Book Online</a>
+                    </div>
+                </div>
+                <script>
+                (function() {{
+                    var bar = document.getElementById('sticky-bar');
+                    var shown = false;
+                    window.addEventListener('scroll', function() {{
+                        if (window.scrollY > 600 && !shown) {{
+                            bar.classList.add('visible');
+                            shown = true;
+                        }}
+                    }});
+                }})();
+                </script>"##,
+                sticky_text = cta.sticky_text,
+                phone_link = PHONE_NUMBER_LINK,
+                phone_svg = PHONE_SVG_14,
+                booking_link = BOOKING_LINK,
+            ),
+        );
+    }
+}
+
 pub fn construct_post(site: &mut Site<UCDPages>, page: &mut Page<UCDPages>) {
     let post = match page.specification.clone() {
         UCDPages::BlogPost(post) => post,
@@ -84,6 +197,10 @@ pub fn construct_post(site: &mut Site<UCDPages>, page: &mut Page<UCDPages>) {
         String::new()
     };
 
+    let (variant_key, variant_cta) = match_cta_variant(&post.frontmatter.tags);
+    let post_cta = site.sections[&format!("post_cta_{variant_key}")].clone();
+    let sticky_bar = site.sections[&format!("sticky_bar_{variant_key}")].clone();
+
     let html = format!(
         r##"
         <!DOCTYPE html>
@@ -116,36 +233,11 @@ pub fn construct_post(site: &mut Site<UCDPages>, page: &mut Page<UCDPages>) {
                         <div class="content">
                             {content}
                         </div>
-                        <div class="post-cta">
-                            <h2>Need Emergency Dental Care?</h2>
-                            <p>Same-day appointments from just £20. Open 24 hours, 7 days a week.</p>
-                            <div class="buttons">
-                                <a href="{phone_link}" class="primary"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg> Call {phone}</a>
-                                <a href="{booking_link}" class="secondary">Book Online</a>
-                            </div>
-                        </div>
+                        {post_cta}
                     </article>
                 </div>
             </main>
-            <div class="sticky-bar" id="sticky-bar">
-                <span>Got a dental concern? We're here 24/7.</span>
-                <div class="sticky-buttons">
-                    <a href="{phone_link}" class="call"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg> Call Now</a>
-                    <a href="{booking_link}">Book Online</a>
-                </div>
-            </div>
-            <script>
-            (function() {{
-                var bar = document.getElementById('sticky-bar');
-                var shown = false;
-                window.addEventListener('scroll', function() {{
-                    if (window.scrollY > 600 && !shown) {{
-                        bar.classList.add('visible');
-                        shown = true;
-                    }}
-                }});
-            }})();
-            </script>
+            {sticky_bar}
             {footer}
         </body>
         </html>
@@ -156,19 +248,18 @@ pub fn construct_post(site: &mut Site<UCDPages>, page: &mut Page<UCDPages>) {
         meta_html = meta_html,
         image = post.frontmatter.image,
         unsplash_attribution = unsplash_attribution,
-        content = inject_mid_cta(&post.content),
-        booking_link = BOOKING_LINK,
-        phone_link = PHONE_NUMBER_LINK,
-        phone = PHONE_NUMBER,
+        content = inject_mid_cta(&post.content, variant_cta),
+        post_cta = post_cta,
+        sticky_bar = sticky_bar,
     );
 
     page.foundation.content = Some(html);
 }
 
-fn inject_mid_cta(content: &str) -> String {
+fn inject_mid_cta(content: &str, cta: &CtaContent) -> String {
     let mid_cta = format!(
-        r##"<div class="inline-cta"><span>Worried about a dental problem?</span> <a href="{}">Call us on {}</a> for same-day help.</div>"##,
-        PHONE_NUMBER_LINK, PHONE_NUMBER
+        r##"<div class="inline-cta"><span>{}</span> <a href="{}">Call us on {}</a> for a free consultation.</div>"##,
+        cta.mid_cta_text, PHONE_NUMBER_LINK, PHONE_NUMBER
     );
 
     // Find a </p> near the midpoint to insert after
