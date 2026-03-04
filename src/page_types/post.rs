@@ -127,6 +127,25 @@ pub fn construct_post(site: &mut Site<UCDPages>, page: &mut Page<UCDPages>) {
                     </article>
                 </div>
             </main>
+            <div class="sticky-bar" id="sticky-bar">
+                <span>Got a dental concern? We're here to help.</span>
+                <div class="sticky-buttons">
+                    <a href="{booking_link}">Book Appointment</a>
+                    <a href="{phone_link}" class="call">Call Us</a>
+                </div>
+            </div>
+            <script>
+            (function() {{
+                var bar = document.getElementById('sticky-bar');
+                var shown = false;
+                window.addEventListener('scroll', function() {{
+                    if (window.scrollY > 600 && !shown) {{
+                        bar.classList.add('visible');
+                        shown = true;
+                    }}
+                }});
+            }})();
+            </script>
             {footer}
         </body>
         </html>
@@ -722,6 +741,72 @@ fn css(site: &mut Site<UCDPages>) {
                         float: none;
                         display: block;
                         margin: 20px auto;
+                    }
+                }
+            }
+        }
+
+        .sticky-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: #029297;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 12px 24px;
+            z-index: 1000;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.15);
+
+            &.visible {
+                transform: translateY(0);
+            }
+
+            span {
+                font-size: 15px;
+                font-weight: 500;
+            }
+
+            .sticky-buttons {
+                display: flex;
+                gap: 10px;
+
+                a {
+                    padding: 8px 20px;
+                    border-radius: 6px;
+                    font-size: 14px;
+                    font-weight: 600;
+                    text-decoration: none;
+                    background: #fff;
+                    color: #029297;
+                    white-space: nowrap;
+
+                    &.call {
+                        background: transparent;
+                        color: #fff;
+                        border: 1.5px solid rgba(255, 255, 255, 0.7);
+                    }
+                }
+            }
+
+            @media (max-width: 768px) {
+                flex-direction: column;
+                gap: 10px;
+                padding: 14px 16px;
+
+                span { font-size: 14px; }
+
+                .sticky-buttons {
+                    width: 100%;
+
+                    a {
+                        flex: 1;
+                        text-align: center;
                     }
                 }
             }
