@@ -469,6 +469,11 @@ fn css(site: &mut Site<UCDPages>) {
                                 font-weight: 600;
                                 text-decoration: none;
                                 transition: transform 0.15s ease, box-shadow 0.15s ease;
+                                display: inline-flex;
+                                align-items: center;
+                                justify-content: center;
+                                line-height: 1;
+                                box-sizing: border-box;
 
                                 &:hover {
                                     transform: translateY(-2px);
@@ -476,13 +481,14 @@ fn css(site: &mut Site<UCDPages>) {
                                     text-decoration: none;
                                 }
 
-                                svg { margin-right: 8px; vertical-align: -2px; }
+                                svg { margin-right: 8px; display: block; }
 
                                 &.primary {
                                     background: #fff;
                                     color: #029297;
                                     font-size: 19px;
                                     padding: 18px 40px;
+                                    border: 2px solid #fff;
                                 }
 
                                 &.secondary {
@@ -838,6 +844,7 @@ fn css(site: &mut Site<UCDPages>) {
                     box-sizing: border-box;
                     display: inline-flex;
                     align-items: center;
+                    justify-content: center;
 
                     &.call {
                         background: #fff;
