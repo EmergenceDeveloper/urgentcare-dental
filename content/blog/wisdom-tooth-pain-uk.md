@@ -4,8 +4,8 @@ description = "Wisdom tooth pain affects most adults at some point. Treatment co
 date = 2026-03-09
 image = "/images/blog/wisdom-tooth-pain-uk.jpg"
 tags = ["Wisdom Teeth", "Dental Pain", "Emergency Dental"]
-unsplash_author = "Marek Piwnicki"
-unsplash_author_url = "https://unsplash.com/@marekpiwnicki"
+unsplash_author = "engin akyurt"
+unsplash_author_url = "https://unsplash.com/@enginakyurt"
 +++
 
 It starts at the back of your mouth. A dull pressure that wasn't there yesterday. Your tongue keeps drifting to the spot, pressing against something tender. By the evening, the ache has spread along your jaw. By bedtime, it's throbbing.
